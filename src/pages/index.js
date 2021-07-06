@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Box, Flex } from "@theme-ui/components"
+import { Box, Flex, Heading, Text } from "@theme-ui/components"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -14,28 +14,68 @@ const Home = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Home" />
-      <Box
-        // mt={5}
-        sx={{
-          position: "absolute",
-          width: "100vw",
-          height: "100vh",
-          left: 0,
-          top: 0,
-        }}
-      >
-        <Flex
+      <Flex sx={{ flexDirection: "column" }}>
+        <Box
           sx={{
-            width: "100%",
-            height: "100%",
-            justifyItems: "center",
-            justifyContent: "center",
+            width: "50vw",
+            height: "100vh",
           }}
         >
-          {/* <img src={FullLogo} width={900} /> */}
-          <Logo />
-        </Flex>
-      </Box>
+          <Flex
+            sx={{
+              left: 0,
+              top: 0,
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              justifyItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img src={FullLogo} width={900} />
+            {/* <Logo /> */}
+          </Flex>
+        </Box>
+        <Box as="section" id="about" my={6}>
+          <Box>
+            <Text>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean. A small river named Duden flows by their
+              place and supplies it with the necessary regelialia.
+            </Text>
+          </Box>
+          <Box>
+            <Text>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean. A small river named Duden flows by their
+              place and supplies it with the necessary regelialia.
+            </Text>
+          </Box>
+          <Box>
+            <Text>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean. A small river named Duden flows by their
+              place and supplies it with the necessary regelialia.
+            </Text>
+          </Box>
+          <Box>
+            <Text>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean. A small river named Duden flows by their
+              place and supplies it with the necessary regelialia.
+            </Text>
+          </Box>
+          
+        </Box>
+      </Flex>
     </Layout>
   )
 }
