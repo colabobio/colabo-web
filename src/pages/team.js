@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
-import { Box, Heading, Flex } from "@theme-ui/components"
-import { DialogContent, DialogOverlay } from "@reach/dialog"
+import { Box, Heading, Flex, Close } from "@theme-ui/components"
+import { DialogContent, DialogOverlay, VisuallyHidden } from "@reach/dialog"
 import "@reach/dialog/styles.css"
 
 import Layout from "../components/layout"
@@ -78,9 +78,16 @@ const Member = ({ member }) => {
       <DialogOverlay
         isOpen={showDialog}
         onDismiss={close}
-        style={{ background: "hsla(0, 0, 0, 1)", zIndex: 20 }}
+        style={{ background: "none", zIndex: 20 }}
       >
-        <DialogContent>
+        <DialogContent
+          style={{ border: "1px solid #000", position: "relative" }}
+          aria-label={`${member.name} description`}
+        >
+          <Box sx={{ position: "absolute", right: 15, top: 15 }}>
+            <Close onClick={close} />
+          </Box>
+
           <Heading as="h3" mb={4} sx={{ textAlign: "left" }}>
             {member.name}
           </Heading>
