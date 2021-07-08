@@ -28,7 +28,7 @@ const Notebook = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Notebook" />
       <Flex sx={{ flexDirection: "column" }} mt={5}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

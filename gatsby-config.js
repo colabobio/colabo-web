@@ -1,15 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Colabo`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Carlos Cruz`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `Web page of the Colubri lab in the BIB program at the University of Massachusetts Medical School`,
+    siteUrl: `https://co-labo.org/`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -58,7 +54,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    { resolve: `gatsby-plugin-sharp`, options: { icon: "./" } },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -126,7 +122,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/colabo-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

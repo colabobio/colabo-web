@@ -88,7 +88,7 @@ const NavBar = () => (
       </Link>
     </Box>
     <Box px={4} py={2}>
-      <ThemeSelector />
+      {/* <ThemeSelector /> */}
     </Box>
   </Flex>
 )

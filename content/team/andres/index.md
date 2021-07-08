@@ -1,6 +1,5 @@
 ---
 name: Andres Colubri
-description: "Hello World"
 category: member
 avatar: ./andres.png
 ---
