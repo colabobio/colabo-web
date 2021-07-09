@@ -12,11 +12,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         allFile(
-          filter: { sourceInstanceName: { eq: "notebook" }, ext: { eq: ".md" } }
+          filter: { ext: { eq: ".md" } }
           sort: { fields: childMarkdownRemark___frontmatter___date, order: ASC }
           limit: 1000
         ) {
           nodes {
+            sourceInstanceName
             childMarkdownRemark {
               id
               fields {
@@ -37,11 +38,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allFile.nodes.map(post => {
+  const mdPages = result.data.allFile.nodes.map(page => {
+    const instance = page.sourceInstanceName
+    const pageSlug = page.childMarkdownRemark.fields.slug
     return {
-      id: post.childMarkdownRemark.id,
+      id: page.childMarkdownRemark.id,
       fields: {
-        slug: `/notebook${post.childMarkdownRemark.fields.slug}`,
+        slug: `/${instance}${pageSlug}`,
       },
     }
   })
@@ -50,16 +53,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+  if (mdPages.length > 0) {
+    mdPages.forEach((page, index) => {
+      const previousPostId = index === 0 ? null : mdPages[index - 1].id
+      const nextPostId =
+        index === mdPages.length - 1 ? null : mdPages[index + 1].id
 
       createPage({
-        path: post.fields.slug,
+        path: page.fields.slug,
         component: blogPost,
         context: {
-          id: post.id,
+          id: page.id,
           previousPostId,
           nextPostId,
         },

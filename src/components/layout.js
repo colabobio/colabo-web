@@ -27,12 +27,12 @@ const navItemStyle = {
 
 const colors = [
   "default",
-  "red",
-  "yellow",
-  "green",
-  "lightblue",
-  "pink",
-  "purple",
+  // "red",
+  // "yellow",
+  // "green",
+  // "lightblue",
+  // "pink",
+  // "purple",
 ]
 
 const NavBar = () => (
