@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Box, Heading, Flex, Close } from "@theme-ui/components"
-import { DialogContent, DialogOverlay, VisuallyHidden } from "@reach/dialog"
+import { DialogContent, DialogOverlay } from "@reach/dialog"
 import "@reach/dialog/styles.css"
 
 import Layout from "../components/layout"

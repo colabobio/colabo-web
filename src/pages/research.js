@@ -3,15 +3,13 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Link from "../components/link"
+import Accordion from "../components/accordion"
 
-import { Box, Heading, Flex } from "@theme-ui/components"
-
+import { Box, Flex } from "@theme-ui/components"
 
 const Research = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const allResearch = data.allFile.nodes.map(post => post.childMarkdownRemark)
-
   if (allResearch.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -25,29 +23,28 @@ const Research = ({ data, location }) => {
     )
   }
 
+  const parsedResearch = allResearch.map((research, index) => {
+    const title = research.frontmatter.title || research.fields.slug
+    const icon = research.frontmatter.icon.childImageSharp.fluid
+    const content = research.frontmatter.description
+    const slug = research.fields.slug
+    const itemLink = `/research${research.fields.slug}`
+    return { index, title, icon, content, slug, itemLink }
+  })
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Research" />
       <Box mt={5}>
-        <Heading>Research</Heading>
-        <Flex sx={{ flexDirection: "column" }} mt={5}>
-          {allResearch.map(research => {
-            const title = research.frontmatter.title || research.fields.slug
-
-            return (
-              <Box key={research.fields.slug} mb={6}>
-                <article
-                  className="post-list-item"
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
-                  <Link to={"/research" + research.fields.slug}>
-                    <Heading>{title}</Heading>
-                  </Link>
-                </article>
-              </Box>
-            )
-          })}
+        <Flex
+          sx={{
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+          mt={5}
+        >
+          <Accordion defaultIndex="1" data={parsedResearch} />
         </Flex>
       </Box>
     </Layout>
@@ -76,6 +73,13 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
+            icon {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

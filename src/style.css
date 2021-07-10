@@ -1,3 +1,11 @@
 html {
   transition: background 500ms ease;
 }
+
+.accordion-item.collapsed {
+  display: none;
+}
+
+.accordion-item.expanded {
+  display: block;
+}

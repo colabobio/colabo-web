@@ -1,5 +1,10 @@
 const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  buttons: {
+    menu: {
+      
+    },
+  },
   fonts: {
     body: "Inter, sans-serif",
     heading: "inherit",
@@ -34,8 +39,8 @@ const theme = {
     heading: {
       textAlign: "center",
       fontWeight: "body",
-      fontSize: 5
-    }
+      fontSize: 5,
+    },
   },
   styles: {
     root: {

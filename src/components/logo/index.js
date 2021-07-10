@@ -2,7 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 
 import "./styles.css"
-const transition = { duration: 20, loop: Infinity, ease: "easeInOut" }
+// const transition = { duration: 20, loop: Infinity, ease: "easeInOut" }
 
 function LetterC() {
   return (

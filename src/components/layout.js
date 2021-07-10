@@ -1,7 +1,6 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
-import { Flex, Box, useColorMode } from "theme-ui"
-
+import { Flex, Box, useColorMode, MenuButton } from "theme-ui"
 import Logo from "../images/colabo-small-logo.svg"
 
 const navItemActiveStyle = {
@@ -27,73 +26,111 @@ const navItemStyle = {
 
 const colors = [
   "default",
-  // "red",
-  // "yellow",
-  // "green",
-  // "lightblue",
-  // "pink",
-  // "purple",
+  "red",
+  "yellow",
+  "green",
+  "lightblue",
+  "pink",
+  "purple",
 ]
 
-const NavBar = () => (
-  <Flex as="nav" sx={{ flexDirection: "column" }}>
-    <Box px={4} py={2} marginTop={3}>
-      <Link to="/" style={navItemStyle}>
-        <img src={Logo} width={125} quality={95} alt="A colabo logo" />
-      </Link>
-    </Box>
-    <Box px={4} py={2}>
-      <Link to="/" activeStyle={navItemActiveStyle} style={navItemStyle}>
-        ABOUT
-      </Link>
-    </Box>
-    <Box px={4} py={2}>
-      <Link
-        activeStyle={navItemActiveStyle}
-        style={navItemStyle}
-        to="/team"
-        partiallyActive={true}
+const NavBar = () => {
+  const [navOpen, setNavOpen] = useState(false)
+  return (
+    <>
+      <Box mt={4} ml={4} sx={{ display: ["block", "none"], zIndex: 10 }}>
+        <MenuButton
+          // sx={{ width: "60px", height: "60px" }}
+          aria-label="Toggle Menu"
+          onClick={() => setNavOpen(true)}
+        />
+      </Box>
+      <Box
+        sx={theme => ({
+          zIndex: 10,
+          maxHeight: ["none", "calc(100vh - 64px)"],
+          minHeight: ["100vh", "none"],
+          position: ["absolute", "sticky"],
+          background: theme.rawColors.background,
+          top: 0,
+          height: ["100%", "auto"],
+          width: ["100%", "auto"],
+          bottom: "auto",
+          overflowX: ["hidden", "visible"],
+          overflowY: ["hidden", "visible"],
+          flex: "none",
+          display: [navOpen ? "flex" : "none", "flex"],
+          transition: "background 500ms ease",
+        })}
       >
-        TEAM
-      </Link>
-    </Box>
-    <Box px={4} py={2}>
-      <Link
-        activeStyle={navItemActiveStyle}
-        style={navItemStyle}
-        to="/research"
-        partiallyActive={true}
-      >
-        RESEARCH
-      </Link>
-    </Box>
-    <Box px={4} py={2}>
-      <Link
-        activeStyle={navItemActiveStyle}
-        style={navItemStyle}
-        to="/contact"
-        partiallyActive={true}
-      >
-        CONTACT
-      </Link>
-    </Box>
-    <Box px={4} py={2}>
-      <Link
-        activeStyle={navItemActiveStyle}
-        style={navItemStyle}
-        to="/notebook"
-        partiallyActive={true}
-      >
-        NOTEBOOK
-      </Link>
-    </Box>
-    <Box px={4} py={2}>
-      {/* <ThemeSelector /> */}
-    </Box>
-  </Flex>
-)
+        <Box
+          as="nav"
+          sx={{
+            flexDirection: "column",
+            width: ["100%", "auto"],
+            textAlign: ["center", "left"],
+          }}
+        >
+          <Box px={4} py={2} sx={{ marginBottom: [4, 0], marginTop: [5, 3] }}>
+            <Link to="/" style={navItemStyle}>
+              <img src={Logo} width={125} quality={95} alt="A colabo logo" />
+            </Link>
+          </Box>
+          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+            <Link to="/" activeStyle={navItemActiveStyle} style={navItemStyle}>
+              ABOUT
+            </Link>
+          </Box>
+          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+            <Link
+              activeStyle={navItemActiveStyle}
+              style={navItemStyle}
+              to="/team"
+              partiallyActive={true}
+            >
+              TEAM
+            </Link>
+          </Box>
+          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+            <Link
+              activeStyle={navItemActiveStyle}
+              style={navItemStyle}
+              to="/research"
+              partiallyActive={true}
+            >
+              RESEARCH
+            </Link>
+          </Box>
+          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+            <Link
+              activeStyle={navItemActiveStyle}
+              style={navItemStyle}
+              to="/contact"
+              partiallyActive={true}
+            >
+              CONTACT
+            </Link>
+          </Box>
+          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+            <Link
+              activeStyle={navItemActiveStyle}
+              style={navItemStyle}
+              to="/notebook"
+              partiallyActive={true}
+            >
+              NOTEBOOK
+            </Link>
+          </Box>
+          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+            {/* <ThemeSelector /> */}
+          </Box>
+        </Box>
+      </Box>
+    </>
+  )
+}
 
-const ThemeSelector = () => {
+export const ThemeSelector = () => {
   const [_colorMode, setColorMode] = useColorMode()
   const handleClick = mode => {
     setColorMode(mode)
@@ -120,10 +157,9 @@ const ThemeSelector = () => {
       ))}
     </Flex>
   )
-  // return colors.map(color => <div></div>)
 }
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   const [_colorMode, setColorMode] = useColorMode()
@@ -148,22 +184,8 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <Box className="global-wrapper" data-is-root-path={isRootPath}>
-      <Flex>
-        <Box
-          sx={{
-            zIndex: 10,
-            maxHeight: "calc(100vh - 64px)",
-            position: "sticky",
-            top: 0,
-            bottom: "auto",
-            overflowX: "visible",
-            overflowY: "auto",
-            flex: "none",
-            display: "block",
-          }}
-        >
-          <NavBar location={location.pathname} />
-        </Box>
+      <Flex sx={{ flexDirection: ["column", "row"], position: "relative" }}>
+        <NavBar location={location.pathname} />
         <Box
           as="main"
           sx={{
