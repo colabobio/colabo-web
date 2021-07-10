@@ -17,7 +17,7 @@ const Home = ({ data, location }) => {
       <Flex sx={{ flexDirection: "column" }}>
         <Flex
           sx={{
-            height: "100vh",
+            height: ["calc(100vh - 10em)", "100vh"],
             width: "100%",
             justifyItems: "center",
             justifyContent: "center",
