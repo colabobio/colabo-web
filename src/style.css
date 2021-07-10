@@ -9,3 +9,9 @@ html {
 .accordion-item.expanded {
   display: block;
 }
+
+@media only screen and (max-width: 600px) {
+  .dialog-content {
+    width: 95vw !important;
+  }
+}

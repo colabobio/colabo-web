@@ -81,7 +81,8 @@ const Member = ({ member }) => {
         style={{ background: "none", zIndex: 20 }}
       >
         <DialogContent
-          style={{ border: "1px solid #000", position: "relative" }}
+          className="dialog-content"
+          style={{ border: "1px solid #000", position: "relative", }}
           aria-label={`${member.name} description`}
         >
           <Box sx={{ position: "absolute", right: 15, top: 15 }}>
