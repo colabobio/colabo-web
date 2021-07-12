@@ -8,14 +8,19 @@ import Seo from "../components/seo"
 
 import { Flex, Box, Heading } from "@theme-ui/components"
 
+const mediumBaseURL = "https://colabobio.medium.com/"
+
+const linkStyle = { textDecoration: "none", color: "inherit" }
+
 const Notebook = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allFile.nodes.map(post => post.childMarkdownRemark)
+  const mediumPosts = data.allMediumPost.nodes
 
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="Notebook" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -29,7 +34,34 @@ const Notebook = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Notebook" />
+
       <Flex sx={{ flexDirection: "column" }} mt={5}>
+        <Heading mb={5}>Medium notes</Heading>
+        {mediumPosts.map(post => {
+          const title = post.title
+          const uniqueRef = post.uniqueSlug
+          return (
+            <Box key={uniqueRef} mb={6}>
+              <article
+                className="post-list-item"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <a
+                  style={linkStyle}
+                  target="_blank"
+                  href={mediumBaseURL + uniqueRef}
+                >
+                  <Heading>{title}</Heading>
+                </a>
+              </article>
+            </Box>
+          )
+        })}
+      </Flex>
+
+      <Flex sx={{ flexDirection: "column" }} mt={5}>
+        <Heading mb={5}>Colabo notes</Heading>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
@@ -59,6 +91,19 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allMediumPost {
+      nodes {
+        author {
+          name
+        }
+        content {
+          subtitle
+        }
+        createdAt
+        title
+        uniqueSlug
       }
     }
 
