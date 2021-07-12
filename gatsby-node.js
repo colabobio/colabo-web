@@ -5,14 +5,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const notebookView = path.resolve(`./src/templates/notebook.js`)
+  const researchView = path.resolve(`./src/templates/research.js`)
+
+  const generatePages = ({ pages, template }) => {
+    pages.forEach((page, index) => {
+      const previousPostId = index === 0 ? null : pages[index - 1].id
+      const nextPostId = index === pages.length - 1 ? null : pages[index + 1].id
+      createPage({
+        path: page.fields.slug,
+        component: template,
+        context: {
+          id: page.id,
+          previousPostId,
+          nextPostId,
+        },
+      })
+    })
+  }
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
       {
         allFile(
-          filter: { ext: { eq: ".md" } }
+          filter: {
+            ext: { eq: ".md" }
+            sourceInstanceName: { in: ["research", "notebook"] }
+          }
           sort: { fields: childMarkdownRemark___frontmatter___date, order: ASC }
           limit: 1000
         ) {
@@ -38,37 +58,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const mdPages = result.data.allFile.nodes.map(page => {
+  const nodes = [...result.data.allFile.nodes]
+
+  const mdPages = nodes.map(page => {
     const instance = page.sourceInstanceName
     const pageSlug = page.childMarkdownRemark.fields.slug
+    const path = `/${instance}${pageSlug}`
     return {
       id: page.childMarkdownRemark.id,
+      instance,
+      path,
       fields: {
-        slug: `/${instance}${pageSlug}`,
+        slug: path,
       },
     }
   })
 
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
+  const researchPages = mdPages.filter(x => x.instance === "research")
+  const notebookPages = mdPages.filter(x => x.instance === "notebook")
 
-  if (mdPages.length > 0) {
-    mdPages.forEach((page, index) => {
-      const previousPostId = index === 0 ? null : mdPages[index - 1].id
-      const nextPostId =
-        index === mdPages.length - 1 ? null : mdPages[index + 1].id
-
-      createPage({
-        path: page.fields.slug,
-        component: blogPost,
-        context: {
-          id: page.id,
-          previousPostId,
-          nextPostId,
-        },
-      })
-    })
+  // Create research pages
+  if (researchPages.length > 0) {
+    generatePages({ pages: researchPages, template: researchView })
+  }
+  if (notebookPages.length > 0) {
+    generatePages({ pages: notebookPages, template: notebookView })
   }
 }
 
