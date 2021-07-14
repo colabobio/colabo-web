@@ -6,7 +6,6 @@ import "@reach/dialog/styles.css"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
 import Image from "../components/image"
 
 import { groupBy } from "../utils"
@@ -72,8 +71,18 @@ const Member = ({ member }) => {
   }
   return (
     <Box margin={2} sx={{ cursor: "pointer" }}>
-      <Box onClick={open} sx={{ width: "220px", margin: "0 auto" }}>
+      <Box
+        onClick={open}
+        className="member-card"
+        sx={{
+          width: "220px",
+          margin: "0 auto",
+        }}
+      >
         <Image fluidPath={member.avatar.childImageSharp.fluid} />
+        <Box className="member-name">
+          {member.name}
+        </Box>
       </Box>
       <DialogOverlay
         isOpen={showDialog}
@@ -82,7 +91,7 @@ const Member = ({ member }) => {
       >
         <DialogContent
           className="dialog-content"
-          style={{ border: "1px solid #000", position: "relative", }}
+          style={{ border: "1px solid #000", position: "relative" }}
           aria-label={`${member.name} description`}
         >
           <Box sx={{ position: "absolute", right: 15, top: 15 }}>
@@ -124,7 +133,7 @@ export const pageQuery = graphql`
 
     allFile(
       filter: { sourceInstanceName: { eq: "team" }, extension: { eq: "md" } }
-      sort: { fields: sourceInstanceName }
+      sort: { fields: childrenMarkdownRemark___frontmatter___order, order: ASC }
     ) {
       nodes {
         childMarkdownRemark {

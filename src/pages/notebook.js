@@ -1,15 +1,13 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Flex, Box, Heading } from "@theme-ui/components"
 
 import Link from "../components/link"
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import { Flex, Box, Heading } from "@theme-ui/components"
-
+// HELPERS
 const mediumBaseURL = "https://colabobio.medium.com/"
-
 const linkStyle = { textDecoration: "none", color: "inherit" }
 
 const Notebook = ({ data, location }) => {
@@ -17,15 +15,12 @@ const Notebook = ({ data, location }) => {
   const posts = data.allFile.nodes.map(post => post.childMarkdownRemark)
   const mediumPosts = data.allMediumPost.nodes
 
-  if (posts.length === 0) {
+  if (posts.length === 0 && mediumPosts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
         <Seo title="Notebook" />
-        <Bio />
         <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          No blog posts found. Add markdown posts to "content/notebook".
         </p>
       </Layout>
     )
@@ -50,6 +45,7 @@ const Notebook = ({ data, location }) => {
                 <a
                   style={linkStyle}
                   target="_blank"
+                  rel="noreferrer"
                   href={mediumBaseURL + uniqueRef}
                 >
                   <Heading>{title}</Heading>

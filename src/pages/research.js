@@ -1,29 +1,13 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Box, Flex } from "@theme-ui/components"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Accordion from "../components/accordion"
 
-import { Box, Flex } from "@theme-ui/components"
-
-const Research = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const allResearch = data.allFile.nodes.map(post => post.childMarkdownRemark)
-  if (allResearch.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
-  const parsedResearch = allResearch.map((research, index) => {
+const researchParser = (files = []) =>
+  files.map((research, index) => {
     const title = research.frontmatter.title || research.fields.slug
     const icon = research.frontmatter.icon.childImageSharp.fluid
     const content = research.frontmatter.description
@@ -31,6 +15,22 @@ const Research = ({ data, location }) => {
     const itemLink = `/research${research.fields.slug}`
     return { index, title, icon, content, slug, itemLink }
   })
+
+const Research = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const allResearchFiles = data.allFile.nodes.map(
+    post => post.childMarkdownRemark
+  )
+  if (allResearchFiles.length === 0) {
+    return (
+      <Layout location={location} title={siteTitle}>
+        <Seo title="Research" />
+        <p>No blog posts found. Add markdown posts to "content/research".</p>
+      </Layout>
+    )
+  }
+
+  const researchs = researchParser(allResearchFiles)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -44,7 +44,7 @@ const Research = ({ data, location }) => {
           }}
           mt={5}
         >
-          <Accordion defaultIndex="1" data={parsedResearch} />
+          <Accordion defaultIndex="1" data={researchs} />
         </Flex>
       </Box>
     </Layout>
@@ -63,6 +63,7 @@ export const pageQuery = graphql`
 
     allFile(
       filter: { sourceInstanceName: { eq: "research" }, ext: { eq: ".md" } }
+      sort: { fields: childrenMarkdownRemark___frontmatter___order, order: ASC }
     ) {
       nodes {
         childMarkdownRemark {

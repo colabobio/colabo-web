@@ -40,7 +40,6 @@ const NavBar = () => {
     <>
       <Box mt={4} ml={4} sx={{ display: ["block", "none"], zIndex: 10 }}>
         <MenuButton
-          // sx={{ width: "60px", height: "60px" }}
           aria-label="Toggle Menu"
           onClick={() => setNavOpen(true)}
         />
@@ -51,7 +50,7 @@ const NavBar = () => {
           maxHeight: ["none", "calc(100vh - 64px)"],
           minHeight: ["100vh", "none"],
           position: ["absolute", "sticky"],
-          background: theme.rawColors.background,
+          background: [theme.rawColors.background, 'transparent'],
           top: 0,
           height: ["100%", "auto"],
           width: ["100%", "auto"],

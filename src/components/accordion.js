@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import { Box, Heading, Flex } from "@theme-ui/components"
+
 import Image from "./image"
 
 const linkStyle = {
@@ -9,7 +9,6 @@ const linkStyle = {
   color: "inherit",
 }
 export const AccordionItem = ({
-  label,
   isCollapsed,
   handleClick,
   title,
