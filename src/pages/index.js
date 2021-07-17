@@ -1,6 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { Box, Flex, Paragraph } from "@theme-ui/components"
+import Lottie from "lottie-react-web"
+import animation from "../components/logo/logo-animation.json"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -24,10 +26,16 @@ const Home = ({ data, location }) => {
             alignItems: "center",
           }}
         >
-          <Box sx={{ width: ["400px", "900px"] }}>
+          {/* <Box sx={{ width: ["400px", "900px"] }}>
             <img alt="Colabo logo" src={FullLogo} width="100%" />
-          </Box>
+          </Box> */}
           {/* <Logo /> */}
+          <Lottie
+            options={{
+              loop: false,
+              animationData: animation,
+            }}
+          />
         </Flex>
         <Box as="section" id="about" my={6}>
           <Paragraph>
