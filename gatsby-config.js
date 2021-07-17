@@ -43,9 +43,13 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-embed-video",
             options: {
-              maxWidth: 630,
+              width: 800,
+              ratio: 1.77,
+              height: 400,
+              related: false,
+              noIframeBorder: true,
             },
           },
           {
@@ -55,6 +59,12 @@ module.exports = {
             },
           },
           `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
@@ -140,6 +150,8 @@ module.exports = {
         username: `@colabobio`,
       },
     },
+
+    `gatsby-remark-responsive-iframe`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,

@@ -22,6 +22,7 @@
     "gatsby-plugin-sharp": "^3.6.0",
     "gatsby-plugin-theme-ui": "^0.10.1",
     "gatsby-remark-copy-linked-files": "^3.2.0",
+    "gatsby-remark-embed-video": "^3.1.1",
     "gatsby-remark-images": "^4.2.0",
     "gatsby-remark-prismjs": "^4.2.0",
     "gatsby-remark-responsive-iframe": "^3.2.0",
