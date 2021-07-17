@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { Flex, Box, useColorMode, MenuButton } from "theme-ui"
 import Logo from "../images/colabo-small-logo.svg"
@@ -39,10 +39,7 @@ const NavBar = () => {
   return (
     <>
       <Box mt={4} ml={4} sx={{ display: ["block", "none"], zIndex: 10 }}>
-        <MenuButton
-          aria-label="Toggle Menu"
-          onClick={() => setNavOpen(true)}
-        />
+        <MenuButton aria-label="Toggle Menu" onClick={() => setNavOpen(true)} />
       </Box>
       <Box
         sx={theme => ({
@@ -50,7 +47,7 @@ const NavBar = () => {
           maxHeight: ["none", "calc(100vh - 64px)"],
           minHeight: ["100vh", "none"],
           position: ["absolute", "sticky"],
-          background: [theme.rawColors.background, 'transparent'],
+          background: [theme.rawColors.background, "transparent"],
           top: 0,
           height: ["100%", "auto"],
           width: ["100%", "auto"],
@@ -70,17 +67,17 @@ const NavBar = () => {
             textAlign: ["center", "left"],
           }}
         >
-          <Box px={4} py={2} sx={{ marginBottom: [4, 0], marginTop: [5, 3] }}>
+          <Box px={4} pt={2} sx={{ marginBottom: [4, 0], marginTop: [5, 3] }}>
             <Link to="/" style={navItemStyle}>
               <img src={Logo} width={125} quality={95} alt="A colabo logo" />
             </Link>
           </Box>
-          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+          <Box px={4} pt={2} sx={{ marginBottom: [4, 0] }}>
             <Link to="/" activeStyle={navItemActiveStyle} style={navItemStyle}>
               ABOUT
             </Link>
           </Box>
-          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+          <Box px={4} pt={2} sx={{ marginBottom: [4, 0] }}>
             <Link
               activeStyle={navItemActiveStyle}
               style={navItemStyle}
@@ -90,7 +87,7 @@ const NavBar = () => {
               TEAM
             </Link>
           </Box>
-          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+          <Box px={4} pt={2} sx={{ marginBottom: [4, 0] }}>
             <Link
               activeStyle={navItemActiveStyle}
               style={navItemStyle}
@@ -100,7 +97,7 @@ const NavBar = () => {
               RESEARCH
             </Link>
           </Box>
-          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+          <Box px={4} pt={2} sx={{ marginBottom: [4, 0] }}>
             <Link
               activeStyle={navItemActiveStyle}
               style={navItemStyle}
@@ -110,7 +107,7 @@ const NavBar = () => {
               CONTACT
             </Link>
           </Box>
-          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+          <Box px={4} pt={2} sx={{ marginBottom: [4, 0] }}>
             <Link
               activeStyle={navItemActiveStyle}
               style={navItemStyle}
@@ -120,7 +117,7 @@ const NavBar = () => {
               NOTEBOOK
             </Link>
           </Box>
-          <Box px={4} py={2} sx={{ marginBottom: [4, 0] }}>
+          <Box px={4} pt={2} sx={{ marginBottom: [4, 0] }}>
             {/* <ThemeSelector /> */}
           </Box>
         </Box>
@@ -130,7 +127,7 @@ const NavBar = () => {
 }
 
 export const ThemeSelector = () => {
-  const [_colorMode, setColorMode] = useColorMode()
+  const setColorMode = useColorMode()[1]
   const handleClick = mode => {
     setColorMode(mode)
   }
@@ -161,25 +158,6 @@ export const ThemeSelector = () => {
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  const [_colorMode, setColorMode] = useColorMode()
-
-  useEffect(() => {
-    //   let usedThemes = []
-    //   let selectableThemes = colors
-    //   const interval = setInterval(() => {
-    //     if (selectableThemes.length === 0) {
-    //       selectableThemes = colors
-    //       usedThemes = []
-    //     }
-    //     const used = [...usedThemes, randomColor]
-    //     const selectable = selectableThemes.filter(x => used.indexOf(x) === -1)
-    //     usedThemes = used
-    //     selectableThemes = selectable
-    const randomColor = colors[Math.floor(Math.random() * colors.length)]
-    setColorMode(randomColor)
-    //   }, 10000)
-    //   return () => clearInterval(interval)
-  }, [])
 
   return (
     <Box className="global-wrapper" data-is-root-path={isRootPath}>

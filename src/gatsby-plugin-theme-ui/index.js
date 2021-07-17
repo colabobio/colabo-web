@@ -1,9 +1,7 @@
 const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   buttons: {
-    menu: {
-      
-    },
+    menu: {},
   },
   fonts: {
     body: "Inter, sans-serif",
@@ -27,12 +25,18 @@ const theme = {
     secondary: "#30c",
     muted: "#f6f6f6",
     modes: {
-      red: { background: "#DC3A59" },
-      yellow: { background: "#EDCD47" },
-      green: { background: "#9EC64E" },
-      lightblue: { background: "#70BBDC" },
-      pink: { background: "#CA8EB3" },
-      purple: { background: "#6C609B" },
+      red: { background: "#e3617a" },
+      yellow: { background: "#f0d76b" },
+      green: { background: "#b1d171" },
+      lightblue: { background: "#8cc8e3" },
+      pink: { background: "#d4a4c2" },
+      purple: { background: "#887faf" },
+      // red: { background: "#DC3A59" },
+      // yellow: { background: "#EDCD47" },
+      // green: { background: "#9EC64E" },
+      // lightblue: { background: "#70BBDC" },
+      // pink: { background: "#CA8EB3" },
+      // purple: { background: "#6C609B" },
     },
   },
   text: {

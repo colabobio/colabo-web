@@ -7,9 +7,6 @@ import animation from "../components/logo/logo-animation.json"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import FullLogo from "../images/colabo-full-logo.svg"
-// import Logo from "../components/logo"
-
 const Home = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
@@ -26,10 +23,6 @@ const Home = ({ data, location }) => {
             alignItems: "center",
           }}
         >
-          {/* <Box sx={{ width: ["400px", "900px"] }}>
-            <img alt="Colabo logo" src={FullLogo} width="100%" />
-          </Box> */}
-          {/* <Logo /> */}
           <Lottie
             options={{
               loop: false,

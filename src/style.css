@@ -1,21 +1,25 @@
+/* Global */
 html {
-  transition: background 500ms ease;
+  transition: background 500ms ease-in;
+}
+
+/* Research accordion */
+.accordion-item {
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .accordion-item.collapsed {
-  display: none;
+  max-height: 0;
+  opacity: 0;
 }
 
 .accordion-item.expanded {
-  display: block;
+  max-height: max-content;
+  opacity: 1;
 }
 
-@media only screen and (max-width: 600px) {
-  .dialog-content {
-    width: 95vw !important;
-  }
-}
-
+/* Team list */
 .member-card {
   position: relative;
 }
@@ -31,11 +35,17 @@ html {
   opacity: 0;
   background-color: #000;
   color: #fff;
-  transition:  0.5s ease;
+  transition: 0.5s ease;
   width: 100%;
   height: 100%;
 }
 
 .member-card:hover .member-name {
   opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .dialog-content {
+    width: 95vw !important;
+  }
 }

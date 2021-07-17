@@ -17,7 +17,12 @@ export const AccordionItem = ({
 }) => {
   return (
     <Box mb={6}>
-      <div className="accordion-button" onMouseEnter={handleClick}>
+      <div
+        className="accordion-button"
+        role="button"
+        tabIndex="0"
+        onMouseEnter={handleClick}
+      >
         <Box mb={4} sx={{ textAlign: "center" }}>
           <article
             className="post-list-item"
@@ -28,13 +33,13 @@ export const AccordionItem = ({
               sx={{
                 alignItems: "center",
                 justifyContent: "center",
-                flexDirection: ["column", "column", "row"],
+                flexDirection: "column",
               }}
             >
               <Box
                 sx={{
                   width: ["100px", "100px", "75px"],
-                  marginBottom: [4, 0],
+                  marginBottom: 4,
                 }}
                 mr={3}
               >
