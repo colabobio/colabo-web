@@ -133,11 +133,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Co-labo`,
+        short_name: `Co-labo`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#000`,
         display: `minimal-ui`,
         icon: `src/images/colabo-icon.png`, // This path is relative to the root of the site.
       },
@@ -150,8 +150,6 @@ module.exports = {
         username: `@colabobio`,
       },
     },
-
-    `gatsby-remark-responsive-iframe`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
