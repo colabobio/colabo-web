@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "colabo-web",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Web page page fot the CoLabo lab",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Carlos Cruz <me@carcruzcast.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/colabobio/colabo-web/"
   },
   "dependencies": {
     "@reach/dialog": "^0.15.2",
@@ -45,15 +45,16 @@
   "devDependencies": {
     "prettier": "2.2.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/colabobio/colabo-web#readme",
   "keywords": [
+    "colabo",
     "gatsby"
   ],
   "license": "0BSD",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git@github.com:colabobio/colabo-web.git"
   },
   "scripts": {
     "build": "gatsby build",
