@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { useColorMode, ThemeProvider } from "theme-ui"
+import { getRandomTimer, getRandomFromArray } from "./src/utils"
 
 // custom typefaces
 import "typeface-inter"
@@ -12,7 +13,9 @@ import theme from "./src/gatsby-plugin-theme-ui/index"
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
 
-const limit = { min: 240000, max: 360000 }
+// Theme timer limits in minutes
+const limit = { min: 0.1, max: 0.15 }
+const randomTimer = () => getRandomTimer(limit.min, limit.max)
 const colors = [
   "default",
   "red",
@@ -23,33 +26,18 @@ const colors = [
   "purple",
 ]
 
-export const wrapRootElement = ({ element }) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Wrapper>{element}</Wrapper>
-    </ThemeProvider>
-  )
-}
-
 const Wrapper = ({ children }) => {
-  const setColorMode = useColorMode()[1]
-  const randomTimer = () =>
-    Math.floor(Math.random() * (limit.max - limit.min + 1) + limit.min)
+  const [colorMode, setColorMode] = useColorMode()
 
   useEffect(() => {
-    let usedThemes = []
-    let selectableThemes = colors
+    let usedThemes = [colorMode]
     const interval = setInterval(() => {
-      if (selectableThemes.length === 0) {
-        selectableThemes = colors
+      if (usedThemes.length === colors.length) {
         usedThemes = []
       }
-      const selectable = selectableThemes.filter(x => used.indexOf(x) === -1)
-      selectableThemes = selectable
-      const randomColor =
-        selectableThemes[Math.floor(Math.random() * colors.length)]
-      const used = [...usedThemes, randomColor]
-      usedThemes = used
+      const selectable = colors.filter(x => usedThemes.indexOf(x) === -1)
+      const randomColor = getRandomFromArray(selectable)
+      usedThemes = [...usedThemes, randomColor]
       setColorMode(randomColor)
     }, randomTimer())
     return () => clearInterval(interval)
@@ -57,4 +45,12 @@ const Wrapper = ({ children }) => {
   }, [])
 
   return <div>{children}</div>
+}
+
+export const wrapRootElement = ({ element }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Wrapper>{element}</Wrapper>
+    </ThemeProvider>
+  )
 }
