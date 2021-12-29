@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { Flex, Box, useColorMode, MenuButton } from "theme-ui"
+import { Flex, Box, MenuButton } from "theme-ui"
 import Logo from "../images/colabo-small-logo.svg"
 
 const navItemActiveStyle = {
@@ -117,41 +117,9 @@ const NavBar = () => {
               NOTEBOOK
             </Link>
           </Box>
-          <Box px={4} pt={2} sx={{ marginBottom: [4, 0] }}>
-            {/* <ThemeSelector /> */}
-          </Box>
         </Box>
       </Box>
     </>
-  )
-}
-
-export const ThemeSelector = () => {
-  const setColorMode = useColorMode()[1]
-  const handleClick = mode => {
-    setColorMode(mode)
-  }
-  return (
-    <Flex>
-      {colors.map(color => (
-        <Box
-          as="span"
-          onClick={() => handleClick(color)}
-          key={color}
-          sx={{
-            width: "1em",
-            height: "1em",
-            border: "1px solid #000",
-            cursor: "pointer",
-            mr: 1,
-            background: theme => {
-              if (color === "default") return "#fff"
-              return theme.rawColors.modes[color].background
-            },
-          }}
-        />
-      ))}
-    </Flex>
   )
 }
 
