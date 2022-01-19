@@ -1,6 +1,6 @@
 ---
 name: Michael Fileto
-category: member
+category: former_student
 avatar: ./michael.png
 order: 6
 ---
