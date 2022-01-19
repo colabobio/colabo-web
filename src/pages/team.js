@@ -29,20 +29,10 @@ const Team = ({ data, location }) => {
           Lab Members & <br /> Collaborators
         </Heading>
         <Box my={5}>
-          <Heading mb={4}>Members</Heading>
+          <Heading mb={4}>Current Members</Heading>
           <MembersWrapper>
             {grupedTeam.member &&
               grupedTeam.member.map(member => (
-                <Member key={member.name} member={member} />
-              ))}
-          </MembersWrapper>
-        </Box>
-
-        <Box my={5}>
-          <Heading mb={4}>Former Students</Heading>
-          <MembersWrapper>
-            {grupedTeam.former_student &&
-              grupedTeam.former_student.map(member => (
                 <Member key={member.name} member={member} />
               ))}
           </MembersWrapper>
@@ -57,6 +47,17 @@ const Team = ({ data, location }) => {
               ))}
           </MembersWrapper>
         </Box>
+
+        <Box my={5}>
+          <Heading mb={4}>Alumni</Heading>
+          <MembersWrapper>
+            {grupedTeam.former_student &&
+              grupedTeam.former_student.map(member => (
+                <Member key={member.name} member={member} />
+              ))}
+          </MembersWrapper>
+        </Box>
+
       </Box>
     </Layout>
   )
