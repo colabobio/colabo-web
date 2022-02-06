@@ -56,7 +56,7 @@ const Notebook = ({ data, location }) => {
         })}
       </Flex>
 
-      <Flex sx={{ flexDirection: "column" }} mt={5}>
+      {/* <Flex sx={{ flexDirection: "column" }} mt={5}>
         <Heading mb={5}>Colabo notes</Heading>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -75,7 +75,8 @@ const Notebook = ({ data, location }) => {
             </Box>
           )
         })}
-      </Flex>
+      </Flex> */}
+
     </Layout>
   )
 }

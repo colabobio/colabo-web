@@ -45,14 +45,14 @@ const Research = ({ data, location }) => {
           }}
           mt={5}
         >
-          <Paragraph>
+          {/* <Paragraph>
           Our research integrates data visualization, machine learning, and digital technologies to create 
           new methods and tools to study infectios diseases, visualize complex datasets, and help with STEM 
           education. Explore the virtual space below to learn more about the projects in the lab.
 
           <iframe src="https://hubs.mozilla.com/FBhqaQK/colabo-outdoors-meeting-space/" width="100%" height="600" frameborder="0" scrolling="yes"></iframe>
 
-          </Paragraph>          
+          </Paragraph>           */}
           <Accordion defaultIndex="1" data={researchs} />
         </Flex>
       </Box>
