@@ -14,7 +14,7 @@ import theme from "./src/gatsby-plugin-theme-ui/index"
 import "prismjs/themes/prism.css"
 
 // Theme timer limits in minutes
-const limit = { min: 0.1, max: 0.15 }
+const limit = { min: 5, max: 10 }
 const randomTimer = () => getRandomTimer(limit.min, limit.max)
 const colors = [
   "default",
