@@ -32,32 +32,7 @@ const Home = ({ data, location }) => {
         </Flex>
         <Box as="section" id="about" my={6}>
           <Paragraph>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean. A small river named Duden flows by their place and
-            supplies it with the necessary regelialia.
-          </Paragraph>
-          <Paragraph>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean. A small river named Duden flows by their place and
-            supplies it with the necessary regelialia.
-          </Paragraph>
-          <Paragraph>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean. A small river named Duden flows by their place and
-            supplies it with the necessary regelialia.
-          </Paragraph>
-          <Paragraph>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean. A small river named Duden flows by their place and
-            supplies it with the necessary regelialia.
+          Welcome to the Colubri Laboratory (CoLabo) at the <a href="https://www.umassmed.edu/bioinformatics/bib-news/welcome-to-bib/">Bioinformatics and Integrative Biology program</a> at the University of Massachusetts. Our research integrates data visualization, machine learning, and mobile technologies to create new methods and tools for biomedical research, education, and outreach.
           </Paragraph>
         </Box>
       </Flex>

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Box, Flex } from "@theme-ui/components"
+import { Box, Flex, Paragraph } from "@theme-ui/components"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -35,6 +35,7 @@ const Research = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Research" />
+
       <Box mt={5}>
         <Flex
           sx={{
@@ -44,6 +45,14 @@ const Research = ({ data, location }) => {
           }}
           mt={5}
         >
+          {/* <Paragraph>
+          Our research integrates data visualization, machine learning, and digital technologies to create 
+          new methods and tools to study infectios diseases, visualize complex datasets, and help with STEM 
+          education. Explore the virtual space below to learn more about the projects in the lab.
+
+          <iframe src="https://hubs.mozilla.com/FBhqaQK/colabo-outdoors-meeting-space/" width="100%" height="600" frameborder="0" scrolling="yes"></iframe>
+
+          </Paragraph>           */}
           <Accordion defaultIndex="1" data={researchs} />
         </Flex>
       </Box>
