@@ -1,6 +1,6 @@
 ---
 name: Winnie Mkandawire
-category: former_student
+category: member
 avatar: ./winnie.png
 order: 5
 ---
