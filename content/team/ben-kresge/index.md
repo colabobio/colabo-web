@@ -1,6 +1,6 @@
 ---
 name: Ben Kresge
-category: member
+category: former_student
 avatar: ./ben.jpg
 order: 5
 ---
