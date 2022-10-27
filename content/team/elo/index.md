@@ -1,6 +1,6 @@
 ---
 name: Elo
-category: member
+category: former_student
 avatar: ./elo.jpg
 order: 5
 ---
