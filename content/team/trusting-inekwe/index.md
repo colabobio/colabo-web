@@ -1,5 +1,5 @@
 ---
-name: Trusting Okechukwu Inekwe
+name: Trusting Inekwe
 category: member
 avatar: ./trusting.png
 order: 3
