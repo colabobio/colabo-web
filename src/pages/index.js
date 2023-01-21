@@ -32,7 +32,7 @@ const Home = ({ data, location }) => {
         </Flex>
         <Box as="section" id="about" my={6}>
           <Paragraph>
-          Welcome to the Colubri Laboratory (CoLabo) at the <a href="https://www.umassmed.edu/bioinformatics/bib-news/welcome-to-bib/">Bioinformatics and Integrative Biology program</a> at the University of Massachusetts. Our research integrates data visualization, machine learning, and mobile technologies to create new methods and tools for biomedical research, education, and outreach.
+          Welcome to the Colubri Laboratory (CoLabo) at the <a href="https://www.umassmed.edu/bioinformatics/bib-news/welcome-to-bib/">Bioinformatics and Integrative Biology program</a> at the University of Massachusetts Chan Medical School. Our team brings together computational scientists, software engineers, and visual designers to develop novel methods and tools for infectious disease research. Together with our partners at the Broad Institute and the Inspire Project, we have created <a href="https://operationoutbreak.org/">Operation Outbreak</a>, the world's first real-life outbreak simulator to improve preparation and response to future pandemics. We seek collaborations at the intersection of epidemiology, genomics, machine learning, and data visualization with the goal of advancing an interdisciplinary vision of biomedical science.
           </Paragraph>
         </Box>
       </Flex>
