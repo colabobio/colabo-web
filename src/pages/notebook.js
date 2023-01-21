@@ -31,7 +31,7 @@ const Notebook = ({ data, location }) => {
       <Seo title="Notebook" />
 
       <Flex sx={{ flexDirection: "column" }} mt={5}>
-        <Heading mb={5}>Medium notes</Heading>
+        {/* <Heading mb={5}>Medium notes</Heading> */}
         {mediumPosts.map(post => {
           const title = post.title
           const uniqueRef = post.uniqueSlug
