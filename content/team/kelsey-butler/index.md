@@ -1,6 +1,6 @@
 ---
 name: Kelsey Butler
-category: member
+category: former_student
 avatar: ./kelsey.png
 order: 1
 ---
