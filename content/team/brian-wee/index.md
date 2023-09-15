@@ -1,6 +1,6 @@
----
+	---
 name: Brian Wee
-category: member
+category: former_student
 avatar: ./brian.png
 order: 5
 ---

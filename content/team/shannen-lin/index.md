@@ -1,6 +1,6 @@
 ---
 name: Shannen Lin
-category: member
+category: former_student
 avatar: ./shannen.png
 order: 4
 ---
