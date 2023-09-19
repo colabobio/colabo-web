@@ -1,4 +1,4 @@
-	---
+---
 name: Brian Wee
 category: former_student
 avatar: ./brian.png
