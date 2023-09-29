@@ -76,22 +76,10 @@ module.exports = {
       options: {
         url: `https://medium.com/feed/@colabobio`,
         name: `ColabobioBlog`,
-        // Optional
-        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
-        // parserOption: {
-        //   customFields: {
-        //     item: ["itunes:duration"],
-        //   },
-        // },
       },
     },
     { resolve: `gatsby-plugin-sharp`, options: { icon: "./" } },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+
     {
       resolve: `gatsby-plugin-feed`,
       options: {
