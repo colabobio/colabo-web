@@ -71,6 +71,20 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://medium.com/feed/@colabobio`,
+        name: `ColabobioBlog`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        // parserOption: {
+        //   customFields: {
+        //     item: ["itunes:duration"],
+        //   },
+        // },
+      },
+    },
     { resolve: `gatsby-plugin-sharp`, options: { icon: "./" } },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
@@ -144,12 +158,6 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
-    {
-      resolve: `gatsby-source-medium`,
-      options: {
-        username: `@colabobio`,
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -28,7 +28,7 @@
     "gatsby-remark-responsive-iframe": "^3.2.0",
     "gatsby-remark-smartypants": "^3.2.0",
     "gatsby-source-filesystem": "^3.6.0",
-    "gatsby-source-medium": "^3.9.0",
+    "gatsby-source-rss-feed": "^1.2.2",
     "gatsby-transformer-remark": "^4.5.0",
     "gatsby-transformer-sharp": "^3.6.0",
     "lottie-react-web": "^2.2.2",

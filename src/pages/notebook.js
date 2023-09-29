@@ -2,26 +2,22 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { Flex, Box, Heading } from "@theme-ui/components"
 
-import Link from "../components/link"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 // HELPERS
-const mediumBaseURL = "https://colabobio.medium.com/"
 const linkStyle = { textDecoration: "none", color: "inherit" }
 
 const Notebook = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allFile.nodes.map(post => post.childMarkdownRemark)
-  const mediumPosts = data.allMediumPost.nodes
+  const mediumPosts = data.allFeedColabobioBlog.nodes
 
   if (posts.length === 0 && mediumPosts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
         <Seo title="Notebook" />
-        <p>
-          No blog posts found. Add markdown posts to "content/notebook".
-        </p>
+        <p>No blog posts found. Add markdown posts to "content/notebook".</p>
       </Layout>
     )
   }
@@ -31,10 +27,9 @@ const Notebook = ({ data, location }) => {
       <Seo title="Notebook" />
 
       <Flex sx={{ flexDirection: "column" }} mt={5}>
-        {/* <Heading mb={5}>Medium notes</Heading> */}
         {mediumPosts.map(post => {
           const title = post.title
-          const uniqueRef = post.uniqueSlug
+          const uniqueRef = post.link
           return (
             <Box key={uniqueRef} mb={6}>
               <article
@@ -46,37 +41,15 @@ const Notebook = ({ data, location }) => {
                   style={linkStyle}
                   target="_blank"
                   rel="noreferrer"
-                  href={mediumBaseURL + uniqueRef}
+                  href={uniqueRef}
                 >
-                  <Heading>{title}</Heading>
+                  <Heading as="h6">{title}</Heading>
                 </a>
               </article>
             </Box>
           )
         })}
       </Flex>
-
-      {/* <Flex sx={{ flexDirection: "column" }} mt={5}>
-        <Heading mb={5}>Colabo notes</Heading>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
-          return (
-            <Box key={post.fields.slug} mb={6}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <Link to={"/notebook" + post.fields.slug}>
-                  <Heading>{title}</Heading>
-                </Link>
-              </article>
-            </Box>
-          )
-        })}
-      </Flex> */}
-
     </Layout>
   )
 }
@@ -90,17 +63,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMediumPost {
+    allFeedColabobioBlog {
       nodes {
-        author {
-          name
-        }
-        content {
-          subtitle
-        }
-        createdAt
+        link
         title
-        uniqueSlug
       }
     }
 

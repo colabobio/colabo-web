@@ -57,7 +57,6 @@ const Team = ({ data, location }) => {
               ))}
           </MembersWrapper>
         </Box>
-
       </Box>
     </Layout>
   )
@@ -81,14 +80,12 @@ const Member = ({ member }) => {
         }}
       >
         <Image fluidPath={member.avatar.childImageSharp.fluid} />
-        <Box className="member-name">
-          {member.name}
-        </Box>
+        <Box className="member-name">{member.name}</Box>
       </Box>
       <DialogOverlay
         isOpen={showDialog}
         onDismiss={close}
-        style={{ background: "none", zIndex: 20 }}
+        style={{ zIndex: 20 }}
       >
         <DialogContent
           className="dialog-content"
