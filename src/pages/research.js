@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Box, Flex, Paragraph } from "@theme-ui/components"
+import { Box, Flex } from "@theme-ui/components"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"

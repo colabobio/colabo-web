@@ -24,16 +24,6 @@ const navItemStyle = {
   },
 }
 
-const colors = [
-  "default",
-  "red",
-  "yellow",
-  "green",
-  "lightblue",
-  "pink",
-  "purple",
-]
-
 const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false)
   return (

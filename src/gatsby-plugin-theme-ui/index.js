@@ -31,12 +31,6 @@ const theme = {
       lightblue: { background: "#8cc8e3" },
       pink: { background: "#d4a4c2" },
       purple: { background: "#887faf" },
-      // red: { background: "#DC3A59" },
-      // yellow: { background: "#EDCD47" },
-      // green: { background: "#9EC64E" },
-      // lightblue: { background: "#70BBDC" },
-      // pink: { background: "#CA8EB3" },
-      // purple: { background: "#6C609B" },
     },
   },
   text: {
