@@ -21,6 +21,8 @@ const Team = ({ data, location }) => {
 
   const grupedTeam = groupBy(team, "category")
   const members = getShuffleVersion(grupedTeam.member)
+  const collaborators = getShuffleVersion(grupedTeam.collaborator)
+  const alumnis = getShuffleVersion(grupedTeam.former_student)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -42,8 +44,8 @@ const Team = ({ data, location }) => {
         <Box my={5}>
           <Heading mb={4}>Collaborators</Heading>
           <MembersWrapper>
-            {grupedTeam.collaborator &&
-              grupedTeam.collaborator.map(member => (
+            {collaborators &&
+              collaborators.map(member => (
                 <Member key={member.name} member={member} />
               ))}
           </MembersWrapper>
@@ -52,8 +54,8 @@ const Team = ({ data, location }) => {
         <Box my={5}>
           <Heading mb={4}>Alumni</Heading>
           <MembersWrapper>
-            {grupedTeam.former_student &&
-              grupedTeam.former_student.map(member => (
+            {alumnis &&
+              alumnis.map(member => (
                 <Member key={member.name} member={member} />
               ))}
           </MembersWrapper>
