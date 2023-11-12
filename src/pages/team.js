@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Image from "../components/image"
 
-import { groupBy } from "../utils"
+import { groupBy, getShuffleVersion } from "../utils"
 
 const Team = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -20,6 +20,9 @@ const Team = ({ data, location }) => {
   })
 
   const grupedTeam = groupBy(team, "category")
+  const members = getShuffleVersion(grupedTeam.member)
+  const collaborators = getShuffleVersion(grupedTeam.collaborator)
+  const alumnis = getShuffleVersion(grupedTeam.former_student)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -31,8 +34,8 @@ const Team = ({ data, location }) => {
         <Box my={5}>
           <Heading mb={4}>Current Members</Heading>
           <MembersWrapper>
-            {grupedTeam.member &&
-              grupedTeam.member.map(member => (
+            {members &&
+              members.map(member => (
                 <Member key={member.name} member={member} />
               ))}
           </MembersWrapper>
@@ -41,8 +44,8 @@ const Team = ({ data, location }) => {
         <Box my={5}>
           <Heading mb={4}>Collaborators</Heading>
           <MembersWrapper>
-            {grupedTeam.collaborator &&
-              grupedTeam.collaborator.map(member => (
+            {collaborators &&
+              collaborators.map(member => (
                 <Member key={member.name} member={member} />
               ))}
           </MembersWrapper>
@@ -51,8 +54,8 @@ const Team = ({ data, location }) => {
         <Box my={5}>
           <Heading mb={4}>Alumni</Heading>
           <MembersWrapper>
-            {grupedTeam.former_student &&
-              grupedTeam.former_student.map(member => (
+            {alumnis &&
+              alumnis.map(member => (
                 <Member key={member.name} member={member} />
               ))}
           </MembersWrapper>
