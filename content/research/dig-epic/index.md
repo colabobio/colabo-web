@@ -74,7 +74,7 @@ A famous example of an (unintended) simulated outbreak in a virtual environment 
 
 ![Corrupted Blood outbreak in WoW multiplayer game](./corrupted-blood.jpeg)
 
-Back in the 1990s, work at the MIT Media Lab on [participatory simulations](https://web.archive.org/web/20220707133503/http://alumni.media.mit.edu/~vanessa/part-sims/) using simple wearable devices called Thinking Tags demonstrated the application of proximity sensing to simulate virtual outbreaks in the physical world ([Resnick, 1998](https://web.media.mit.edu/~mres/papers/lifelongk/lifelongk.pdf), [Colella, 1998](https://dspace.mit.edu/bitstream/handle/1721.1/61099/39926882-MIT.pdf)). These simulations were ported over to Palm pilot devices, representing a direct predecessor to our Operation Outbreak project:
+Back in the 1990s, work at the MIT Media Lab on [participatory simulations](https://web.archive.org/web/20220707133503/http://alumni.media.mit.edu/~vanessa/part-sims/) using simple wearable devices called Thinking Tags demonstrated the application of proximity sensing to simulate virtual outbreaks in the physical world ([Borovoy et al., 1996](https://web.archive.org/web/20100718171854id_/http://alumni.media.mit.edu/~dmerrill/badge/borovoy.pdf), [Resnick, 1998](https://web.media.mit.edu/~mres/papers/lifelongk/lifelongk.pdf), [Colella, 1998](https://dspace.mit.edu/bitstream/handle/1721.1/61099/39926882-MIT.pdf)). These simulations were ported over to Palm pilot devices, representing a direct predecessor to our Operation Outbreak project:
 
 ![Corrupted Blood outbreak in WoW multiplayer game](./virus-palm.jpeg)
 
