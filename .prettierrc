@@ -1,4 +1,10 @@
 {
-  "arrowParens": "avoid",
-  "semi": false
+	"trailingComma": "all",
+	"tabWidth": 2,
+	"useTabs": true,
+	"semi": true,
+	"singleQuote": true,
+	"endOfLine": "auto",
+	"bracketSpacing": true,
+	"pugWrapAttributesThreshold": 1
 }

@@ -1,0 +1,29 @@
+@import '@styles/helpers/helpers-all.scss';
+@import '../../news-feed-variables.scss';
+
+.list {
+	display: flex;
+	flex-wrap: nowrap;
+
+	flex-shrink: 0;
+	gap: $gap;
+
+	max-width: 100%;
+
+	animation: marquee infinite linear var(--animation-duration);
+	will-change: transform;
+}
+
+.item {
+	flex-shrink: 0;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}

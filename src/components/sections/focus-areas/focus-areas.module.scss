@@ -1,0 +1,19 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.title {
+	@include h4;
+
+	letter-spacing: -0.01em;
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+
+	@include bp($tablet_max, min) {
+		padding-left: 3rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		padding-left: 2rem;
+	}
+}

@@ -1,0 +1,49 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.section {
+	@include bp($tablet_max, min) {
+		padding-bottom: 0;
+	}
+
+	@include bp($tablet_max - 1) {
+		padding-bottom: 3.2rem;
+	}
+}
+
+.imageW {
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	aspect-ratio: 75.3 / 15.8;
+
+	&:not(:last-child) {
+		margin-bottom: 3.6rem;
+	}
+}
+
+.text {
+	font-family: $font_base;
+	font-weight: 500;
+	letter-spacing: -0.03em;
+	text-align: justify;
+
+	@include bp($tablet_max, min) {
+		font-size: 2.85rem;
+		line-height: 1.3;
+	}
+
+	@include bp($tablet_max - 1) {
+		font-size: 1.8rem;
+		line-height: 1.28;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.footer {
+	position: relative;
+	z-index: 10;
+	padding: 1rem 3rem;
+
+	border-top: 1px solid var(--dark);
+	background-color: var(--light);
+}
+
+.footerIn {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.link {
+	font-size: 1.4rem;
+	line-height: 1.4;
+	letter-spacing: -0.02em;
+	text-decoration: underline;
+	color: inherit;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+.info {
+	font-size: 1.4rem;
+	line-height: 1.4;
+	letter-spacing: -0.02em;
+
+	@include bp('393px', min) {
+		margin-left: auto;
+	}
+}

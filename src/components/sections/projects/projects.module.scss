@@ -1,0 +1,55 @@
+@import '@styles/helpers/helpers-all.scss';
+@import './project-variables.scss';
+
+.section {
+	padding: 0;
+
+	background-color: var(--light);
+
+	@include bp($tablet_max, min) {
+		max-height: calc(100vh - var(--height-header) - var(--height-footer));
+	}
+
+	@include bp($tablet_max - 1) {
+		min-height: calc(100vh - var(--height-header));
+	}
+}
+
+.label {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+
+	color: var(--light);
+
+	@include bp($tablet_max, min) {
+		top: 9rem;
+
+		width: 52.4rem;
+		height: 16rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		top: 2.4rem;
+
+		width: 100%;
+		height: 11rem;
+		padding: 0 1.8rem;
+	}
+}
+
+div.swiper {
+	position: relative;
+	z-index: 2;
+
+	@include bp($tablet_max, min) {
+		height: calc(100vh - var(--height-header));
+	}
+}
+
+div.item {
+	@include bp($tablet_max, min) {
+		height: auto;
+	}
+}

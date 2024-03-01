@@ -1,0 +1,25 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.notes {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.notesItem {
+	@include bp($tablet_min, min) {
+		aspect-ratio: 1 / 1;
+	}
+
+	@include bp($tablet_max, min) {
+		width: 33.3333%;
+	}
+
+	@include bp($tablet_max - 1, $tablet_min) {
+		width: 50%;
+	}
+
+	@include bp($tablet_min - 1) {
+		width: 100%;
+		min-height: 48rem;
+	}
+}

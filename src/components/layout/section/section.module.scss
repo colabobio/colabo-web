@@ -1,0 +1,27 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.section {
+	position: relative;
+
+	@include bp($tablet_max, min) {
+		padding: 11.4rem var(--gl-indent);
+	}
+
+	@include bp($tablet_max - 1) {
+		padding: 5rem var(--gl-indent);
+	}
+
+	&.noIndent {
+		padding: 0;
+	}
+}
+
+.container {
+	max-width: $page_width;
+	margin: 0 auto;
+	width: 100%;
+
+	&.mdSize {
+		max-width: $page_width_md;
+	}
+}

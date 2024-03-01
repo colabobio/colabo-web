@@ -1,0 +1,16 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.label {
+	font-family: $font_heading;
+	line-height: 1.1;
+	letter-spacing: -.01em;
+	text-transform: uppercase;
+
+	@include bp($tablet_max, min) {
+		font-size: 1.6rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		font-size: 1.2rem;
+	}
+}

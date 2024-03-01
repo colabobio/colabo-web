@@ -1,0 +1,21 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.section {
+	border-top: 1px solid var(--dark);
+	padding: 0;
+}
+
+.aside {
+	background-color: var(--light);
+	border-right: 1px solid var(--dark);
+}
+
+.content {
+	@include bp($tablet_max, min) {
+		padding-bottom: 6rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		padding-bottom: 19.4rem;
+	}
+}

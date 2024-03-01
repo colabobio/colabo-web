@@ -1,0 +1,32 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.row {
+	@include bp($tablet_max, min) {
+		display: flex;
+		align-items: flex-start;
+		gap: 2.6rem;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 3.2rem;
+	}
+}
+
+.column {
+	@include bp($tablet_max, min) {
+		&:nth-child(1) {
+			width: 12rem;
+			flex-shrink: 0;
+		}
+
+		&:nth-child(2) {
+			flex: 1 1 auto;
+		}
+	}
+
+	&:not(:last-child) {
+		@include bp($tablet_max - 1) {
+			margin-bottom: 1rem;
+		}
+	}
+}

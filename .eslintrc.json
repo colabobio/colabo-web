@@ -1,0 +1,34 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"plugin:import/errors",
+		"plugin:react/recommended",
+		"airbnb",
+		"prettier"
+	],
+	"settings": {
+		"import/resolver": {
+			"alias": {
+				"extensions": [".js", ".jsx"],
+				"map": [
+					["@", "./src/"],
+					["@ui", "./src/components/ui"],
+					["@sections", "./src/components/sections"],
+					["@layout", "./src/components/layout"]
+				]
+			}
+		}
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["react"],
+	"rules": {}
+}

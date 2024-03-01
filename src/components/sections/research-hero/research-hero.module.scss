@@ -1,0 +1,27 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.section {
+	@include bp($tablet_max, min) {
+		padding-top: 9.6rem;
+		padding-bottom: 11.6rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		padding-top: 2.8rem;
+		padding-bottom: 6.2rem;
+	}
+}
+
+.imageW {
+	position: relative;
+	max-width: 100%;
+	margin: 0 auto;
+
+	@include bp($tablet_max, min) {
+		width: 47.4%;
+	}
+
+	@include bp($tablet_max - 1) {
+		width: 100%;
+	}
+}

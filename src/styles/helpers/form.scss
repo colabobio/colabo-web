@@ -1,0 +1,46 @@
+$placeholder_color: var(--dark);
+
+@mixin union_form_styles {
+	width: 100%;
+	padding-bottom: 1rem;
+	padding-left: 0;
+
+	// font-family: var(--telegraf-font);
+	color: var(--dark);
+	box-shadow: 0 1px 0 0 var(--dark);
+
+	border: none;
+	background-color: transparent;
+	background-clip: padding-box;
+	transition: box-shadow 0.3s ease 0s;
+
+	&::-webkit-input-placeholder {
+		color: $placeholder_color;
+	}
+
+	&::-moz-placeholder {
+		color: $placeholder_color;
+		opacity: 1;
+	}
+
+	&:-ms-input-placeholder {
+		color: $placeholder_color;
+		opacity: 1;
+	}
+
+	&:focus {
+		// box-shadow: 0 1px 0 0 var(--secondary-color);
+
+		&::-webkit-input-placeholder {
+			color: transparent;
+		}
+
+		&::-moz-placeholder {
+			color: transparent;
+		}
+
+		&:-ms-input-placeholder {
+			color: transparent;
+		}
+	}
+}

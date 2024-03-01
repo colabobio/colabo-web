@@ -1,0 +1,10 @@
+$font_path: '/fonts/';
+
+@include font_face('Tagada-Regular', 'Tagada', $font_path, 400);
+
+@include font_face('FigGrotesk0.3-Book', 'FigGrotesk0.3', $font_path, 300);
+@include font_face('FigGrotesk0.3-Regular', 'FigGrotesk0.3', $font_path, 400);
+@include font_face('FigGrotesk0.3-Medium', 'FigGrotesk0.3', $font_path, 500);
+@include font_face('FigGrotesk0.3-Semibold', 'FigGrotesk0.3', $font_path, 600);
+@include font_face('FigGrotesk0.3-Bold', 'FigGrotesk0.3', $font_path, 700);
+@include font_face('FigGrotesk0.3-Black', 'FigGrotesk0.3', $font_path, 900);

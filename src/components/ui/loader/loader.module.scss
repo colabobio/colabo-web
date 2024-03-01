@@ -1,0 +1,14 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.loader {
+	@include h5;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 40rem;
+
+	text-align: center;
+	font-family: $font_heading;
+}

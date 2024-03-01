@@ -1,0 +1,91 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.grant {
+	border-bottom: 1px solid var(--dark);
+
+	@include bp($tablet_max, min) {
+		padding: 6rem 2.8rem 6rem 11.4rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		padding: 3rem 3rem 1.8rem 3rem;
+	}
+}
+
+.link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.content {
+	display: flex;
+
+	// cursor: pointer;
+
+	.org {
+		font-size: 2.8rem;
+		margin-left: 1.5rem;
+	}
+
+	@include bp($tablet_max, min) {
+		align-items: center;
+		gap: 3rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		flex-direction: column;
+		gap: 2rem;
+
+		.org {
+			font-size: 2rem;
+			margin-left: 1.2rem;
+		}
+	}
+}
+
+.imagesList {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include bp($tablet_max, min) {
+		gap: 6.2rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		gap: 3rem;
+	}
+}
+
+.imgW {
+	flex-shrink: 0;
+	width: 16rem;
+	height: 16rem;
+
+	transition: box-shadow 0.2s ease-in-out;
+
+	.link:hover &,
+	.link:focus & {
+		box-shadow: 0 0 10px var(--dark);
+	}
+}
+
+.title {
+	@include h2;
+
+	padding-bottom: 0.6rem;
+
+	line-height: 1;
+
+	.link:hover &,
+	.link:focus & {
+		// text-decoration: underline;
+	}
+
+	@include bp($tablet_max, min) {
+		letter-spacing: -0.01em;
+	}
+
+	@include bp($tablet_max - 1) {
+		letter-spacing: -0.05em;
+	}
+}

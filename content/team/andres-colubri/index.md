@@ -2,6 +2,7 @@
 name: Andrés Colubri
 category: member
 avatar: ./andres.png
+avatarHover: ./andres-hover.jpg
 order: 0
 ---
 

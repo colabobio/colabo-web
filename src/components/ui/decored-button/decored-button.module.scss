@@ -1,0 +1,117 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.button {
+	--offset: 0%;
+
+	@include st_btn;
+
+	position: relative;
+
+	height: 3.9rem;
+	line-height: 3.9rem;
+
+	padding: 0 1rem;
+
+	color: var(--dark);
+	font-size: 1.8rem;
+	letter-spacing: -0.04em;
+
+	text-decoration: none;
+	transition: color .3s ease, background-color .3s ease;
+
+	&.squareDecor {
+		border: 1px solid var(--dark);
+	}
+
+	&.roundedDecor {
+		border-radius: 10rem;
+		border: 1px solid var(--dark);
+	}
+
+	&.v1Color {
+		background-color: var(--lazer);
+	}
+
+	&.v2Color {
+		background-color: var(--pink);
+	}
+
+	&.v3Color {
+		background-color: var(--cerulean);
+	}
+
+	&.v4Color {
+		background-color: var(--saffron);
+	}
+
+	&.elipsesDecor,
+	&.circlesDecor {
+		min-width: 4rem;
+		background-color: transparent;
+	}
+
+	@at-root {
+		a#{&} {
+
+			&:hover,
+			&:focus {
+				color: var(--lazer);
+
+				&:not(.elipsesDecor):not(.circlesDecor) {
+					background-color: var(--dark);
+				}
+
+				&.elipsesDecor,
+				&.circlesDecor {
+					.decor {
+						background-color: var(--dark);
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.decorsWrap {
+	position: absolute;
+	top: 0;
+	left: var(--offset);
+	z-index: -1;
+
+	width: 100%;
+	height: 100%;
+}
+
+.decor {
+	position: absolute;
+	top: 0;
+
+	height: 100%;
+
+	border-radius: 10rem;
+	border: 1px solid var(--dark);
+
+	transition: background-color .3s ease;
+
+	.elipsesDecor &,
+	.circlesDecor & {
+		mix-blend-mode: lighten;
+	}
+
+	.v1Color & {
+		background-color: var(--lazer);
+	}
+
+	.v2Color & {
+		background-color: var(--pink);
+	}
+
+	.v3Color & {
+		background-color: var(--cerulean);
+	}
+
+	.v4Color & {
+		background-color: var(--saffron);
+	}
+}

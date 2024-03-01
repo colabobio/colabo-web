@@ -1,0 +1,116 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.section {
+	padding: 0;
+}
+
+.aside {
+	border-right: 1px solid var(--dark);
+}
+
+.formW {
+	flex-grow: 1;
+
+	background-color: var(--light);
+
+	@include bp($tablet_max, min) {
+		padding: 11rem 4rem 4rem 16%;
+	}
+
+	@include bp($tablet_max - 1) {
+		padding: 8rem 2rem 4.4rem 3rem;
+	}
+}
+
+.form {
+	@include bp($tablet_max, min) {
+		max-width: 52rem;
+	}
+}
+
+.inputsW {
+	&:not(:last-child) {
+		margin-bottom: 5.4rem;
+	}
+}
+
+.inputs {
+	display: flex;
+
+	@include bp($tablet_max, min) {
+		gap: 2rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		flex-direction: column;
+
+		gap: 2.2rem;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.inputW {
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.textareaW {
+	&:not(:last-child) {
+		@include bp($tablet_max, min) {
+			margin-bottom: 2.8rem;
+		}
+
+		@include bp($tablet_max - 1) {
+			margin-bottom: 5rem;
+		}
+	}
+}
+
+.button {
+	@include body;
+
+	display: block;
+	width: 100%;
+	height: 6rem;
+	padding: 1.4rem 4rem 1rem;
+
+	font-family: inherit;
+	text-transform: uppercase;
+	color: var(--dark);
+
+	border: 1px solid var(--dark);
+	transition: background-color 0.2s ease-in-out;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background-color: var(--cerulean);
+		color: var(--dark);
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.status {
+	@include body;
+
+	display: block;
+
+	font-family: $font_heading;
+	letter-spacing: -0.01em;
+	text-align: center;
+
+	&.success {
+		color: var(--green);
+	}
+
+	&.error {
+		color: var(--red);
+	}
+}

@@ -1,0 +1,119 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.header {
+	display: flex;
+
+	&:not(:last-child) {
+		@include bp($tablet_max, min) {
+			margin-bottom: 3.8rem;
+		}
+
+		@include bp($tablet_max - 1) {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.textW {
+	@include h4;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 6.8rem;
+	flex-grow: 1;
+
+	&:after {
+		@include bp($tablet_max, min) {
+			content: '';
+			width: 100%;
+
+			transform: translateY(-0.6rem);
+			border-top: 1px solid currentColor;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-right: 4.2rem;
+	}
+}
+
+.text {
+	display: block;
+	flex-shrink: 0;
+
+	letter-spacing: -0.01em;
+}
+
+.descr {
+	@include h4;
+	flex-shrink: 0;
+	margin-left: auto;
+
+	letter-spacing: -0.01em;
+}
+
+.membersList {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include bp($tablet_max, min) {
+		justify-content: center;
+	}
+
+	@include bp($tablet_max - 1) {
+		margin-right: -2rem;
+		margin-bottom: -2rem;
+	}
+
+	&.threePerRow {
+		@include bp($tablet_max, min) {
+			margin-right: -4.6rem;
+			margin-bottom: -3.6rem;
+		}
+	}
+
+	&.fourPerRow {
+		@include bp($tablet_max, min) {
+			margin-right: -3rem;
+			margin-bottom: -3.6rem;
+		}
+	}
+
+	&:not(:last-child) {
+		@include bp($tablet_max, min) {
+			margin-bottom: 22.6rem;
+		}
+
+		@include bp($tablet_max - 1) {
+			margin-bottom: 10rem;
+		}
+	}
+}
+
+.memberItem {
+	position: relative;
+	z-index: 10;
+
+	@include bp($tablet_max - 1) {
+		width: 50%;
+		padding-right: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	&.threePerRow {
+		@include bp($tablet_max, min) {
+			width: 33.3333%;
+			padding-right: 4.6rem;
+			padding-bottom: 3.6rem;
+		}
+	}
+
+	&.fourPerRow {
+		@include bp($tablet_max, min) {
+			width: 25%;
+			padding-right: 3rem;
+			padding-bottom: 3.4rem;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.textarea {
+	display: block;
+	width: 100%;
+	padding: 1rem;
+
+	font-family: $font_base;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+
+	color: var(--dark);
+
+	caret-color: var(--dark);
+	border: 1px solid var(--dark);
+
+	@include bp($tablet_max, min) {
+		min-height: 24.8rem;
+
+		font-size: 2.1rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		min-height: 15.4rem;
+
+		font-size: 1.8rem;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 0.6rem;
+	}
+
+	&::placeholder {
+		color: var(--saffron_2);
+	}
+}

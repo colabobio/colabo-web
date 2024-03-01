@@ -1,0 +1,110 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.memberContent {
+}
+
+.imageContainer {
+	position: relative;
+	width: 100%;
+
+	overflow: hidden;
+
+	cursor: pointer;
+
+	@include bp($tablet_max, min) {
+		aspect-ratio: 322 / 284;
+	}
+
+	@include bp($tablet_max - 1) {
+		aspect-ratio: 166 / 162;
+	}
+}
+
+.imageHoverW {
+	height: 100%;
+}
+
+.imageW {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+
+	transition: opacity 0.2s ease-in-out;
+
+	.memberContent:hover &,
+	.memberContent:focus & {
+		opacity: 0;
+	}
+}
+
+.image {
+	height: 100%;
+}
+
+.info {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	z-index: -1;
+	width: 100vw;
+
+	background-color: var(--light);
+	border-top: 1px solid var(--dark);
+	border-bottom: 1px solid var(--dark);
+	opacity: 0;
+	pointer-events: none;
+	will-change: transform;
+
+	transform: translateY(60%);
+
+	transition:
+		opacity 0.3s ease-in-out,
+		transform 0.3s ease-in-out;
+
+	@include bp($tablet_max, min) {
+		padding: 4rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		padding: 2rem;
+	}
+
+	.memberContent:hover &,
+	.memberContent:focus & {
+		opacity: 1;
+		pointer-events: all;
+		transform: translateY(0);
+	}
+}
+
+.title {
+	@include h5;
+	letter-spacing: -0.02em;
+
+	&:not(:last-child) {
+		@include bp($tablet_max, min) {
+			margin-bottom: 2rem;
+		}
+
+		@include bp($tablet_max - 1) {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.text {
+	letter-spacing: -0.02em;
+
+	@include bp($tablet_max, min) {
+		font-size: 2.1rem;
+		line-height: 1.43;
+	}
+
+	@include bp($tablet_max - 1) {
+		font-size: 1.4rem;
+		line-height: 1.2;
+	}
+}

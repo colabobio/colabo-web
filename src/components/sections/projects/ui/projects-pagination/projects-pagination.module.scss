@@ -1,0 +1,237 @@
+@import '@styles/helpers/helpers-all.scss';
+@import '../../project-variables.scss';
+
+
+.pagination {
+	position: absolute;
+	left: 0;
+	z-index: 5;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 100%;
+	height: 2px;
+
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8);
+	background-color: var(--light);
+
+	@include bp($tablet_max, min) {
+		bottom: max(8rem, 14.2vh);
+		padding: 0 2.5rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		top: 57vw;
+		padding: 0 .8rem;
+	}
+}
+
+.container {
+	position: relative;
+	flex-shrink: 0;
+}
+
+.info {
+	@include bp($tablet_max, min) {
+		position: absolute;
+		bottom: calc(100% + 1.2rem);
+
+		border: 1px solid var(--dark);
+		box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.10), 4px 3px 4px 0 rgba(0, 0, 0, .09), .8rem .6rem .6rem 0 rgba(0, 0, 0, .05), 1.5rem 1rem .7rem 0 rgba(0, 0, 0, .01), 2.3rem 1.6rem .8rem 0 rgba(0, 0, 0, 0), 0 4px 4px 0 rgba(0, 0, 0, .25);
+		background-color: var(--light);
+
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity $transition;
+		overflow: hidden;
+	}
+
+	@include bp($tablet_max - 1) {
+		display: none;
+	}
+
+	.rightMod & {
+		@include bp($tablet_max, min) {
+			right: 1.6rem;
+		}
+	}
+
+	.leftMod & {
+		@include bp($tablet_max, min) {
+			left: 1.6rem;
+		}
+	}
+
+	.centerMod & {
+		@include bp($tablet_max, min) {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.active & {
+		@include bp($tablet_max, min) {
+			pointer-events: initial;
+			opacity: 1;
+		}
+	}
+}
+
+.infoContent {
+	@include bp($tablet_max, min) {
+		min-width: 34.8rem;
+
+		max-height: calc(100vh - var(--height-header) - var(--height-footer) - max(15rem, 14.2vh));
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		transition: transform $transition;
+		transform: translateY(15%);
+
+		scrollbar-color: var(--white) var(--dark);
+		scrollbar-width: thin;
+
+		&::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--dark);
+		}
+	}
+
+	.active & {
+		@include bp($tablet_max, min) {
+			transform: translateY(0);
+		}
+	}
+}
+
+$size: 5.4rem;
+$mob_size: 2rem;
+
+.button {
+	position: relative;
+	cursor: pointer;
+
+	@include bp($tablet_max, min) {
+		width: $size;
+		height: $size;
+	}
+
+	@include bp($tablet_max - 1) {
+		width: $mob_size;
+		height: $mob_size;
+
+		margin-bottom: calc($mob_size / 4 + 1px);
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		border-radius: 50%;
+		pointer-events: none;
+	}
+
+	&::before {
+		transform: translate(-50%, -50%);
+		background-color: var(--light);
+
+		@include bp($tablet_max, min) {
+			width: 2.8rem;
+			height: 2.8rem;
+		}
+
+		@include bp($tablet_max - 1) {
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+
+	@media (any-hover: hover) {
+		&::after {
+			transform: translate(-50%, -50%) scale(0);
+			background: var(--dark);
+			opacity: 0.8;
+			transition: transform .3s $base-ease;
+
+			@include bp($tablet_max, min) {
+				width: 1.2rem;
+				height: 1.2rem;
+			}
+
+			@include bp($tablet_max - 1) {
+				width: 4px;
+				height: 4px;
+			}
+		}
+
+		&:hover {
+			&::after {
+				transform: translate(-50%, -50%) scale(1);
+			}
+		}
+	}
+
+	.active & {
+		pointer-events: none;
+	}
+}
+
+.cursor {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	pointer-events: none;
+	will-change: transform;
+
+	@include bp($tablet_max, min) {
+		height: $size;
+		width: $size;
+		margin-top: calc($size / -2);
+	}
+
+	@include bp($tablet_max - 1) {
+		height: $mob_size;
+		width: $mob_size;
+		margin-top: calc($mob_size / -2 + 1px);
+	}
+
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+
+		@include bp($tablet_max, min) {
+			border: 2px solid var(--light);
+		}
+
+		@include bp($tablet_max - 1) {
+			border: 1px solid var(--light);
+		}
+	}
+}
+
+.hint {
+	position: absolute;
+	right: 0;
+	top: 100%;
+	z-index: 2;
+
+	@include bp($tablet_max, min) {
+		display: none;
+	}
+}

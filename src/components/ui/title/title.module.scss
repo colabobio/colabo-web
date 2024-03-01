@@ -1,0 +1,31 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.title {
+	&.h1Size {
+		@include h1;
+	}
+
+	&.h2Size {
+		@include h2;
+	}
+
+	&.h3Size {
+		@include h3;
+	}
+
+	&.h4Size {
+		@include h4;
+	}
+
+	&.h5Size {
+		@include h5;
+	}
+
+	&.h5BoldSize {
+		@include h5_bold;
+	}
+
+	&.h6Size {
+		@include h6;
+	}
+}

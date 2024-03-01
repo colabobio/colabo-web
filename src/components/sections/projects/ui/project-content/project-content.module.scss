@@ -1,0 +1,80 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.component {
+	background: var(--light);
+	color: var(--dark);
+
+	@include bp($tablet_max, min) {
+		padding: 3.4rem 4rem 3.8rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		width: 100%;
+		padding: 2.6rem var(--gl-indent) 3rem;
+	}
+}
+
+.heading {
+	line-height: 1.1;
+	letter-spacing: -0.07em;
+
+	&:not(:last-child) {
+		@include bp($tablet_max, min) {
+			margin-bottom: 1.2rem;
+		}
+
+		@include bp($tablet_max - 1) {
+			margin-bottom: 1.4rem;
+		}
+	}
+}
+
+.body {
+	@include body;
+
+	line-height: 1.43;
+	letter-spacing: -0.07em;
+
+	&:not(:last-child) {
+		@include bp($tablet_max, min) {
+			margin-bottom: 1rem;
+		}
+
+		@include bp($tablet_max - 1) {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.link {
+	@include st_btn;
+
+	align-items: flex-start;
+	gap: .8rem;
+
+	font-size: max(10px, 1rem);
+	color: inherit;
+	font-weight: 900;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+
+	text-decoration: none;
+
+	transition: opacity .3s $base-ease 0s;
+
+	&:hover,
+	&:focus {
+		opacity: 0.6;
+
+		.icon {
+			transform: translateX(2px);
+		}
+	}
+}
+
+.icon {
+	width: max(10px, 1rem);
+	height: max(10px, 1rem);
+
+	transition: transform .3s $base-ease 0s;
+}

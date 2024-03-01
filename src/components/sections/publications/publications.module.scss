@@ -1,0 +1,31 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.section {
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 12.2rem;
+}
+
+.container {
+	background-color: var(--light);
+}
+
+.list {
+	border: 1px solid var(--dark);
+	border-right: unset;
+}
+
+.item {
+	@include bp($tablet_max, min) {
+		padding: 3.4rem var(--gl-indent) 3.6rem 11.4rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		padding: var(--gl-indent);
+	}
+
+	&:not(:last-child) {
+		border-bottom: 1px solid var(--dark);
+	}
+}

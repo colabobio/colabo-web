@@ -1,0 +1,111 @@
+@import '@styles/helpers/helpers-all.scss';
+
+.component {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	color: var(--dark);
+}
+
+.heading {
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+
+	@include bp($tablet_max, min) {
+		font-size: 2.1rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		font-size: 1.8rem;
+	}
+}
+
+.text {
+	line-height: 1.1;
+	font-weight: 300;
+	letter-spacing: -0.01em;
+
+	@include bp($tablet_max, min) {
+		font-size: 1.8rem;
+	}
+
+	@include bp($tablet_max - 1) {
+		font-size: 1.4rem;
+	}
+}
+
+.row {
+	@include bp($tablet_max, min) {
+		display: flex;
+	}
+}
+
+.label {
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.1;
+	letter-spacing: -0.01em;
+
+	@include bp($tablet_max, min) {
+		width: 50%;
+		padding-top: 1px;
+	}
+
+	&:not(:last-child) {
+		@include bp($tablet_max - 1) {
+			margin-bottom: 1.4rem;
+		}
+	}
+}
+
+.linksRow {
+	display: flex;
+	gap: 3rem;
+
+	@include bp($tablet_max, min) {
+		width: 50%;
+	}
+}
+
+.linksRowInner {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+
+	@include bp($tablet_max, min) {
+		padding-top: 1px;
+	}
+
+	@include bp($tablet_max - 1) {
+		margin-top: -2px;
+	}
+}
+
+.link {
+	display: block;
+
+	color: inherit;
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.1;
+	letter-spacing: -0.01em;
+	text-decoration: underline;
+
+	transition: opacity 0.3s $base-ease;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		opacity: 0.8;
+	}
+}
+
+.info {
+	color: inherit;
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.1;
+	letter-spacing: -0.01em;
+}

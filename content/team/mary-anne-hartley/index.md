@@ -2,7 +2,8 @@
 name: Mary-Anne Hartley
 category: collaborator
 avatar: ./annie.png
-order: 6
+avatarHover: ./annie-hover.jpg
+order: 18
 ---
 
-Mary-Anne is a scientist at the Machine Learnign and Optimization Liboratory at the EPFL, in Laussance, Switzerland. She is interested in the applications of ML to emergency medicine and emerging diseases. Andres' collaboration with Mary-Anne revolves around improving data collection and model derivation methods.
+Mary-Anne "Annie" Hartley is an Assistant Professor in Biomedical Informatics and Data Science. Her research is focused on developing and validating novel data-driven tools designed to improve healthcare in low-resource settings, with a special interest in Africa.
