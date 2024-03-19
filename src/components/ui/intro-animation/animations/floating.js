@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 
-export function deadFish({ target, onUpdate, rangeX, rangeY }) {
+export function floating({ target, onUpdate, rangeX, rangeY }) {
 	const moveXTL = gsap.timeline();
 	const moveYTL = gsap.timeline();
 
@@ -47,4 +47,4 @@ export function deadFish({ target, onUpdate, rangeX, rangeY }) {
 	return killTimelines;
 }
 
-export default deadFish;
+export default floating;

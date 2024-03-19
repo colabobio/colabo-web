@@ -8,7 +8,7 @@ import { extend, useFrame, useThree } from '@react-three/fiber';
 import PropTypes from 'prop-types';
 import Lottie from 'lottie-web';
 import { Observer } from 'gsap/Observer';
-import { deadFish } from './animations/dead-fish';
+import { floating } from './animations/floating';
 import { BLOBS_DESKTOP, BLOBS_MOBILE } from './constants';
 
 import animation from './logo-animation.json';
@@ -282,7 +282,7 @@ export function AnimationCanvas({ initialAspect }) {
 		});
 	};
 
-	const initDeadFish = () => {
+	const initFloating = () => {
 		const timelines = [];
 
 		pointsInitialBufferRef.current.forEach((blob, index) => {
@@ -294,7 +294,7 @@ export function AnimationCanvas({ initialAspect }) {
 			};
 
 			timelines.push(
-				deadFish({
+				floating({
 					target: offset,
 					rangeX: BLOBS[index].rangeX,
 					rangeY: BLOBS[index].rangeY,
@@ -315,7 +315,7 @@ export function AnimationCanvas({ initialAspect }) {
 				const { randomRange = 0.05 } = point;
 
 				timelines.push(
-					deadFish({
+					floating({
 						target: pointOffset,
 						rangeX: { min: -randomRange, max: randomRange },
 						rangeY: { min: -randomRange, max: randomRange },
@@ -404,7 +404,7 @@ export function AnimationCanvas({ initialAspect }) {
 			$blobsMeshRef.current.material.uniforms,
 		);
 
-		const timelines = initDeadFish();
+		const timelines = initFloating();
 
 		$lottieMeshRef.current.material.uniforms.uTexture.value =
 			lottieCanvasRef.current;

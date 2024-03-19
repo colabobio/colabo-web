@@ -14,6 +14,13 @@ module.exports = {
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-react-helmet',
 		{
+			resolve: `gatsby-plugin-nprogress`,
+			options: {
+				showSpinner: false,
+				template: `<div class="bar">Loading…</div>`,
+			},
+		},
+		{
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a name is required for each tracking id

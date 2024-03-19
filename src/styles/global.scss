@@ -1,2 +1,22 @@
 @import 'base/base';
 @import 'base/fonts';
+
+#nprogress {
+	.bar {
+		position: fixed !important;
+		top: 0 !important;
+		left: 0 !important;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100% !important;
+		height: 100% !important;
+
+		font-size: 5rem;
+		color: #fff;
+
+		transform: translate(0px, 0px) !important;
+		background: rgba(#c6ff54, 0.9) !important;
+	}
+}
