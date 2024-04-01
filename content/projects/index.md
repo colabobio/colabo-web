@@ -4,7 +4,7 @@ projects:
     title: 'Operation Outbreak'
     content: "Operation Outbreak (OO): Immerse yourself in a fictional epidemic, where a Bluetooth-transmitted pathogen spreads across smartphones.  Take on real-world roles — government official, biomedical researcher, banker, healthcare worker, and more — as you battle the outbreak, gaining hands-on knowledge of society's response in a unique learning experience"
     url: 'https://operationoutbreak.org'
-    - img: ./04.jpeg
+  - img: ./04.jpeg
     title: 'Travel Healthy'
     content: 'An app for monitoring infectious disease symptoms among international travelers (and more). The goal of this study is simply to map symptoms of U.S. travelers as they visit other countries, and collect samples (nasal swab, stool, blood) when they return. The really ambitious goal is to integrate the data from the app with other sources (e.g.: molecular testing) to create an outbreak forecasting system based on travel patterns.'
     url: 'https://gten.massgeneral.org/travel-healthy-app/'
