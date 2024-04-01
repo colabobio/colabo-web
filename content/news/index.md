@@ -4,7 +4,7 @@ news:
     title: 'Salihu just got his paper on COVID-19 variolation published on the Infectious Disease Modelling journal!'
     url: 'https://www.sciencedirect.com/science/article/pii/S2468042724000319/'
   - decorVariant: 'circles'
-    title: 'Trusting`s manuscript applying Machine Learning methods to study the effect of the COVID-19 lockdown on people with chronic conditions has been accepted at the IEEE/ACM CHASE 2024 conference' 
+    title: 'Trusting`s manuscript applying ML methods to study the effect of the COVID-19 lockdown on chronic conditions has been accepted at IEEE/ACM CHASE 2024' 
     url: 'https://conferences.computer.org/chase2024/'
   - decorVariant: 'rounded'
     colorVariant: '2'
