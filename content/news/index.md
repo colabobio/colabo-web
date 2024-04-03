@@ -1,9 +1,15 @@
 ---
 news:
+  - decorVariant: 'circles'
+    colorVariant: '2'
+    title: 'Askar and Andres are attendiong the scverse x Boston hackathon at Harvard Medical School, to work on the next version of SCIViewer. First scverse hackathon ever in the US!'
+    url: 'https://hms-dbmi.github.io/scverse-hackathon-spring-2024/'
   - decorVariant: 'square'
+    colorVariant: '3'
     title: 'Salihu just got his paper on COVID-19 variolation published on the Infectious Disease Modelling journal!'
     url: 'https://www.sciencedirect.com/science/article/pii/S2468042724000319/'
   - decorVariant: 'circles'
+    colorVariant: '1'
     title: 'Trusting`s manuscript applying ML methods to study the effect of the COVID-19 lockdown on chronic conditions has been accepted at IEEE/ACM CHASE 2024' 
     url: 'https://conferences.computer.org/chase2024/'
   - decorVariant: 'rounded'
@@ -24,8 +30,4 @@ news:
   - decorVariant: 'square'
     title: 'Travel Healthy for international travelers app recently released and available on the Apple and Google stores'
     url: 'https://gten.massgeneral.org/travel-healthy-app/'
-  - decorVariant: 'circles'
-    colorVariant: '2'
-    title: 'Largest Operation Outbreak simulation involving 800 students conducted at Wenzhou-Kean University Nov-Dec 2023'
-    url: 'https://colabobio.medium.com/667295c43907'
 ---
