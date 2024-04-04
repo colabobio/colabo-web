@@ -5,6 +5,7 @@ import { BUTTON_DECOR_VARIANTS } from '@utils/constants';
 import classNames from 'classnames';
 import {
 	button,
+	container,
 	decorsWrap,
 	decor,
 	squareDecor,
@@ -90,28 +91,31 @@ export function DecoredButton({ children, url, decorVariant, colorVariant }) {
 		}
 	}, [$buttonRef, decorVariant]);
 
-	return url !== '#' ? (
-		<Link ref={$buttonRef} to={url} className={buttonClassnames}>
-			{children}
-			{(decorVariant === BUTTON_DECOR_VARIANTS.elipses ||
-				decorVariant === BUTTON_DECOR_VARIANTS.circles) && (
-				<span className={decorsWrap}>
-					{renderDecors(decorNumber, decorOffset)}
-				</span>
-			)}
-		</Link>
-	) : (
-		<div
-			ref={$buttonRef}
-			className={buttonClassnames}
-			style={{ cursor: 'default' }}
-		>
-			{children}
-			{(decorVariant === BUTTON_DECOR_VARIANTS.elipses ||
-				decorVariant === BUTTON_DECOR_VARIANTS.circles) && (
-				<span className={decorsWrap}>
-					{renderDecors(decorNumber, decorOffset)}
-				</span>
+	return (
+		<div ref={$buttonRef} className={container}>
+			{url !== '#' ? (
+				<Link target="_blank" to={url} className={buttonClassnames}>
+					{children}
+					{(decorVariant === BUTTON_DECOR_VARIANTS.elipses ||
+						decorVariant === BUTTON_DECOR_VARIANTS.circles) && (
+						<span className={decorsWrap}>
+							{renderDecors(decorNumber, decorOffset)}
+						</span>
+					)}
+				</Link>
+			) : (
+				<div
+					className={buttonClassnames}
+					style={{ cursor: 'default' }}
+				>
+					{children}
+					{(decorVariant === BUTTON_DECOR_VARIANTS.elipses ||
+						decorVariant === BUTTON_DECOR_VARIANTS.circles) && (
+						<span className={decorsWrap}>
+							{renderDecors(decorNumber, decorOffset)}
+						</span>
+					)}
+				</div>
 			)}
 		</div>
 	);
