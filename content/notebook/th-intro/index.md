@@ -1,6 +1,6 @@
 ---
 guid: cf2148ecd6e2
-bg: https://i.imgur.com/ahVOPF3.jpeg
+bg: https://imgur.com/a/travel-healthy-ahVOPF3
 ---
 
 
