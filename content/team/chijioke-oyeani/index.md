@@ -1,6 +1,6 @@
 ---
 name: Chijioke Oyeani
-category: member
+category: former_student
 avatar: ./chijioke.png
 avatarHover: ./chijioke-hover.jpg
 order: 25
