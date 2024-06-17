@@ -1,6 +1,6 @@
 ---
 name: Arnav Gupta
-category: member
+category: former_student
 avatar: ./arnav.png
 avatarHover: ./arnav-hover.jpg
 order: 8
