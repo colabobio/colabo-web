@@ -9,6 +9,7 @@
 	],
 	"scripts": {
 		"develop": "gatsby develop",
+		"deploy": "gatsby build && gh-pages -d public -b main",
 		"start": "gatsby develop",
 		"build": "gatsby build",
 		"serve": "gatsby serve",
@@ -39,6 +40,7 @@
 		"gatsby-source-filesystem": "^5.12.1",
 		"gatsby-transformer-remark": "^6.12.3",
 		"gatsby-transformer-sharp": "^5.12.3",
+		"gh-pages": "^6.3.0",
 		"gsap": "file:gsap-bonus.tgz",
 		"ismobilejs": "^1.1.1",
 		"isomorphic-dompurify": "^1.9.0",
