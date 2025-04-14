@@ -3,7 +3,7 @@ news:
   - decorVariant: 'circles'
     colorVariant: '1'
     title: 'Winnie's remarkable career and achievements were showcased by UMass Chan News'
-    url: 'https://www.umassmed.edu/news/news-archives/2025/03/phd-candidate-winnie-mkandawire-impacted-by-grief-and-driven-by-hope-studies-disease-outbreak-modeling/'
+    url: 'https://direc.to/mB9T'
   - decorVariant: 'square'
     colorVariant: '2'
     title: 'Read our pre-print on the epidemic simulation at Wenzhou-Kean University that used proximity sensing and gamification to study the effect of risk perception on infectious disease spread'
