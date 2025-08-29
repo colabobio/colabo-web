@@ -176,13 +176,41 @@ exports.createSchemaCustomization = ({ actions }) => {
   `);
 };
 
-// Handle deprecated punycode module
-exports.onCreateWebpackConfig = ({ actions }) => {
+// Handle deprecated punycode module and other problematic modules
+exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
   actions.setWebpackConfig({
     resolve: {
       fallback: {
-        punycode: false
+        punycode: false,
+        fs: false,
+        path: false,
+        os: false,
       },
     },
   });
+
+  // Prevent error from @parcel/watcher by ignoring it
+  if (stage === 'build-javascript' || stage === 'build-html') {
+    const config = getConfig();
+    const miniCssExtractPlugin = config.plugins.find(
+      plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
+    );
+    if (miniCssExtractPlugin) {
+      miniCssExtractPlugin.options.ignoreOrder = true;
+    }
+    
+    // Add null-loader for problematic modules
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /\@parcel\/watcher/,
+            use: 'null-loader',
+          },
+        ],
+      },
+    });
+
+    actions.replaceWebpackConfig(config);
+  }
 };
