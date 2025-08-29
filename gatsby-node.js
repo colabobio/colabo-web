@@ -175,3 +175,14 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `);
 };
+
+// Handle deprecated punycode module
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      fallback: {
+        punycode: false
+      },
+    },
+  });
+};
