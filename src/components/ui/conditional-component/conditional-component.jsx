@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types';
 
-export function ConditionalComponent({ data, children }) {
-	if (!data) return null;
+export function ConditionalComponent({ data, children, fallback }) {
+	// If no data provided, show fallback or null
+	if (!data) return fallback || null;
 
-	if (Array.isArray(data) && !data.length) return null;
+	// If array with no items
+	if (Array.isArray(data) && !data.length) return fallback || null;
 
+	// If object with no keys
+	if (!Array.isArray(data) && typeof data === 'object' && Object.keys(data).length === 0) return fallback || null;
+	
 	return children;
 }
 
@@ -15,10 +20,12 @@ ConditionalComponent.propTypes = {
 		PropTypes.string,
 	]),
 	children: PropTypes.node.isRequired,
+	fallback: PropTypes.node,
 };
 
 ConditionalComponent.defaultProps = {
 	data: null,
+	fallback: null,
 };
 
 export default ConditionalComponent;
