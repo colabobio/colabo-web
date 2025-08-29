@@ -79,7 +79,7 @@ export function AreaItem({
 }
 
 AreaItem.propTypes = {
-	reverse: PropTypes.string,
+	reverse: PropTypes.bool,
 	variant: PropTypes.string,
 	number: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
