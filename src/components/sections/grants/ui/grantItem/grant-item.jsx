@@ -29,7 +29,7 @@ export function GrantItem({ image, text, organization, href }) {
 }
 
 GrantItem.propTypes = {
-	image: PropTypes.string,
+	image: PropTypes.object,
 	text: PropTypes.string,
 	organization: PropTypes.string,
 	href: PropTypes.string.isRequired,
