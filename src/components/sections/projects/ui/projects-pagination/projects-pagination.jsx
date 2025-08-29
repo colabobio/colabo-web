@@ -124,7 +124,7 @@ export function ProjectsPagination({ slides, activeIndex, onClick }) {
 ProjectsPagination.propTypes = {
 	slides: PropTypes.arrayOf(
 		PropTypes.shape({
-			img: PropTypes.string.isRequired,
+			img: PropTypes.object.isRequired, // Updated from string to object for GatsbyImage
 			title: PropTypes.string.isRequired,
 			content: PropTypes.string.isRequired,
 			url: PropTypes.string,
