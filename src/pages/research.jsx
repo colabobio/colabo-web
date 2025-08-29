@@ -94,9 +94,7 @@ export const pageQuery = graphql`
 						description
 						img {
 							childImageSharp {
-								fluid {
-									...GatsbyImageSharpFluid
-								}
+								gatsbyImageData(layout: FULL_WIDTH)
 							}
 						}
 						page
