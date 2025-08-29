@@ -5,8 +5,11 @@ import { SanitaizedText } from '@ui/sanitaized-text';
 import { formatDate } from '@utils/helpers';
 import * as styles from './note-item.module.scss';
 
-export function NoteItem({ img, link, title, author, pubDate }) {
+export function NoteItem({ img, link, title, author, pubDate, thumbnail }) {
 	const date = formatDate(pubDate) || '';
+	
+	// Use Medium thumbnail if available and no custom image is provided
+	const imageToDisplay = img || thumbnail;
 
 	return (
 		<a
@@ -16,16 +19,16 @@ export function NoteItem({ img, link, title, author, pubDate }) {
 			rel="noopener noreferrer"
 		>
 			<div className={styles.imageW}>
-				{img && <img className={styles.image} src={img} alt={title} />}
+				{imageToDisplay && <img className={styles.image} src={imageToDisplay} alt={title} />}
 			</div>
 			<div className={styles.contentW}>
 				<div className={styles.content}>
 					<div className={styles.header}>
-						<SanitaizedText className={styles.title}>{title}</SanitaizedText>
+						<SanitaizedText className={styles.title}>{title || "Untitled Post"}</SanitaizedText>
 						{/* {text && <div className={styles.text}>{text}</div>} */}
 					</div>
 					<div className={styles.info}>
-						<div className={styles.author}>By {author}</div>
+						<div className={styles.author}>By {author || "Unknown Author"}</div>
 						<div className={styles.date}>{date}</div>
 					</div>
 				</div>
@@ -47,15 +50,20 @@ export function NoteItem({ img, link, title, author, pubDate }) {
 
 NoteItem.propTypes = {
 	link: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
-	author: PropTypes.string.isRequired,
-	pubDate: PropTypes.string.isRequired,
-	img: PropTypes.shape(),
-	// text: PropTypes.string.isRequired,
+	title: PropTypes.string,
+	author: PropTypes.string,
+	pubDate: PropTypes.string,
+	img: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+	thumbnail: PropTypes.string,
+	// text: PropTypes.string,
 };
 
 NoteItem.defaultProps = {
 	img: undefined,
+	title: "Untitled Post",
+	author: "Unknown Author",
+	pubDate: "",
+	thumbnail: undefined,
 };
 
 export default NoteItem;
