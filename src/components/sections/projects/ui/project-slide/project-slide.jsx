@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { ProjectContent } from '../project-content';
 import { component, bg, image, body } from './project-slide.module.scss';
 
-export function ProjectSlide({ img, title, content, url }) {
+export function ProjectSlide({ img, title, content, url = undefined }) {
 	return (
 		<div className={component}>
 			<div
@@ -32,10 +32,6 @@ ProjectSlide.propTypes = {
 	title: PropTypes.string.isRequired,
 	content: PropTypes.string.isRequired,
 	url: PropTypes.string,
-};
-
-ProjectSlide.defaultProps = {
-	url: undefined,
 };
 
 export default ProjectSlide;

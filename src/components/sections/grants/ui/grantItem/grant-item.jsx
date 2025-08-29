@@ -10,7 +10,7 @@ import {
 	org,
 } from './grant-item.module.scss';
 
-export function GrantItem({ image, text, organization, href }) {
+export function GrantItem({ image = undefined, text = undefined, organization = undefined, href }) {
 	return (
 		<div className={grant}>
 			<a href={href} className={link} target="_blank" rel="noreferrer">
@@ -33,12 +33,6 @@ GrantItem.propTypes = {
 	text: PropTypes.string,
 	organization: PropTypes.string,
 	href: PropTypes.string.isRequired,
-};
-
-GrantItem.defaultProps = {
-	image: undefined,
-	text: undefined,
-	organization: undefined,
 };
 
 export default GrantItem;

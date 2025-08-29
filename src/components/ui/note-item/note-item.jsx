@@ -5,7 +5,14 @@ import { SanitaizedText } from '@ui/sanitaized-text';
 import { formatDate } from '@utils/helpers';
 import * as styles from './note-item.module.scss';
 
-export function NoteItem({ img, link, title, author, pubDate, thumbnail }) {
+export function NoteItem({ 
+	img = undefined, 
+	link, 
+	title = "Untitled Post", 
+	author = "Unknown Author", 
+	pubDate = "", 
+	thumbnail = undefined 
+}) {
 	const date = formatDate(pubDate) || '';
 	
 	// Use Medium thumbnail if available and no custom image is provided
@@ -56,14 +63,6 @@ NoteItem.propTypes = {
 	img: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 	thumbnail: PropTypes.string,
 	// text: PropTypes.string,
-};
-
-NoteItem.defaultProps = {
-	img: undefined,
-	title: "Untitled Post",
-	author: "Unknown Author",
-	pubDate: "",
-	thumbnail: undefined,
 };
 
 export default NoteItem;

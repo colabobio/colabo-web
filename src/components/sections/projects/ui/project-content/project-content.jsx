@@ -13,7 +13,7 @@ import {
 	icon,
 } from './project-content.module.scss';
 
-export function ProjectContent({ className, title, content, url }) {
+export function ProjectContent({ className = undefined, title, content, url = undefined }) {
 	return (
 		<div className={classNames(component, className)}>
 			<Title className={heading} tag="h2" size="h5">
@@ -42,11 +42,6 @@ ProjectContent.propTypes = {
 	content: PropTypes.string.isRequired,
 	className: PropTypes.string,
 	url: PropTypes.string,
-};
-
-ProjectContent.defaultProps = {
-	className: undefined,
-	url: undefined,
 };
 
 export default ProjectContent;

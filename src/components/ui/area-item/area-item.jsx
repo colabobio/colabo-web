@@ -23,8 +23,8 @@ const animations = {
 };
 
 export function AreaItem({
-	reverse,
-	variant,
+	reverse = undefined,
+	variant = undefined,
 	number,
 	title,
 	text,
@@ -86,11 +86,6 @@ AreaItem.propTypes = {
 	text: PropTypes.string.isRequired,
 	href: PropTypes.string.isRequired,
 	animation: PropTypes.string.isRequired,
-};
-
-AreaItem.defaultProps = {
-	reverse: undefined,
-	variant: undefined,
 };
 
 export default AreaItem;

@@ -32,7 +32,7 @@ const transitionClassnames = {
 	exitActive,
 };
 
-export function Header({ menuTransitionTimeout }) {
+export function Header({ menuTransitionTimeout = 300 }) {
 	const data = useStaticQuery(graphql`
 		query HeaderQuery {
 			header: file(
@@ -125,10 +125,6 @@ export function Header({ menuTransitionTimeout }) {
 
 Header.propTypes = {
 	menuTransitionTimeout: PropTypes.number,
-};
-
-Header.defaultProps = {
-	menuTransitionTimeout: 300,
 };
 
 export default Header;

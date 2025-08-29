@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { wrapper, image, contain, cover } from './image.module.scss';
 
-export function Image({ wrapperClassName, imgClassname, src, alt, variant }) {
+export function Image({ wrapperClassName = undefined, imgClassname = undefined, src, alt, variant = 'cover' }) {
 	return (
 		<div className={classNames(wrapper, wrapperClassName)}>
 			<img
@@ -24,12 +24,6 @@ Image.propTypes = {
 	src: PropTypes.string.isRequired,
 	alt: PropTypes.string.isRequired,
 	variant: PropTypes.oneOf(['contain', 'cover']),
-};
-
-Image.defaultProps = {
-	wrapperClassName: undefined,
-	imgClassname: undefined,
-	variant: 'cover',
 };
 
 export default Image;

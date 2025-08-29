@@ -9,7 +9,7 @@ const mouseEvent = {
 	leave: 'leave',
 };
 
-export function Menu({ menuItems, className }) {
+export function Menu({ menuItems, className = undefined }) {
 	const [isHovered, setHovered] = useState(false);
 	const menuLength = menuItems.length - 1;
 
@@ -48,10 +48,6 @@ Menu.propTypes = {
 			url: PropTypes.string.isRequired,
 		}),
 	).isRequired,
-};
-
-Menu.defaultProps = {
-	className: undefined,
 };
 
 export default Menu;

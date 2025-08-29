@@ -23,7 +23,7 @@ const selectClassnames = ({ size }) =>
 		[h6Size]: size === 'h6',
 	});
 
-export function Title({ children, className, tag, size }) {
+export function Title({ children, className = undefined, tag = 'div', size = 'h4' }) {
 	const Tag = tag;
 	const titleClassname = selectClassnames({ size });
 
@@ -37,12 +37,6 @@ Title.propTypes = {
 	className: PropTypes.string,
 	tag: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
 	size: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h5_bold', 'h6']),
-};
-
-Title.defaultProps = {
-	className: undefined,
-	tag: 'div',
-	size: 'h4',
 };
 
 export default Title;

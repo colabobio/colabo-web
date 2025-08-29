@@ -17,7 +17,12 @@ import {
 	info,
 } from './publication-item.module.scss';
 
-export function PublicationItem({ title, authors, publication, links }) {
+export function PublicationItem({ 
+	title = undefined, 
+	authors = undefined, 
+	publication = undefined, 
+	links = [] 
+}) {
 	return (
 		<div className={component}>
 			<ConditionalComponent data={title}>
@@ -77,13 +82,6 @@ PublicationItem.propTypes = {
 			url: PropTypes.string.isRequired,
 		}),
 	),
-};
-
-PublicationItem.defaultProps = {
-	title: undefined,
-	authors: undefined,
-	publication: undefined,
-	links: [],
 };
 
 export default PublicationItem;
