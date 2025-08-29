@@ -5,7 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './textarea-item.module.scss';
 
-export function TextareaItem({ register, name, isRequired, placeholder }) {
+export function TextareaItem({ register, name, isRequired = false, placeholder }) {
 	return (
 		<textarea
 			className={styles.textarea}
@@ -20,10 +20,6 @@ TextareaItem.propTypes = {
 	name: PropTypes.string.isRequired,
 	placeholder: PropTypes.string.isRequired,
 	isRequired: PropTypes.bool,
-};
-
-TextareaItem.defaultProps = {
-	isRequired: false,
 };
 
 export default TextareaItem;

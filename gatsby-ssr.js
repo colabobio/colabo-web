@@ -1,4 +1,3 @@
-import "./src/styles/global.scss"
 import React from "react"
 import { HelmetProvider } from "react-helmet-async"
 

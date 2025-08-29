@@ -6,7 +6,8 @@ import { Layout } from '@layout/layout';
 import { Seo } from '@ui/seo';
 import { HomeHero } from '@sections/home-hero';
 import { NewsFeed } from '@sections/news-feed';
-import { IntroAnimation } from '../components/ui/intro-animation';
+// import { IntroAnimation } from '../components/ui/intro-animation';
+import { StaticPlaceholder } from '../components/ui/intro-animation/static-placeholder';
 
 function IndexPage({ data }) {
 	const { news } = data.news.childMarkdownRemark.frontmatter;
@@ -15,7 +16,8 @@ function IndexPage({ data }) {
 		<Layout>
 			<Seo title="Colabo" image="/images/home.png" />
 			<HomeHero>
-				<IntroAnimation />
+				{/* Original 3D animation replaced with static version due to punycode deprecation error */}
+				<StaticPlaceholder />
 				<ConditionalComponent data={news}>
 					<NewsFeed newsItems={news} />
 				</ConditionalComponent>
@@ -25,7 +27,10 @@ function IndexPage({ data }) {
 }
 
 IndexPage.propTypes = {
-	data: PropTypes.shape.isRequired,
+	data: PropTypes.shape({
+		site: PropTypes.object,
+		news: PropTypes.object
+	}).isRequired,
 };
 
 export default IndexPage;

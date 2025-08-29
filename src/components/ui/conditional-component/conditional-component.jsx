@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export function ConditionalComponent({ data, children, fallback }) {
+export function ConditionalComponent({ data = null, children, fallback = null }) {
 	// If no data provided, show fallback or null
 	if (!data) return fallback || null;
 
@@ -21,11 +21,6 @@ ConditionalComponent.propTypes = {
 	]),
 	children: PropTypes.node.isRequired,
 	fallback: PropTypes.node,
-};
-
-ConditionalComponent.defaultProps = {
-	data: null,
-	fallback: null,
 };
 
 export default ConditionalComponent;

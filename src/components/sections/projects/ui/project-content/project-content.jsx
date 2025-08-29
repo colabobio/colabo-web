@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Title } from '@ui/title';
 import { SanitaizedText } from '@ui/sanitaized-text';
 import { Arrow } from '@icons/arrow';
-import { Link } from 'gatsby';
+// Import Link was removed as we'll use regular <a> tags for external links
 import {
 	component,
 	heading,
@@ -13,7 +13,7 @@ import {
 	icon,
 } from './project-content.module.scss';
 
-export function ProjectContent({ className, title, content, url }) {
+export function ProjectContent({ className = undefined, title, content, url = undefined }) {
 	return (
 		<div className={classNames(component, className)}>
 			<Title className={heading} tag="h2" size="h5">
@@ -21,9 +21,9 @@ export function ProjectContent({ className, title, content, url }) {
 			</Title>
 			<SanitaizedText className={body}>{content}</SanitaizedText>
 			{url && (
-				<Link
+				<a
 					className={link}
-					to={url}
+					href={url}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
@@ -31,7 +31,7 @@ export function ProjectContent({ className, title, content, url }) {
 					<span className={icon}>
 						<Arrow />
 					</span>
-				</Link>
+				</a>
 			)}
 		</div>
 	);
@@ -42,11 +42,6 @@ ProjectContent.propTypes = {
 	content: PropTypes.string.isRequired,
 	className: PropTypes.string,
 	url: PropTypes.string,
-};
-
-ProjectContent.defaultProps = {
-	className: undefined,
-	url: undefined,
 };
 
 export default ProjectContent;

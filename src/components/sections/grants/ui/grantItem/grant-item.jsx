@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import {
 	grant,
 	content,
@@ -10,13 +10,13 @@ import {
 	org,
 } from './grant-item.module.scss';
 
-export function GrantItem({ image, text, organization, href }) {
+export function GrantItem({ image = undefined, text = undefined, organization = undefined, href }) {
 	return (
 		<div className={grant}>
 			<a href={href} className={link} target="_blank" rel="noreferrer">
 				<div className={content}>
 					<div className={imgW}>
-						<Img fluid={image.childImageSharp.fluid} alt={text} />
+						<GatsbyImage image={getImage(image)} alt={text} />
 					</div>
 					<div className={title}>
 						{text}
@@ -29,16 +29,10 @@ export function GrantItem({ image, text, organization, href }) {
 }
 
 GrantItem.propTypes = {
-	image: PropTypes.string,
+	image: PropTypes.object,
 	text: PropTypes.string,
 	organization: PropTypes.string,
 	href: PropTypes.string.isRequired,
-};
-
-GrantItem.defaultProps = {
-	image: undefined,
-	text: undefined,
-	organization: undefined,
 };
 
 export default GrantItem;

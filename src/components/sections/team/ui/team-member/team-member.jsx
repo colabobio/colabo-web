@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useRef, useEffect } from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import { SanitaizedText } from '@ui/sanitaized-text';
 import { useWindowSize } from '../../../../../hooks';
@@ -30,15 +30,15 @@ export function TeamMember({ avatar, avatarHover, name, html }) {
 		<div className={memberContent}>
 			<div className={imageContainer}>
 				<div className={imageHoverW}>
-					<Img
-						fluid={avatar.childImageSharp.fluid}
+					<GatsbyImage
+						image={getImage(avatar)}
 						alt={name}
 						className={image}
 					/>
 				</div>
 				<div className={imageW}>
-					<Img
-						fluid={avatarHover.childImageSharp.fluid}
+					<GatsbyImage
+						image={getImage(avatarHover)}
 						alt={name}
 						className={image}
 					/>

@@ -63,22 +63,34 @@ export function AnimationCanvas({ initialAspect }) {
 			loop: false,
 		});
 
-		lottiePlayer.addEventListener('complete', () => {
-			lottieAnimationActive.current = false;
-		});
+		// Safely add event listener with error handling
+		try {
+			lottiePlayer.addEventListener('complete', () => {
+				lottieAnimationActive.current = false;
+			});
+		} catch (err) {
+			console.warn('Could not add lottie complete listener', err);
+		}
 
-		lottieCanvasRef.current = new T.CanvasTexture(lottiePlayer.container);
-		if ($lottieMeshRef?.current?.material)
-			$lottieMeshRef.current.material.uniforms.uTexture.value =
-				lottieCanvasRef.current;
-
-		// 	setLottieCanvas(
-		// 	,
-		// );
+		try {
+			lottieCanvasRef.current = new T.CanvasTexture(lottiePlayer.container);
+			if ($lottieMeshRef?.current?.material)
+				$lottieMeshRef.current.material.uniforms.uTexture.value =
+					lottieCanvasRef.current;
+		} catch (err) {
+			console.warn('Could not set lottie canvas texture', err);
+		}
 
 		return () => {
 			lottieAnimationActive.current = false;
-			lottiePlayer.stop();
+			try {
+				if (lottiePlayer && typeof lottiePlayer.stop === 'function') {
+					lottiePlayer.stop();
+					lottiePlayer.destroy();
+				}
+			} catch (err) {
+				console.warn('Could not cleanup lottie player', err);
+			}
 		};
 	};
 
@@ -335,27 +347,48 @@ export function AnimationCanvas({ initialAspect }) {
 	useFrame(() => {
 		if (throttling) {
 			throttling = false;
-
 			return;
 		}
 
 		throttling = true;
 
-		updateBuffer();
-		if ($lottieMeshRef.current?.material.uniforms) {
-			if (lottieAnimationActive.current)
-				$lottieMeshRef.current.material.uniforms.uTexture.value.needsUpdate = true;
-			$lottieMeshRef.current.material.uniforms.uTime.value += 0.01;
+		try {
+			updateBuffer();
+		} catch (err) {
+			console.warn('Error updating buffer', err);
+		}
+		
+		try {
+			if ($lottieMeshRef.current?.material?.uniforms) {
+				if (lottieAnimationActive.current && $lottieMeshRef.current.material.uniforms.uTexture?.value) {
+					$lottieMeshRef.current.material.uniforms.uTexture.value.needsUpdate = true;
+				}
+				$lottieMeshRef.current.material.uniforms.uTime.value += 0.01;
+			}
+		} catch (err) {
+			console.warn('Error updating Lottie animation frame', err);
 		}
 	});
 
 	useEffect(() => {
-		let destroyLottie = initLottie();
+		let destroyLottie;
+		
+		try {
+			destroyLottie = initLottie();
+		} catch (err) {
+			console.warn('Failed to initialize Lottie animation', err);
+			destroyLottie = () => {}; // Provide a fallback empty function
+		}
+		
 		const killEvents = initEvents();
 		setGeometry();
 
 		const timeoutId = setTimeout(() => {
-			destroyLottie();
+			try {
+				destroyLottie();
+			} catch (err) {
+				console.warn('Failed to destroy Lottie on timeout', err);
+			}
 		}, 20000);
 
 		const handleRepeatAnimation = (e) => {
@@ -376,15 +409,29 @@ export function AnimationCanvas({ initialAspect }) {
 
 			if (dist > aspectSize / 2) return;
 
-			destroyLottie();
-			destroyLottie = initLottie();
+			try {
+				destroyLottie();
+				destroyLottie = initLottie();
+			} catch (err) {
+				console.warn('Failed to reinitialize Lottie animation', err);
+			}
 		};
 
-		gl?.domElement?.addEventListener('click', handleRepeatAnimation);
+		if (gl?.domElement) {
+			gl.domElement.addEventListener('click', handleRepeatAnimation);
+		}
 
 		return () => {
-			gl?.domElement?.removeEventListener('click', handleRepeatAnimation);
-			destroyLottie();
+			if (gl?.domElement) {
+				gl.domElement.removeEventListener('click', handleRepeatAnimation);
+			}
+			
+			try {
+				destroyLottie();
+			} catch (err) {
+				console.warn('Failed to cleanup Lottie animation', err);
+			}
+			
 			clearTimeout(timeoutId);
 			killEvents();
 		};
@@ -393,29 +440,63 @@ export function AnimationCanvas({ initialAspect }) {
 	useLayoutEffect(() => {
 		if (!$lottieMeshRef.current) return;
 
-		const lottieMeshUniforms = $lottieMeshRef.current.material.uniforms;
+		let logoStandByTl;
+		let logoDistTween;
+		let changeColorsTl;
+		let timelines = [];
 
-		const logoStandByTl = logoStandByAnim(lottieMeshUniforms);
-		const logoDistTween = logoDistAnimation(lottieMeshUniforms, () => {
-			logoStandByTl.play();
-		});
+		try {
+			const lottieMeshUniforms = $lottieMeshRef.current.material.uniforms;
+			
+			logoStandByTl = logoStandByAnim(lottieMeshUniforms);
+			logoDistTween = logoDistAnimation(lottieMeshUniforms, () => {
+				try {
+					logoStandByTl?.play();
+				} catch (err) {
+					console.warn('Error playing logo standby animation', err);
+				}
+			});
 
-		const changeColorsTl = blobColorChangeAnim(
-			$blobsMeshRef.current.material.uniforms,
-		);
+			if ($blobsMeshRef.current?.material?.uniforms) {
+				changeColorsTl = blobColorChangeAnim(
+					$blobsMeshRef.current.material.uniforms,
+				);
+			}
 
-		const timelines = initFloating();
+			timelines = initFloating();
 
-		$lottieMeshRef.current.material.uniforms.uTexture.value =
-			lottieCanvasRef.current;
+			if ($lottieMeshRef.current?.material?.uniforms?.uTexture) {
+				$lottieMeshRef.current.material.uniforms.uTexture.value = lottieCanvasRef.current;
+			}
+		} catch (err) {
+			console.warn('Error setting up animations in layout effect', err);
+		}
 
 		// eslint-disable-next-line consistent-return
 		return () => {
-			logoStandByTl?.kill();
-			logoDistTween?.kill();
-			changeColorsTl?.clear();
-			changeColorsTl?.kill();
-			timelines?.forEach((killFn) => killFn());
+			try {
+				if (logoStandByTl && typeof logoStandByTl.kill === 'function') logoStandByTl.kill();
+				if (logoDistTween && typeof logoDistTween.kill === 'function') logoDistTween.kill();
+				
+				if (changeColorsTl) {
+					if (typeof changeColorsTl.clear === 'function') changeColorsTl.clear();
+					if (typeof changeColorsTl.kill === 'function') changeColorsTl.kill();
+				}
+				
+				if (Array.isArray(timelines)) {
+					timelines.forEach((killFn) => {
+						if (typeof killFn === 'function') {
+							try {
+								killFn();
+							} catch (err) {
+								console.warn('Error killing timeline', err);
+							}
+						}
+					});
+				}
+			} catch (err) {
+				console.warn('Error cleaning up animations in layout effect', err);
+			}
 		};
 	}, [pointsBuffer]);
 

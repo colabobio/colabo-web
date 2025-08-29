@@ -13,9 +13,9 @@ import {
 } from './aside-layout.module.scss';
 
 export function AsideLayout({
-	className,
-	asideMod,
-	captionMod,
+	className = undefined,
+	asideMod = undefined,
+	captionMod = 'captionMod1',
 	label,
 	children,
 }) {
@@ -63,13 +63,7 @@ AsideLayout.propTypes = {
 	children: PropTypes.node.isRequired,
 	className: PropTypes.string,
 	asideMod: PropTypes.string,
-	captionMod: PropTypes.oneOf('captionMod1', 'captionMod2'),
-};
-
-AsideLayout.defaultProps = {
-	className: undefined,
-	asideMod: undefined,
-	captionMod: 'captionMod1',
+	captionMod: PropTypes.oneOf(['captionMod1', 'captionMod2']),
 };
 
 export default AsideLayout;

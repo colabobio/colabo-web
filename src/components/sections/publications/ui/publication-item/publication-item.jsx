@@ -17,7 +17,12 @@ import {
 	info,
 } from './publication-item.module.scss';
 
-export function PublicationItem({ title, authors, publication, links }) {
+export function PublicationItem({ 
+	title = undefined, 
+	authors = undefined, 
+	publication = undefined, 
+	links = [] 
+}) {
 	return (
 		<div className={component}>
 			<ConditionalComponent data={title}>
@@ -42,15 +47,16 @@ export function PublicationItem({ title, authors, publication, links }) {
 								<div className={linksRowInner}>
 									{links?.map((item) =>
 										item.url ? (
-											<Link
+											// Use regular anchor tag for external links instead of Gatsby's Link
+											<a
 												key={item.text}
 												className={link}
-												to={item.url}
+												href={item.url}
 												target="_blank"
 												rel="noopener noreferrer"
 											>
 												{item.text}
-											</Link>
+											</a>
 										) : (
 											<span key={item.text} className={info}>
 												{item.text}
@@ -77,13 +83,6 @@ PublicationItem.propTypes = {
 			url: PropTypes.string.isRequired,
 		}),
 	),
-};
-
-PublicationItem.defaultProps = {
-	title: undefined,
-	authors: undefined,
-	publication: undefined,
-	links: [],
 };
 
 export default PublicationItem;

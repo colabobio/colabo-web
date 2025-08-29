@@ -92,8 +92,12 @@ function NotebookPage({ data, serverData = {} }) {
 }
 
 NotebookPage.propTypes = {
-	data: PropTypes.shape().isRequired,
-	serverData: PropTypes.shape().isRequired,
+	data: PropTypes.shape({
+		notes: PropTypes.object
+	}).isRequired,
+	serverData: PropTypes.shape({
+		items: PropTypes.array
+	})
 };
 
 export default NotebookPage;

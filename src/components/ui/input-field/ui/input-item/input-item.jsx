@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './input-item.module.scss';
 
-export function InputItem({ register, name, placeholder, type, isRequired }) {
+export function InputItem({ register, name, placeholder, type = 'text', isRequired = false }) {
 	return (
 		<input
 			className={styles.input}
@@ -20,11 +20,6 @@ InputItem.propTypes = {
 	placeholder: PropTypes.string.isRequired,
 	type: PropTypes.oneOf(['text', 'email']),
 	isRequired: PropTypes.bool,
-};
-
-InputItem.defaultProps = {
-	isRequired: false,
-	type: 'text',
 };
 
 export default InputItem;

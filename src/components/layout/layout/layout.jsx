@@ -12,7 +12,7 @@ const isTouchDevice = () =>
 	window.navigator.maxTouchPoints > 0 ||
 	window.navigator.msMaxTouchPoints > 0;
 
-export function Layout({ children, wrapperMod }) {
+export function Layout({ children, wrapperMod = undefined }) {
 	const { height } = useWindowSize();
 
 	useEffect(() => {
@@ -49,10 +49,6 @@ export function Layout({ children, wrapperMod }) {
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
 	wrapperMod: PropTypes.oneOf(['projects']),
-};
-
-Layout.defaultProps = {
-	wrapperMod: undefined,
 };
 
 export default Layout;

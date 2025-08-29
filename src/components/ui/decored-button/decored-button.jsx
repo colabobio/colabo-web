@@ -65,7 +65,12 @@ const renderDecors = (number, decoOffset) => {
 	});
 };
 
-export function DecoredButton({ children, url, decorVariant, colorVariant }) {
+export function DecoredButton({ 
+	children, 
+	url = '#', 
+	decorVariant = BUTTON_DECOR_VARIANTS.square, 
+	colorVariant = '1' 
+}) {
 	const [decorNumber, setDecorNumber] = useState(3);
 	const $buttonRef = useRef();
 
@@ -94,15 +99,27 @@ export function DecoredButton({ children, url, decorVariant, colorVariant }) {
 	return (
 		<div ref={$buttonRef} className={container}>
 			{url !== '#' ? (
-				<Link target="_blank" to={url} className={buttonClassnames}>
-					{children}
-					{(decorVariant === BUTTON_DECOR_VARIANTS.elipses ||
-						decorVariant === BUTTON_DECOR_VARIANTS.circles) && (
-						<span className={decorsWrap}>
-							{renderDecors(decorNumber, decorOffset)}
-						</span>
-					)}
-				</Link>
+				url.startsWith('http') || url.startsWith('https') ? (
+					<a href={url} target="_blank" rel="noopener noreferrer" className={buttonClassnames}>
+						{children}
+						{(decorVariant === BUTTON_DECOR_VARIANTS.elipses ||
+							decorVariant === BUTTON_DECOR_VARIANTS.circles) && (
+							<span className={decorsWrap}>
+								{renderDecors(decorNumber, decorOffset)}
+							</span>
+						)}
+					</a>
+				) : (
+					<Link to={url} className={buttonClassnames}>
+						{children}
+						{(decorVariant === BUTTON_DECOR_VARIANTS.elipses ||
+							decorVariant === BUTTON_DECOR_VARIANTS.circles) && (
+							<span className={decorsWrap}>
+								{renderDecors(decorNumber, decorOffset)}
+							</span>
+						)}
+					</Link>
+				)
 			) : (
 				<div
 					className={buttonClassnames}
@@ -131,12 +148,6 @@ DecoredButton.propTypes = {
 		BUTTON_DECOR_VARIANTS.circles,
 	]),
 	colorVariant: PropTypes.oneOf(['1', '2', '3', '4']),
-};
-
-DecoredButton.defaultProps = {
-	url: '#',
-	decorVariant: BUTTON_DECOR_VARIANTS.square,
-	colorVariant: '1',
 };
 
 export default DecoredButton;
