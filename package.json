@@ -9,7 +9,7 @@
 	],
 	"scripts": {
 		"develop": "gatsby develop",
-		"deploy": "gatsby build --prefix-paths && gh-pages -d public",
+		"deploy": "NODE_OPTIONS=--no-experimental-fetch gatsby build --prefix-paths && gh-pages -d public",
 		"start": "gatsby develop",
 		"build": "gatsby build",
 		"serve": "gatsby serve",

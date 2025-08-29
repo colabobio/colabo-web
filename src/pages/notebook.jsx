@@ -16,31 +16,30 @@ const notesParser = (files = []) =>
 		guid: file.frontmatter.guid,
 	}));
 
-function NotebookPage({ data, serverData = {} }) {
+function NotebookPage({ data }) {
 	const { tl, handleAnimatedBg } = useAnimatedBg();
 
 	const allNotes = data.notes.nodes.map((post) => post.childMarkdownRemark);
 	const notesImages = notesParser(allNotes);
 
-	// Handle the case where serverData is undefined or doesn't have items
-	const mediumPosts = serverData?.items || [];
-	
-	// Add client-side fetching for GitHub Pages (which doesn't support SSR)
+	// Client-side fetching only, no server-side rendering for GitHub Pages compatibility
 	const [clientSidePosts, setClientSidePosts] = React.useState([]);
+	const [isLoading, setIsLoading] = React.useState(true);
 	
 	useEffect(() => {
-		// If we don't have server-side data, fetch on the client side
-		if (!mediumPosts.length) {
-			MEDIUM_API.getLatestPosts()
-				.then(result => {
-					if (result?.items) {
-						setClientSidePosts(result.items);
-					}
-				})
-				.catch(err => {
-					console.error("Error fetching Medium posts on client side:", err);
-				});
-		}
+		// Always fetch on client side since GitHub Pages doesn't support SSR
+		setIsLoading(true);
+		MEDIUM_API.getLatestPosts()
+			.then(result => {
+				if (result?.items) {
+					setClientSidePosts(result.items);
+				}
+				setIsLoading(false);
+			})
+			.catch(err => {
+				console.error("Error fetching Medium posts on client side:", err);
+				setIsLoading(false);
+			});
 		
 		handleAnimatedBg();
 
@@ -67,26 +66,40 @@ function NotebookPage({ data, serverData = {} }) {
 		}));
 	};
 	
-	// Use either server-side data or client-side fetched data
-	const displayPosts = processMediumPosts(mediumPosts.length ? mediumPosts : clientSidePosts);
+	// Only client-side data is used
+	const displayPosts = processMediumPosts(clientSidePosts);
 
 	return (
 		<Layout>
 			<Seo title="Notebook" image="/images/notebook.png" />
 			<NotebookHero />
-			<ConditionalComponent 
-				data={displayPosts} 
-				fallback={
-					<Section variant="no_indent">
-						<div style={{ textAlign: 'center', padding: '50px 0' }}>
-							<h3>Loading Medium posts...</h3>
-							<p>Please visit <a href="https://colabobio.medium.com/" target="_blank" rel="noopener noreferrer">our Medium page</a> directly if posts don't appear.</p>
+			{isLoading ? (
+				<Section variant="no_indent">
+					<div style={{ textAlign: 'center', padding: '50px 0' }}>
+						<h3>Loading Medium posts...</h3>
+						<p>Please wait while we fetch the latest articles...</p>
+					</div>
+				</Section>
+			) : (
+				<ConditionalComponent 
+					data={displayPosts} 
+					fallback={
+						<Section variant="no_indent">
+							<div style={{ textAlign: 'center', padding: '50px 0' }}>
+								<h3>No Medium posts found</h3>
+								<p>Please visit <a href="https://colabobio.medium.com/" target="_blank" rel="noopener noreferrer">our Medium page</a> directly to view our articles.</p>
+							</div>
+						</Section>
+					}
+				>
+					<Notes notes={displayPosts} images={notesImages} />
+					{displayPosts.length > 0 && (
+						<div style={{ textAlign: 'center', padding: '20px 0', fontSize: '14px', opacity: 0.7 }}>
+							Showing {displayPosts.length} articles from our Medium page
 						</div>
-					</Section>
-				}
-			>
-				<Notes notes={displayPosts} images={notesImages} />
-			</ConditionalComponent>
+					)}
+				</ConditionalComponent>
+			)}
 		</Layout>
 	);
 }
@@ -94,10 +107,7 @@ function NotebookPage({ data, serverData = {} }) {
 NotebookPage.propTypes = {
 	data: PropTypes.shape({
 		notes: PropTypes.object
-	}).isRequired,
-	serverData: PropTypes.shape({
-		items: PropTypes.array
-	})
+	}).isRequired
 };
 
 export default NotebookPage;
@@ -123,23 +133,4 @@ export const pageQuery = graphql`
 	}
 `;
 
-export async function getServerData() {
-	try {
-		const notesData = await MEDIUM_API.getLatestPosts();
-		
-		return {
-			props: notesData,
-			// Set a reasonable cache time to avoid hitting API rate limits
-			status: 200,
-			headers: {
-				'Cache-Control': 'public, max-age=600', // Cache for 10 minutes
-			},
-		};
-	} catch (error) {
-		console.error("Error in getServerData:", error);
-		return {
-			props: { items: [] },
-			status: 200, // Return 200 to avoid page not found errors
-		};
-	}
-}
+// Removed getServerData function to make compatible with GitHub Pages
