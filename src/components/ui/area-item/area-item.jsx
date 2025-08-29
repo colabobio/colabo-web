@@ -35,15 +35,8 @@ export function AreaItem({
 
 	const lottieRef = useRef(null);
 
-	useEffect(
-		() => () => {
-			if (lottieRef.current) {
-				lottieRef.current.destroy();
-			}
-		},
-		[],
-	);
-
+	// Remove the cleanup function that was causing the error
+	// react-lottie-player handles cleanup differently
 	const [isPlaying, setIsPlaying] = React.useState(false);
 
 	const playAnimation = () => {

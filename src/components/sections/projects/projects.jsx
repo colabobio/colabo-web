@@ -92,7 +92,7 @@ export function Projects({ projects }) {
 Projects.propTypes = {
 	projects: PropTypes.arrayOf(
 		PropTypes.shape({
-			img: PropTypes.string.isRequired,
+			img: PropTypes.object.isRequired, // Changed from string to object for GatsbyImage
 			title: PropTypes.string.isRequired,
 			content: PropTypes.string.isRequired,
 			url: PropTypes.string,

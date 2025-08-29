@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Title } from '@ui/title';
 import { SanitaizedText } from '@ui/sanitaized-text';
 import { Arrow } from '@icons/arrow';
-import { Link } from 'gatsby';
+// Import Link was removed as we'll use regular <a> tags for external links
 import {
 	component,
 	heading,
@@ -21,9 +21,9 @@ export function ProjectContent({ className, title, content, url }) {
 			</Title>
 			<SanitaizedText className={body}>{content}</SanitaizedText>
 			{url && (
-				<Link
+				<a
 					className={link}
-					to={url}
+					href={url}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
@@ -31,7 +31,7 @@ export function ProjectContent({ className, title, content, url }) {
 					<span className={icon}>
 						<Arrow />
 					</span>
-				</Link>
+				</a>
 			)}
 		</div>
 	);
