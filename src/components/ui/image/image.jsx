@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { wrapper, image, contain, cover } from './image.module.scss';

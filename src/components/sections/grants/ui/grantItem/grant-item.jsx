@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import {
 	grant,
 	content,
@@ -16,7 +16,7 @@ export function GrantItem({ image, text, organization, href }) {
 			<a href={href} className={link} target="_blank" rel="noreferrer">
 				<div className={content}>
 					<div className={imgW}>
-						<Img fluid={image.childImageSharp.fluid} alt={text} />
+						<GatsbyImage image={getImage(image)} alt={text} />
 					</div>
 					<div className={title}>
 						{text}

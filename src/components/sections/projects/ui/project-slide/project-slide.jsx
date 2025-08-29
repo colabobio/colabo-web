@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { ProjectContent } from '../project-content';
 import { component, bg, image, body } from './project-slide.module.scss';
 
@@ -12,9 +12,9 @@ export function ProjectSlide({ img, title, content, url }) {
 				data-swiper-parallax-opacity="0"
 				className={bg}
 			>
-				<Img
+				<GatsbyImage
 						className={image}
-						fluid={img.childImageSharp.fluid}
+						image={getImage(img)}
 						alt={title}
 					/>
 			</div>
