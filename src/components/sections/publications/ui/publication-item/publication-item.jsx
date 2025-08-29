@@ -47,15 +47,16 @@ export function PublicationItem({
 								<div className={linksRowInner}>
 									{links?.map((item) =>
 										item.url ? (
-											<Link
+											// Use regular anchor tag for external links instead of Gatsby's Link
+											<a
 												key={item.text}
 												className={link}
-												to={item.url}
+												href={item.url}
 												target="_blank"
 												rel="noopener noreferrer"
 											>
 												{item.text}
-											</Link>
+											</a>
 										) : (
 											<span key={item.text} className={info}>
 												{item.text}
