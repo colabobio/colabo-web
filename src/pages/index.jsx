@@ -27,7 +27,10 @@ function IndexPage({ data }) {
 }
 
 IndexPage.propTypes = {
-	data: PropTypes.shape.isRequired,
+	data: PropTypes.shape({
+		site: PropTypes.object,
+		news: PropTypes.object
+	}).isRequired,
 };
 
 export default IndexPage;

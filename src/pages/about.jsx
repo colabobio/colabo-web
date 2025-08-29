@@ -51,7 +51,11 @@ function AboutPage({ data }) {
 }
 
 AboutPage.propTypes = {
-	data: PropTypes.shape.isRequired,
+	data: PropTypes.shape({
+		team: PropTypes.object,
+		heros: PropTypes.object,
+		grants: PropTypes.object
+	}).isRequired,
 };
 
 export default AboutPage;

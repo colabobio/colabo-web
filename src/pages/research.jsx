@@ -59,7 +59,11 @@ function ResearchPage({ data }) {
 }
 
 ResearchPage.propTypes = {
-	data: PropTypes.shape.isRequired,
+	data: PropTypes.shape({
+		files: PropTypes.object,
+		heros: PropTypes.object,
+		publications: PropTypes.object
+	}).isRequired,
 };
 
 export default ResearchPage;

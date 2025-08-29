@@ -20,7 +20,10 @@ function ProjectsPage({ data }) {
 }
 
 ProjectsPage.propTypes = {
-	data: PropTypes.shape.isRequired,
+	data: PropTypes.shape({
+		site: PropTypes.object,
+		projects: PropTypes.object
+	}).isRequired,
 };
 
 export default ProjectsPage;
