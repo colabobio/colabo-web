@@ -12,7 +12,7 @@ module.exports = {
 		'gatsby-plugin-sitemap',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
-		'gatsby-plugin-react-helmet',
+		'gatsby-plugin-react-helmet-async',
 		{
 			resolve: `gatsby-plugin-nprogress`,
 			options: {
@@ -202,6 +202,8 @@ module.exports = {
         `,
 				feeds: [
 					{
+						title: "Colubri Laboratory RSS Feed",
+						description: "RSS Feed for Colubri Laboratory",
 						serialize: ({ query: { site, allMarkdownRemark } }) =>
 							allMarkdownRemark.nodes.map((node) => ({
 								...node.frontmatter,
@@ -214,7 +216,7 @@ module.exports = {
 						query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { frontmatter: { date: DESC } },
                 ) {
                   nodes {
                     excerpt

@@ -12,10 +12,10 @@ export function InputField({
 	errors,
 	name,
 	placeholder,
-	type,
+	type = 'text',
 	label,
-	isRequired,
-	isTextarea,
+	isRequired = false,
+	isTextarea = false,
 }) {
 	return (
 		<label className={styles.label}>
@@ -59,12 +59,6 @@ InputField.propTypes = {
 	label: PropTypes.string.isRequired,
 	isRequired: PropTypes.bool,
 	isTextarea: PropTypes.bool,
-};
-
-InputField.defaultProps = {
-	isRequired: false,
-	isTextarea: false,
-	type: 'text',
 };
 
 export default InputField;

@@ -20,7 +20,10 @@ function ProjectsPage({ data }) {
 }
 
 ProjectsPage.propTypes = {
-	data: PropTypes.shape.isRequired,
+	data: PropTypes.shape({
+		site: PropTypes.object,
+		projects: PropTypes.object
+	}).isRequired,
 };
 
 export default ProjectsPage;
@@ -42,9 +45,7 @@ export const pageQuery = graphql`
 					projects {
 						img {
 							childImageSharp {
-								fluid(maxWidth: 1920, quality: 100) {
-									...GatsbyImageSharpFluid
-								}
+								gatsbyImageData(width: 1920, quality: 100, layout: FULL_WIDTH)
 							}
 						}
 						title

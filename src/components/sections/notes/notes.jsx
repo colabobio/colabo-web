@@ -6,16 +6,28 @@ import { Section } from '../../layout/section';
 import { NoteItem } from '../../ui/note-item';
 import * as styles from './notes.module.scss';
 
-export function Notes({ notes, images }) {
+export function Notes({ notes = [], images = [] }) {
+	if (!notes || notes.length === 0) {
+		return (
+			<Section variant="no_indent">
+				<div className={styles.notes}>
+					<p>Loading Medium posts...</p>
+				</div>
+			</Section>
+		);
+	}
+
 	return (
 		<Section variant="no_indent">
 			<ul className={styles.notes}>
 				{notes.map((item) => {
+					if (!item || !item.guid) return null;
+					
 					const guid = getGuidFromLink(item.guid);
 					const currentPost = getPostByGuid(guid, images);
 
 					return (
-						<li className={styles.notesItem} key={item.title}>
+						<li className={styles.notesItem} key={item.title || item.guid}>
 							<NoteItem {...item} img={currentPost?.img} />
 						</li>
 					);

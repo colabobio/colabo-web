@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useLocation } from '@reach/router';
+import { useLocation } from '@gatsbyjs/reach-router';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -32,7 +32,7 @@ const transitionClassnames = {
 	exitActive,
 };
 
-export function Header({ menuTransitionTimeout }) {
+export function Header({ menuTransitionTimeout = 300 }) {
 	const data = useStaticQuery(graphql`
 		query HeaderQuery {
 			header: file(
@@ -125,10 +125,6 @@ export function Header({ menuTransitionTimeout }) {
 
 Header.propTypes = {
 	menuTransitionTimeout: PropTypes.number,
-};
-
-Header.defaultProps = {
-	menuTransitionTimeout: 300,
 };
 
 export default Header;

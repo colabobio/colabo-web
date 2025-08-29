@@ -5,7 +5,7 @@ import { Title } from '@ui/title';
 import { Links } from './ui/links';
 import { section, container, heading } from './news-feed.module.scss';
 
-export function NewsFeed({ newsItems, marqueSpeed }) {
+export function NewsFeed({ newsItems, marqueSpeed = 40 }) {
 	const $containerRef = useRef(null);
 
 	useEffect(() => {
@@ -42,10 +42,6 @@ NewsFeed.propTypes = {
 			colorVariant: PropTypes.string,
 		}),
 	).isRequired,
-};
-
-NewsFeed.defaultProps = {
-	marqueSpeed: 40,
 };
 
 export default NewsFeed;

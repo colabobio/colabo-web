@@ -50,7 +50,13 @@ export const getPostByGuid = (guid, images) => {
 export const getGuidFromLink = (link) => {
 	if (!link) return null;
 
-	return link.split('/').pop().replace('-', ' ');
+	// Medium GUIDs can have different formats
+	// Try to extract the last segment of the URL which often contains the unique identifier
+	let guid = link.split('/').pop();
+	
+	// Handle both hyphenated and non-hyphenated formats
+	// Return as-is since we're matching against the same format from markdown files
+	return guid;
 };
 
 export const shuffleArray = (array) => {

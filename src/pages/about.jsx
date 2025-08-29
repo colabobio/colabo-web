@@ -51,7 +51,11 @@ function AboutPage({ data }) {
 }
 
 AboutPage.propTypes = {
-	data: PropTypes.shape.isRequired,
+	data: PropTypes.shape({
+		team: PropTypes.object,
+		heros: PropTypes.object,
+		grants: PropTypes.object
+	}).isRequired,
 };
 
 export default AboutPage;
@@ -69,16 +73,12 @@ export const pageQuery = graphql`
 						category
 						avatar {
 							childImageSharp {
-								fluid {
-									...GatsbyImageSharpFluid
-								}
+								gatsbyImageData(layout: FULL_WIDTH)
 							}
 						}
 						avatarHover {
 							childImageSharp {
-								fluid {
-									...GatsbyImageSharpFluid
-								}
+								gatsbyImageData(layout: FULL_WIDTH)
 							}
 						}
 					}
@@ -95,9 +95,7 @@ export const pageQuery = graphql`
 						description
 						img {
 							childImageSharp {
-								fluid {
-									...GatsbyImageSharpFluid
-								}
+								gatsbyImageData(layout: FULL_WIDTH)
 							}
 						}
 						page
@@ -116,9 +114,7 @@ export const pageQuery = graphql`
 						organization
 						img {
 							childImageSharp {
-								fluid {
-									...GatsbyImageSharpFluid
-								}
+								gatsbyImageData(layout: FULL_WIDTH)
 							}
 						}
 						href

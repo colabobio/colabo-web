@@ -45,7 +45,7 @@ Publications.propTypes = {
 					text: PropTypes.string.isRequired,
 					url: PropTypes.string.isRequired,
 				}),
-			).isRequired,
+			), // Removed isRequired
 		}),
 	).isRequired,
 };
