@@ -11,9 +11,13 @@
 		"develop": "gatsby develop",
 		"deploy": "NODE_OPTIONS=--no-experimental-fetch gatsby build --prefix-paths && gh-pages -d public",
 		"start": "gatsby develop",
-		"build": "gatsby build",
+		"build": "NODE_ENV=production gatsby build",
 		"serve": "gatsby serve",
-		"clean": "gatsby clean"
+		"clean": "gatsby clean",
+		"postinstall": "node scripts/postinstall.js"
+	},
+	"optionalDependencies": {
+		"@parcel/watcher": "^2.4.1"
 	},
 	"dependencies": {
 		"@gatsbyjs/reach-router": "^2.0.1",

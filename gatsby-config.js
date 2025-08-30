@@ -183,7 +183,7 @@ module.exports = {
 			},
 		},
 		`gatsby-transformer-sharp`,
-		{ resolve: `gatsby-plugin-sharp`, options: { icon: './' } },
+		`gatsby-plugin-sharp`,
 
 		{
 			resolve: `gatsby-plugin-feed`,

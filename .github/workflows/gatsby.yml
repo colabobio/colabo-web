@@ -74,11 +74,31 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: |
+          if [ "${{ steps.detect-package-manager.outputs.manager }}" = "npm" ]; then
+            npm ci --include=optional
+          else
+            ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+          fi
+      - name: Clean Gatsby cache
+        run: |
+          if [ "${{ steps.detect-package-manager.outputs.manager }}" = "npm" ]; then
+            npm run clean
+          else
+            ${{ steps.detect-package-manager.outputs.manager }} run clean
+          fi
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+          NODE_ENV: 'production'
+          CI: 'true'
+          GATSBY_CPU_COUNT: 1
+        run: |
+          if [ "${{ steps.detect-package-manager.outputs.manager }}" = "npm" ]; then
+            npm run build
+          else
+            ${{ steps.detect-package-manager.outputs.manager }} run build
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

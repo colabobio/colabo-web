@@ -178,6 +178,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 // Handle deprecated punycode module and other problematic modules
 exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
+  const config = getConfig();
+  
   actions.setWebpackConfig({
     resolve: {
       fallback: {
@@ -187,11 +189,13 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
         os: false,
       },
     },
+    externals: {
+      '@parcel/watcher': 'commonjs @parcel/watcher',
+    },
   });
 
-  // Prevent error from @parcel/watcher by ignoring it
+  // Handle @parcel/watcher specifically for build stages
   if (stage === 'build-javascript' || stage === 'build-html') {
-    const config = getConfig();
     const miniCssExtractPlugin = config.plugins.find(
       plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
     );
@@ -208,6 +212,11 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
             use: 'null-loader',
           },
         ],
+      },
+      resolve: {
+        alias: {
+          '@parcel/watcher': false,
+        },
       },
     });
 
