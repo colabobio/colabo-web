@@ -19,6 +19,9 @@
 	"optionalDependencies": {
 		"@parcel/watcher": "^2.4.1"
 	},
+	"resolutions": {
+		"@parcel/watcher": "2.0.4"
+	},
 	"dependencies": {
 		"@gatsbyjs/reach-router": "^2.0.1",
 		"@react-three/drei": "^9.88.17",
