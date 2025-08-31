@@ -2,7 +2,89 @@
 
 ✨ Quick guide to customizing/changing animations
 
-# Intro animation (logo & blobs)
+## D3.js Network Animation (Current)
+
+The new network animation shows a real-time contact network visualization using D3.js. It displays people as nodes and their interactions as links that appear and disappear over time.
+
+### Configuration
+
+All settings are controlled in `src/components/ui/intro-animation/network-config.js`:
+
+```javascript
+// Simulation parameters
+simulation: {
+  numPeople: 40,              // Number of people/nodes in the network
+  maxDuration: 300,           // Total simulation duration in seconds
+  numContacts: 150,           // Number of contact interactions
+  animationSpeed: 100,        // Animation speed in milliseconds per step
+},
+
+// Visual appearance
+visual: {
+  nodeRadius: 8,              // Size of each person/node
+  linkDistance: 50,           // Preferred distance between connected nodes
+  chargeStrength: -180,       // Force pushing nodes apart (negative = repulsion)
+  linkColor: '#4f46e5',       // Color of active connections (indigo)
+  linkOpacity: 0.7,           // Opacity of connections
+},
+```
+
+### Customizing the Animation
+
+To modify the network animation:
+
+1. **Colors**: Update `nodeColors` array in the config for different node colors
+2. **Speed**: Adjust `animationSpeed` to make the animation faster/slower
+3. **Network Size**: Change `numPeople` and `numContacts` for larger/smaller networks
+4. **Forces**: Modify `chargeStrength` and `linkDistance` to change the layout behavior
+
+### Switching Back to Other Animations
+
+To use a different animation, update `src/pages/index.jsx`:
+
+```jsx
+// For D3 Network Animation (current)
+import { NetworkAnimation } from '../components/ui/intro-animation/network-animation';
+<NetworkAnimation />
+
+// For Static Logo
+import { StaticPlaceholder } from '../components/ui/intro-animation/static-placeholder';
+<StaticPlaceholder />
+
+// For Original 3D Animation (if issues are resolved)
+import { IntroAnimation } from '../components/ui/intro-animation';
+<IntroAnimation />
+```
+
+---
+
+## Legacy Animation Documentation
+
+To replace the intro animation, implement a new one and place the JS file under ```src/components/ui/intro-animation/animations```. 
+
+Then import the file into ```src/pages/index.js``` like so:
+
+```
+import { MyAnimation } from '../components/ui/intro-animation/my-animation';
+
+function IndexPage({ data }) {
+	const { news } = data.news.childMarkdownRemark.frontmatter;
+
+	return (
+		<Layout>
+			<Seo title="Colabo" image="/images/home.png" />
+			<HomeHero>
+				<MyAnimation />
+				<ConditionalComponent data={news}>
+					<NewsFeed newsItems={news} />
+				</ConditionalComponent>
+			</HomeHero>
+		</Layout>
+	);
+}
+```
+
+## Original logo & blobs animation from 360D
 
 ## ✅ Scene:
 

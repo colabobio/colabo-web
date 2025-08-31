@@ -6,8 +6,9 @@ import { Layout } from '@layout/layout';
 import { Seo } from '@ui/seo';
 import { HomeHero } from '@sections/home-hero';
 import { NewsFeed } from '@sections/news-feed';
+import { NetworkAnimation } from '../components/ui/intro-animation/network-animation';
 // import { IntroAnimation } from '../components/ui/intro-animation';
-import { StaticPlaceholder } from '../components/ui/intro-animation/static-placeholder';
+// import { StaticPlaceholder } from '../components/ui/intro-animation/static-placeholder';
 
 function IndexPage({ data }) {
 	const { news } = data.news.childMarkdownRemark.frontmatter;
@@ -16,8 +17,8 @@ function IndexPage({ data }) {
 		<Layout>
 			<Seo title="Colabo" image="/images/home.png" />
 			<HomeHero>
-				{/* Original 3D animation replaced with static version due to punycode deprecation error */}
-				<StaticPlaceholder />
+				{/* D3.js Network Animation showing real-time contact networks */}
+				<NetworkAnimation />
 				<ConditionalComponent data={news}>
 					<NewsFeed newsItems={news} />
 				</ConditionalComponent>
