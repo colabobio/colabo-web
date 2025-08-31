@@ -95,7 +95,7 @@ function NotebookPage({ data }) {
 					<Notes notes={displayPosts} images={notesImages} />
 					{displayPosts.length > 0 && (
 						<div style={{ textAlign: 'center', padding: '20px 0', fontSize: '14px', opacity: 0.7 }}>
-							Showing {displayPosts.length} articles from our Medium page
+							Showing the latest {displayPosts.length} notebook articles, please visit <a href="https://colabobio.medium.com/" target="_blank" rel="noopener noreferrer">our Medium page</a> to read more.
 						</div>
 					)}
 				</ConditionalComponent>
