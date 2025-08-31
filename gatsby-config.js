@@ -4,7 +4,7 @@
 module.exports = {
 	siteMetadata: {
 		title: 'Colubri Laboratory',
-		siteUrl: 'https://www.yourdomain.tld',
+		siteUrl: 'https://co-labo.org/',
 	},
 	plugins: [
 		{
