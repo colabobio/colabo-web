@@ -71,60 +71,57 @@ export default ResearchPage;
 export const pageQuery = graphql`
 	query {
 		files: allFile(
-			filter: { sourceInstanceName: { eq: "research" }, ext: { eq: ".md" } }
-			sort: { fields: childrenMarkdownRemark___frontmatter___order, order: ASC }
+			filter: {sourceInstanceName: {eq: "research"}, ext: {eq: ".md"}}
+			sort: {childrenMarkdownRemark: {frontmatter: {order: ASC}}}
 		) {
 			nodes {
-				childMarkdownRemark {
-					id
-					fields {
-						slug
-					}
-					frontmatter {
-						title
-						description
-						href
-						animation
-					}
+			childMarkdownRemark {
+				id
+				fields {
+				slug
 				}
+				frontmatter {
+				title
+				description
+				href
+				animation
+				}
+			}
 			}
 		}
 		heros: allFile(
-			filter: { sourceInstanceName: { eq: "heros" }, extension: { eq: "md" } }
+			filter: {sourceInstanceName: {eq: "heros"}, extension: {eq: "md"}}
 		) {
 			nodes {
-				childMarkdownRemark {
-					frontmatter {
-						description
-						img {
-							childImageSharp {
-								gatsbyImageData(layout: FULL_WIDTH)
-							}
-						}
-						page
+			childMarkdownRemark {
+				frontmatter {
+				description
+				img {
+					childImageSharp {
+					gatsbyImageData(layout: FULL_WIDTH)
 					}
 				}
+				page
+				}
+			}
 			}
 		}
 		publications: allFile(
-			filter: {
-				sourceInstanceName: { eq: "publications" }
-				extension: { eq: "md" }
-			}
-			sort: { fields: childMarkdownRemark___frontmatter___order, order: ASC }
+			filter: {sourceInstanceName: {eq: "publications"}, extension: {eq: "md"}}
+			sort: {childMarkdownRemark: {frontmatter: {order: ASC}}}
 		) {
 			nodes {
-				childMarkdownRemark {
-					frontmatter {
-						title
-						authors
-						publication
-						links {
-							text
-							url
-						}
-					}
+			childMarkdownRemark {
+				frontmatter {
+				title
+				authors
+				publication
+				links {
+					text
+					url
 				}
+				}
+			}
 			}
 		}
 	}

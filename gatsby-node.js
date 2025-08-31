@@ -68,26 +68,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 	// Get all markdown blog posts sorted by date
 	const result = await graphql(`
-		{
-			allFile(
-				filter: {
-					ext: { eq: ".md" }
-					sourceInstanceName: { in: ["research", "notebook"] }
-				}
-				sort: { fields: childMarkdownRemark___frontmatter___date, order: ASC }
-				limit: 1000
-			) {
-				nodes {
-					sourceInstanceName
-					childMarkdownRemark {
-						id
-						fields {
-							slug
-						}
-					}
+	{
+		allFile(
+			filter: {ext: {eq: ".md"}, sourceInstanceName: {in: ["research", "notebook"]}}
+			sort: {childMarkdownRemark: {frontmatter: {date: ASC}}}
+			limit: 1000
+		) {
+			nodes {
+			sourceInstanceName
+			childMarkdownRemark {
+				id
+				fields {
+				slug
 				}
 			}
+			}
 		}
+	}
 	`);
 
 	if (result.errors) {

@@ -63,64 +63,64 @@ export default AboutPage;
 export const pageQuery = graphql`
 	query {
 		team: allFile(
-			filter: { sourceInstanceName: { eq: "team" }, extension: { eq: "md" } }
-			sort: { fields: childMarkdownRemark___frontmatter___order, order: ASC }
+			filter: {sourceInstanceName: {eq: "team"}, extension: {eq: "md"}}
+			sort: {childMarkdownRemark: {frontmatter: {order: ASC}}}
 		) {
 			nodes {
-				childMarkdownRemark {
-					frontmatter {
-						name
-						category
-						avatar {
-							childImageSharp {
-								gatsbyImageData(layout: FULL_WIDTH)
-							}
-						}
-						avatarHover {
-							childImageSharp {
-								gatsbyImageData(layout: FULL_WIDTH)
-							}
-						}
+			childMarkdownRemark {
+				frontmatter {
+				name
+				category
+				avatar {
+					childImageSharp {
+					gatsbyImageData(layout: FULL_WIDTH)
 					}
-					html
 				}
+				avatarHover {
+					childImageSharp {
+					gatsbyImageData(layout: FULL_WIDTH)
+					}
+				}
+				}
+				html
+			}
 			}
 		}
 		heros: allFile(
-			filter: { sourceInstanceName: { eq: "heros" }, extension: { eq: "md" } }
+			filter: {sourceInstanceName: {eq: "heros"}, extension: {eq: "md"}}
 		) {
 			nodes {
-				childMarkdownRemark {
-					frontmatter {
-						description
-						img {
-							childImageSharp {
-								gatsbyImageData(layout: FULL_WIDTH)
-							}
-						}
-						page
+			childMarkdownRemark {
+				frontmatter {
+				description
+				img {
+					childImageSharp {
+					gatsbyImageData(layout: FULL_WIDTH)
 					}
 				}
+				page
+				}
+			}
 			}
 		}
 		grants: allFile(
-			filter: { sourceInstanceName: { eq: "grants" }, extension: { eq: "md" } }
-			sort: { fields: childMarkdownRemark___frontmatter___order, order: DESC }
+			filter: {sourceInstanceName: {eq: "grants"}, extension: {eq: "md"}}
+			sort: {childMarkdownRemark: {frontmatter: {order: DESC}}}
 		) {
 			nodes {
-				childMarkdownRemark {
-					frontmatter {
-						title
-						organization
-						img {
-							childImageSharp {
-								gatsbyImageData(layout: FULL_WIDTH)
-							}
-						}
-						href
-						order
+			childMarkdownRemark {
+				frontmatter {
+				title
+				organization
+				img {
+					childImageSharp {
+					gatsbyImageData(layout: FULL_WIDTH)
 					}
 				}
+				href
+				order
+				}
+			}
 			}
 		}
 	}
