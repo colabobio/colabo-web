@@ -1,9 +1,9 @@
 ---
 projects:
   - img: ./05.png
-    title: 'Operation Outbreak'
-    content: "Operation Outbreak (OO): Immerse yourself in a fictional epidemic, where a Bluetooth-transmitted pathogen spreads across smartphones.  Take on real-world roles — government official, biomedical researcher, banker, healthcare worker, and more — as you battle the outbreak, gaining hands-on knowledge of society's response in a unique learning experience"
-    url: 'https://operationoutbreak.org'
+    title: 'Epigames'
+    content: 'Epigames: This is new mobile applicaitn that tries to find an answer to this question: what if playing a game on your phone could help scientists understand how diseases spread—and even prevent the next pandemic? Developed with the Epidemica platform for experimental epidemiology, this project offers the closest proxy for observing pathogen transmission in human populations'
+    url: 'https://epidemica.info'
   - img: ./04.jpeg
     title: 'Travel Healthy'
     content: 'An app for monitoring infectious disease symptoms among international travelers (and more). The goal of this study is simply to map symptoms of U.S. travelers as they visit other countries, and collect samples (nasal swab, stool, blood) when they return. The really ambitious goal is to integrate the data from the app with other sources (e.g.: molecular testing) to create an outbreak forecasting system based on travel patterns.'
