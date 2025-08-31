@@ -3,7 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import { Section } from '../../layout/section';
-import { section, imageW, text } from './about-hero.module.scss';
+import Lottie from 'react-lottie-player';
+import { section, imageW, text, lottieBackground } from './about-hero.module.scss';
+
+import colaboAnimation from '../../../../static/images/colabo-animation-v1.json';
 
 export function AboutHero({ description }) {
 	return (
@@ -24,6 +27,24 @@ export function AboutHero({ description }) {
 					/>
 				</svg>
 			</div>
+
+		<div className={lottieBackground}>
+			<Lottie
+				animationData={colaboAnimation}
+				loop
+				play
+				style={{
+				position: 'relative',
+					top: 130,
+					left: 0,
+					width: '100%',
+					height: '80%',
+					opacity: 0.1, // Very subtle background
+					zIndex: -1
+				}}
+			/>
+			</div>
+
 			<div className={text}>
 				<Markdown>{description}</Markdown>
 			</div>
