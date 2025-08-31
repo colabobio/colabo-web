@@ -1,7 +1,7 @@
 @use '@styles/helpers/helpers-all' as *;
 
-.memberContent {
-}
+// .memberContent {
+// }
 
 .imageContainer {
 	position: relative;
@@ -82,7 +82,10 @@
 
 .title {
 	@include h5;
-	letter-spacing: -0.02em;
+
+	& {
+		letter-spacing: -0.02em;
+	}
 
 	&:not(:last-child) {
 		@include bp($tablet_max, min) {

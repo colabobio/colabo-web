@@ -34,10 +34,12 @@
 	ol {
 		@include body_xl;
 
-		font-weight: 500;
-		line-height: 1.28;
-		letter-spacing: -0.03em;
-		text-align: justify;
+		& {
+			font-weight: 500;
+			line-height: 1.28;
+			letter-spacing: -0.03em;
+			text-align: justify;
+		}
 
 		&:not(:last-child) {
 			@include bp($tablet_max, min) {

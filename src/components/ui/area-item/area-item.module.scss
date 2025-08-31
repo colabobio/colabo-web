@@ -132,9 +132,10 @@
 .title {
 	@include h3;
 
-	display: flex;
-
-	line-height: 1.1;
+	& {
+		display: flex;
+		line-height: 1.1;
+	}
 
 	&:not(:last-child) {
 		@include bp($tablet_max, min) {
@@ -179,7 +180,9 @@
 .text {
 	@include body_xl;
 
-	line-height: 1.44;
+	& {
+		line-height: 1.44;
+	}	
 
 	@include bp($tablet_max, min) {
 		letter-spacing: -0.07em;

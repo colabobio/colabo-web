@@ -72,14 +72,15 @@
 .title {
 	@include h2;
 
-	padding-bottom: 0.6rem;
+	& {
+		padding-bottom: 0.6rem;
+		line-height: 1;
+	}	
 
-	line-height: 1;
-
-	.link:hover &,
-	.link:focus & {
-		// text-decoration: underline;
-	}
+	// .link:hover &,
+	// .link:focus & {
+	// 	// text-decoration: underline;
+	// }
 
 	@include bp($tablet_max, min) {
 		letter-spacing: -0.01em;

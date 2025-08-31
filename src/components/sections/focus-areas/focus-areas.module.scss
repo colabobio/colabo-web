@@ -3,7 +3,9 @@
 .title {
 	@include h4;
 
-	letter-spacing: -0.01em;
+	&{
+		letter-spacing: -0.01em;
+	}	
 
 	&:not(:last-child) {
 		margin-bottom: 1rem;
