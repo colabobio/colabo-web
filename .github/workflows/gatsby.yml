@@ -74,12 +74,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
+        env:
+          npm_config_ignore_optional: true
         run: |
           if [ "${{ steps.detect-package-manager.outputs.manager }}" = "npm" ]; then
-            npm ci --include=optional
+            npm ci --omit=optional || npm ci --force
           else
             ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
           fi
+      - name: Debug package installation
+        run: |
+          echo "Node version: $(node --version)"
+          echo "NPM version: $(npm --version)"
+          echo "Checking @parcel/watcher installation:"
+          npm list @parcel/watcher || echo "@parcel/watcher not found (expected in CI)"
       - name: Clean Gatsby cache
         run: |
           if [ "${{ steps.detect-package-manager.outputs.manager }}" = "npm" ]; then
