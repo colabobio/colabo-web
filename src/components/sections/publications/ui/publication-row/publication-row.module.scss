@@ -1,4 +1,4 @@
-@import '@styles/helpers/helpers-all.scss';
+@use '@styles/helpers/helpers-all' as *;
 
 .row {
 	@include bp($tablet_max, min) {

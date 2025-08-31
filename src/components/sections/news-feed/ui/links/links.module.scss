@@ -1,12 +1,12 @@
-@import '@styles/helpers/helpers-all.scss';
-@import '../../news-feed-variables.scss';
+@use '@styles/helpers/helpers-all' as *;
+@use '../../news-feed-variables' as vars;
 
 .list {
 	display: flex;
 	flex-wrap: nowrap;
 
 	flex-shrink: 0;
-	gap: $gap;
+	gap: vars.$gap;
 
 	max-width: 100%;
 

@@ -1,5 +1,5 @@
-@import 'reset';
-@import '../helpers/helpers-all.scss';
+@use 'reset';
+@use '../helpers/helpers-all' as *;
 
 //------------------------------------------------------------base styles
 

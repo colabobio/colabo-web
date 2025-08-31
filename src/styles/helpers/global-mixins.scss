@@ -1,7 +1,9 @@
 @use 'sass:math';
+@use 'sass:map';
+@use 'variables' as vars;
 
 @function z-index($key) {
-	@return map-get($z-index, $key);
+	@return map.get(vars.$z-index, $key);
 }
 
 @mixin z-index($key) {
@@ -17,7 +19,7 @@
 	transform: translateZ(0);
 }
 
-@mixin font_face($file_name, $font_name: $file_name, $path: $font_path, $weight: normal, $style: normal) {
+@mixin font_face($file_name, $font_name: $file_name, $path: '/fonts/', $weight: normal, $style: normal) {
 	@font-face {
 		font-family: quote($font_name);
 		src: url($path + $file-name + '.woff2') format('woff2'), url($path + $file-name + '.woff') format('woff');

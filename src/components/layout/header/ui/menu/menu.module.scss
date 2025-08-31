@@ -1,5 +1,5 @@
-@import '../../header-variables.scss';
-@import '@styles/helpers/helpers-all.scss';
+@use '../../header-variables' as vars;
+@use '@styles/helpers/helpers-all' as *;
 
 $indent: 3rem;
 
@@ -73,7 +73,7 @@ $indent: 3rem;
 				width: calc(100% + $indent);
 				height: 100%;
 
-				transition: opacity $animation, background $animation;
+				transition: opacity vars.$animation, background vars.$animation;
 				opacity: 0;
 
 				.item:nth-child(1) & {
@@ -105,7 +105,7 @@ $indent: 3rem;
 				position: relative;
 				z-index: 3;
 
-				transition: opacity $animation;
+				transition: opacity vars.$animation;
 			}
 
 			&:hover {
@@ -138,7 +138,7 @@ $indent: 3rem;
 		display: block;
 		padding: 4.2rem var(--gl-indent) 3.8rem;
 
-		transition: background $animation;
+		transition: background vars.$animation;
 
 		&:hover,
 		&:focus {

@@ -1,5 +1,5 @@
-@import '@styles/helpers/helpers-all.scss';
-@import './news-feed-variables.scss';
+@use '@styles/helpers/helpers-all' as *;
+@use './news-feed-variables' as vars;
 
 
 .section {
@@ -22,7 +22,7 @@
 	z-index: 1;
 
 	display: flex;
-	gap: $gap;
+	gap: vars.$gap;
 
 	&:hover,
 	&:focus {

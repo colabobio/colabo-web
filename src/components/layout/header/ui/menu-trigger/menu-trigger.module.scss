@@ -1,5 +1,5 @@
-@import '../../header-variables.scss';
-@import '@styles/helpers/helpers-all.scss';
+@use '../../header-variables' as vars;
+@use '@styles/helpers/helpers-all' as *;
 
 $burgerHeight: 2rem;
 
@@ -26,7 +26,7 @@ $burgerHeight: 2rem;
 		width: 100%;
 		height: 2px;
 
-		transition: transform $menu_animation, background $menu_animation;
+		transition: transform vars.$menu_animation, background vars.$menu_animation;
 		will-change: transform;
 
 		background-color: var(--dark);

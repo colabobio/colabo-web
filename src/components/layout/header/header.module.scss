@@ -1,5 +1,5 @@
-@import './header-variables.scss';
-@import '@styles/helpers/helpers-all.scss';
+@use './header-variables' as vars;
+@use '@styles/helpers/helpers-all' as *;
 
 .header {
 	position: fixed;
@@ -38,7 +38,7 @@
 
 		background-color: var(--light);
 
-		transition: background $menu_animation;
+		transition: background vars.$menu_animation;
 
 		:global(.body--open_menu_state) & {
 			@include bp($tablet_max - 1) {
@@ -95,7 +95,7 @@
 		opacity: 0;
 		pointer-events: none;
 
-		transition: opacity $animation;
+		transition: opacity vars.$animation;
 	}
 
 	:global(.body--open_menu_state) & {
@@ -115,11 +115,11 @@
 	}
 
 	@include bp($tablet_max, min) {
-		transition: color $animation;
+		transition: color vars.$animation;
 	}
 
 	@include bp($tablet_max - 1) {
-		transition: color $menu_animation;
+		transition: color vars.$menu_animation;
 	}
 }
 
@@ -159,7 +159,7 @@
 
 		&.enterActive {
 			opacity: 1;
-			transition: transform $menu_animation, opacity $menu_animation;
+			transition: transform vars.$menu_animation, opacity vars.$menu_animation;
 			transform: translateY(0);
 		}
 
@@ -171,7 +171,7 @@
 		&.exitActive {
 			opacity: 0;
 			transform: translateY(-100%);
-			transition: transform $menu_animation, opacity $menu_animation;
+			transition: transform vars.$menu_animation, opacity vars.$menu_animation;
 		}
 	}
 }

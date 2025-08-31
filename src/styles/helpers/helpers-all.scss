@@ -1,6 +1,7 @@
-@import 'global-mixins';
-@import 'project-mixins';
-@import 'buttons-mixins';
-@import 'variables';
-@import 'form';
-@import 'typography';
+// Modern Sass: Forward all helper modules to make them available
+@forward 'variables';
+@forward 'global-mixins';
+@forward 'project-mixins';
+@forward 'buttons-mixins';
+@forward 'form';
+@forward 'typography';

@@ -1,5 +1,5 @@
-@import '@styles/helpers/helpers-all.scss';
-@import '../../project-variables.scss';
+@use '@styles/helpers/helpers-all' as *;
+@use '../../project-variables' as vars;
 
 
 .pagination {
@@ -44,7 +44,7 @@
 
 		opacity: 0;
 		pointer-events: none;
-		transition: opacity $transition;
+		transition: opacity vars.$transition;
 		overflow: hidden;
 	}
 
@@ -87,7 +87,7 @@
 		overflow-x: hidden;
 		overflow-y: auto;
 
-		transition: transform $transition;
+		transition: transform vars.$transition;
 		transform: translateY(15%);
 
 		scrollbar-color: var(--white) var(--dark);

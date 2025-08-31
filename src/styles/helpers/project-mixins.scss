@@ -1,3 +1,5 @@
+@use 'variables' as vars;
+
 @mixin cover_img {
 	display: block;
 	width: 100%;
@@ -16,7 +18,7 @@
 
 @mixin scale_out_hover($hover: false) {
 	transform: scale(1.06);
-	transition: transform .3s $base-ease 0s;
+	transition: transform .3s vars.$base-ease 0s;
 	will-change: transform;
 
 	@if ($hover) {

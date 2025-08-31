@@ -1,12 +1,15 @@
+@use 'variables' as vars;
+@use 'global-mixins' as mixins;
+
 @mixin h1 {
-	font-family: $font_heading;
+	font-family: vars.$font_heading;
 	font-weight: 400;
 
-	@include bp($tablet_max, min) {
+	@include mixins.bp(vars.$tablet_max, min) {
 		font-size: 10rem;
 	}
 
-	@include bp($tablet_max - 1) {
+	@include mixins.bp(vars.$tablet_max - 1) {
 		font-size: 2.4rem;
 	}
 }
@@ -14,11 +17,11 @@
 @mixin h2 {
 	font-weight: 400;
 
-	@include bp($tablet_max, min) {
+	@include mixins.bp(vars.$tablet_max, min) {
 		font-size: 6.4rem;
 	}
 
-	@include bp($tablet_max - 1) {
+	@include mixins.bp(vars.$tablet_max - 1) {
 		font-size: 3.2rem;
 	}
 }
@@ -26,24 +29,24 @@
 @mixin h3 {
 	font-weight: 400;
 
-	@include bp($tablet_max, min) {
+	@include mixins.bp(vars.$tablet_max, min) {
 		font-size: 6rem;
 	}
 
-	@include bp($tablet_max - 1) {
+	@include mixins.bp(vars.$tablet_max - 1) {
 		font-size: 3.2rem;
 	}
 }
 
 @mixin h4 {
-	font-family: $font_heading;
+	font-family: vars.$font_heading;
 	font-weight: 400;
 
-	@include bp($tablet_max, min) {
+	@include mixins.bp(vars.$tablet_max, min) {
 		font-size: 4.8rem;
 	}
 
-	@include bp($tablet_max - 1) {
+	@include mixins.bp(vars.$tablet_max - 1) {
 		font-size: 2.4rem;
 	}
 }
@@ -51,11 +54,11 @@
 @mixin h5 {
 	font-weight: 400;
 
-	@include bp($tablet_max, min) {
+	@include mixins.bp(vars.$tablet_max, min) {
 		font-size: 4rem;
 	}
 
-	@include bp($tablet_max - 1) {
+	@include mixins.bp(vars.$tablet_max - 1) {
 		font-size: 3.2rem;
 	}
 }
@@ -63,11 +66,11 @@
 @mixin h5_bold {
 	font-weight: 700;
 
-	@include bp($tablet_max, min) {
+	@include mixins.bp(vars.$tablet_max, min) {
 		font-size: 4rem;
 	}
 
-	@include bp($tablet_max - 1) {
+	@include mixins.bp(vars.$tablet_max - 1) {
 		font-size: 3.2rem;
 	}
 }
@@ -78,11 +81,11 @@
 }
 
 @mixin body_xl {
-	@include bp($tablet_max, min) {
+	@include mixins.bp(vars.$tablet_max, min) {
 		font-size: 1.8rem;
 	}
 
-	@include bp($tablet_max - 1) {
+	@include mixins.bp(vars.$tablet_max - 1) {
 		font-size: 1.6rem;
 	}
 }

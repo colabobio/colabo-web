@@ -7,7 +7,14 @@ module.exports = {
 		siteUrl: 'https://www.yourdomain.tld',
 	},
 	plugins: [
-		'gatsby-plugin-sass',
+		{
+			resolve: 'gatsby-plugin-sass',
+			options: {
+				sassOptions: {
+					api: 'modern-compiler',
+				},
+			},
+		},
 		'gatsby-plugin-image',
 		'gatsby-plugin-sitemap',
 		'gatsby-plugin-sharp',

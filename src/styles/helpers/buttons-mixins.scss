@@ -1,3 +1,6 @@
+@use 'variables' as vars;
+@use 'global-mixins' as mixins;
+
 @mixin st_btn {
 	display: inline-flex;
 	justify-content: center;
@@ -5,11 +8,11 @@
 
 	text-align: center;
 	white-space: nowrap;
-	font-family: $font_base;
+	font-family: vars.$font_base;
 	cursor: pointer;
 
 	&[type='submit'] {
-		@include appearance(none);
+		@include mixins.appearance(none);
 	}
 
 	&:hover,
