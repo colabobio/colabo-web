@@ -2,18 +2,18 @@
 projects:
   - img: ./epigames.jpg
     title: 'Epigames'
-    content: 'Epigames: What if playing a game on your phone could help scientists understand how diseases spread—and even prevent the next pandemic? Developed with the Epidemica platform for experimental epidemiology, this project offers the closest proxy for observing pathogen transmission in human populations'
+    content: 'What if playing a game on your phone could help scientists understand how diseases spread—and even prevent the next pandemic? Developed with the Epidemica platform for experimental epidemiology, the Epigames app could offer the closest proxy for observing pathogen transmission in human populations.'
     url: 'https://epidemica.info'
-  - img: ./04.jpeg
+  - img: ./th.jpg
     title: 'Travel Healthy'
-    content: 'An app for monitoring infectious disease symptoms among international travelers (and more). The goal of this study is simply to map symptoms of U.S. travelers as they visit other countries, and collect samples (nasal swab, stool, blood) when they return. The really ambitious goal is to integrate the data from the app with other sources (e.g.: molecular testing) to create an outbreak forecasting system based on travel patterns.'
+    content: 'This mobile app provides an easy-to-use tool for participatory disease surveillance by U.S. international travelers and generates high resolution data that could inform outbreak detection and personalized recommendations for travelers.'
     url: 'https://gten.massgeneral.org/travel-healthy-app/'
-  - img: ./03.jpg
-    title: 'SciViewer'
-    content: 'Our project utilizes Single Cell RNA Sequencing (scRNA-seq), a cost-effective and high-throughput method, to analyze gene expression across individual cells. This technology enables us to investigate diverse biological questions such as cell type identification, cellular heterogeneity, and gene expression variability. With scRNA-seq datasets growing in size and new experimental techniques emerging rapidly, our research aims to leverage these advancements for deeper insights into complex biological systems.'
-    url: 'https://github.com/colabobio/sciviewer'
-  - img: ./01.png
-    title: 'Muttomics'
-    content: 'Are stereotypes about dog personalities really true? Scientists from the Darwin’s Dogs project at Harvard, Broad Institute have found, looking at the dogs’ behavior survey data, that variation within each breed is very broad and so those behavioral stereotypes are far less pronounced than people typically think. Muttomics was developed as a visualization tool to describe the statistical linkage between dog breeds and their behaviors and physical traits in a more visual way. Users can explore the probability of matching a dog breed with particular behavior features or physical traits they may be interested in.'
-    url: 'https://darwinsark.org/muttomics_viz_dashboard'
+  - img: ./scsketch.jpg
+    title: 'scSketch'
+    content: 'This is an interactive visualizer of single-cell RNA sequencing data for Juypyter notebooks, allowing researchers to explore large datasets with millions of data points while applying an innovative directional search method to find patterns of biological interest.'
+    url: 'https://github.com/colabobio/scsketch'
+  - img: ./pounce.jpg
+    title: 'Pounce!'
+    content: 'This online platform, created in collaboration with the Karlsson lab, lets anyone become a community scientist to help study animal behavior by watching short video clips and tagging specific actions. Right now, we’re starting with one simple but fun task: spotting the “grab-bite” behavior in playful puppies!'
+    url: 'https://www.pounceforscience.org/'
 ---
