@@ -82,14 +82,16 @@ export function NetworkAnimation() {
     if (config.interaction.enableZoom) {
       svg.call(zoom);
       
-      // Set initial zoom to be zoomed out 3 times (scale = 1/3)
-      const initialScale = 1 / 3;
-      const initialTransform = d3.zoomIdentity
-        .translate(width / 2, height / 2)
-        .scale(initialScale)
-        .translate(-width / 2, -height / 2);
-      
-      svg.call(zoom.transform, initialTransform);
+      if (config.interaction.zoomInit !== 1) {
+        const zinit = config.interaction.zoomInit;
+        // Set initial zoom to be zoomed out zinit times (scale = 1/zinit)
+        const initialScale = 1 / zinit;
+        const initialTransform = d3.zoomIdentity
+          .translate(width / 2, height / 2)
+          .scale(initialScale)
+          .translate(-width / 2, -height / 2);      
+        svg.call(zoom.transform, initialTransform);
+      }
     }
 
     // Create groups for links and nodes

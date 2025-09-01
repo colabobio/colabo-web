@@ -24,7 +24,7 @@ visual: {
   nodeRadius: 8,              // Size of each person/node
   linkDistance: 50,           // Preferred distance between connected nodes
   chargeStrength: -180,       // Force pushing nodes apart (negative = repulsion)
-  linkColor: '#4f46e5',       // Color of active connections (indigo)
+  linkColor: '#000000',       // Color of active connections (black)
   linkOpacity: 0.7,           // Opacity of connections
 },
 ```

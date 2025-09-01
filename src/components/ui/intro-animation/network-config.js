@@ -6,7 +6,7 @@
 export const NETWORK_CONFIG = {
   // Simulation parameters
   simulation: {
-    numPeople: 200,              // Number of people/nodes in the network
+    numPeople: 40,              // Number of people/nodes in the network
     maxDuration: 300,           // Total simulation duration in seconds
     numContacts: 150,           // Number of contact interactions
     animationSpeed: 100,        // Animation speed in milliseconds per step
@@ -15,7 +15,7 @@ export const NETWORK_CONFIG = {
   // Visual appearance
   visual: {
     nodeRadius: 8,              // Size of each person/node
-    linkDistance: 250,           // Preferred distance between connected nodes
+    linkDistance: 50,           // Preferred distance between connected nodes
     chargeStrength: -180,       // Force pushing nodes apart (negative = repulsion)
     linkColor: '#000000',       // Color of active connections (black)
     linkOpacity: 0.7,           // Opacity of connections
@@ -61,6 +61,7 @@ export const NETWORK_CONFIG = {
   interaction: {
     zoomMin: 0.1,              // Minimum zoom level
     zoomMax: 4,                // Maximum zoom level
+    zoomInit: 1,               // Initial zoom level
     enableDrag: true,          // Allow dragging nodes
     enableZoom: true,          // Allow zooming/panning
   }
