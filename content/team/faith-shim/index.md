@@ -1,6 +1,6 @@
 ---
 name: Faith Shim
-category: member
+category: former_student
 avatar: ./faith.png
 avatarHover: ./faith-hover.jpg
 order: 11

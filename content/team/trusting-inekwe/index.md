@@ -1,6 +1,6 @@
 ---
 name: Trusting Inekwe
-category: member
+category: collaborator
 avatar: ./trusting.png
 avatarHover: ./trusting-hover.jpg
 order: 7

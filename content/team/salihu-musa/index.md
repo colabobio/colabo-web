@@ -1,6 +1,6 @@
 ---
 name: Salihu Musa
-category: member
+category: collaborator
 avatar: ./salihu.png
 avatarHover: ./salihu-hover.jpg
 order: 5

@@ -1,6 +1,6 @@
 ---
 name: Yinan Dong
-category: member
+category: former_student
 avatar: ./yinan.png
 avatarHover: ./yinan-hover.jpg
 order: 2

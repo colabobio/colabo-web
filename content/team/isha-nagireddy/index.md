@@ -1,6 +1,6 @@
 ---
 name: Isha Nagireddy
-category: member
+category: former_student
 avatar: ./isha.png
 avatarHover: ./isha-hover.jpg
 order: 10

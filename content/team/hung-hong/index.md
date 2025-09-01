@@ -1,6 +1,6 @@
 ---
 name: Hung Hong
-category: member
+category: former_student
 avatar: ./hung.png
 avatarHover: ./hung-hover.jpg
 order: 4
