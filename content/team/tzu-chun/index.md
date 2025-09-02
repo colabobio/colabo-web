@@ -1,8 +1,8 @@
 ---
 name: Tzu-Chun
 category: collaborator
-avatar: ./tzu-hover.png
-avatarHover: ./tzu.png
+avatar: ./tzuchun.png
+avatarHover: ./tzuchun-hover.jpg
 order: 19
 ---
 
