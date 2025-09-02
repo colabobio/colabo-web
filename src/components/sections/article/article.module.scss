@@ -100,7 +100,12 @@
 	}
 
 	figure {
-		width: 100%;
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
 
 		&:not(:last-child) {
 			@include bp($tablet_max, min) {
@@ -115,6 +120,7 @@
 		img {
 			display: block;
 			width: 100%;
+			max-width: 100%;
 		}
 	}
 }
