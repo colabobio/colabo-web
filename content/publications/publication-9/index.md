@@ -5,7 +5,7 @@ publication: PLOS Neglected Tropical Diseases. 2022 Oct 12;16(10):e0010789.
 links:
   [
     { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36223331' },
-    { 'text': 'DOI', url: 'http://doi.org/10.1371/journal.pntd.0010789' },
+    { 'text': 'DOI', url: 'https://doi.org/10.1371/journal.pntd.0010789' },
   ]
 order: 8
 ---

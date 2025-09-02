@@ -5,7 +5,7 @@ publication: 'Lancet Infect Dis. 2018 Jun;18(6):684-695.'
 links:
   [
     { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/29523497' },
-    { 'text': 'DOI', url: 'http://doi.org/10.1016/S1473-3099(18)30121-X' },
+    { 'text': 'DOI', url: 'https://doi.org/10.1016/S1473-3099(18)30121-X' },
   ]
 order: 21
 ---

@@ -5,7 +5,7 @@ publication: Patterns (N Y). 2022 Aug 12;3(8):100572.
 links:
   [
     { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36033592' },
-    { 'text': 'DOI', url: 'http://doi.org/10.1016/j.patter.2022.100572' },
+    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.patter.2022.100572' },
   ]
 order: 7
 ---

@@ -5,7 +5,7 @@ publication: Viruses. 2021 Aug 13;13(8):1605.
 links:
   [
     { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/34452470' },
-    { 'text': 'DOI', url: 'http://doi.org/10.3390/v13081605' },
+    { 'text': 'DOI', url: 'https://doi.org/10.3390/v13081605' },
   ]
 order: 15
 ---

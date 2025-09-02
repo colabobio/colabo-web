@@ -5,7 +5,7 @@ publication: Nature Communications. 2020 Aug 17;11(1):4131.
 links:
   [
     { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/32807807' },
-    { 'text': 'DOI', url: 'http://doi.org/10.1038/s41467-020-17994-9' },
+    { 'text': 'DOI', url: 'https://doi.org/10.1038/s41467-020-17994-9' },
   ]
 order: 16
 ---

@@ -5,7 +5,7 @@ publication: Sci Rep. 2022 Feb 3;12(1):1857.
 links:
   [
     { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35115545' },
-    { 'text': 'DOI', url: 'http://doi.org/10.1038/s41598-021-02605-4' },
+    { 'text': 'DOI', url: 'https://doi.org/10.1038/s41598-021-02605-4' },
   ]
 order: 13
 ---

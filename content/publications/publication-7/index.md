@@ -5,7 +5,7 @@ publication: J Travel Med. 2023 Jul 6:taad089.
 links:
   [
     { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/37410376' },
-    { 'text': 'DOI', url: 'http://doi.org/10.1093/jtm/taad089' },
+    { 'text': 'DOI', url: 'https://doi.org/10.1093/jtm/taad089' },
   ]
 order: 6
 ---

@@ -5,7 +5,7 @@ publication: Emerg Infect Dis. 2022 Jun;28(6):1189-1197.
 links:
   [
     { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35608611' },
-    { 'text': 'DOI', url: 'http://doi.org/10.3201/eid2806.212265' },
+    { 'text': 'DOI', url: 'https://doi.org/10.3201/eid2806.212265' },
   ]
 order: 10
 ---

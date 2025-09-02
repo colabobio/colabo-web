@@ -5,7 +5,7 @@ publication: Bioinformatics. 2021 Oct 2:btab689.
 links:
   [
     { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/34601589' },
-    { 'text': 'DOI', url: 'http://doi.org/10.1093/bioinformatics/btab689' },
+    { 'text': 'DOI', url: 'https://doi.org/10.1093/bioinformatics/btab689' },
   ]
 order: 14
 ---
