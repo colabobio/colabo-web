@@ -7,20 +7,33 @@ import { useAnimatedBg } from '@hooks';
 import { Seo } from '@ui/seo';
 import { Article } from '../components/sections/article';
 
-function BlogPostTemplate({ data }) {
+function BlogPostTemplate({ data, location }) {
 	const { tl, handleAnimatedBg } = useAnimatedBg();
 
 	const post = data.markdownRemark;
+	const isResearchPage = location.pathname.startsWith('/research/') && location.pathname !== '/research/';
 
 	useEffect(() => {
-		handleAnimatedBg();
+		if (isResearchPage) {
+			// Set white background for individual research area pages
+			document.documentElement.style.setProperty('--animated-bg-color', '#ffffff');
+		} else {
+			// Use animated background for other pages
+			handleAnimatedBg();
+		}
 
 		return () => {
-			if (tl) {
-				tl.kill();
+			if (isResearchPage) {
+				// Restore default for research pages
+				document.documentElement.style.removeProperty('--animated-bg-color');
+			} else {
+				// Clean up animated background for other pages
+				if (tl) {
+					tl.kill();
+				}
 			}
 		};
-	}, []);
+	}, [isResearchPage]);
 	
 	return (
 		<Layout>
