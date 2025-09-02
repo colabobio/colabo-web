@@ -1,6 +1,11 @@
 ---
-title: "Caseload and Case Fatality of Lassa Fever in Nigeria, 2001-2018: A Specialist Center's Experience and Its Implications."
-authors: 'Akpede GO, Asogun DA, Okogbenin SA, Dawodu SO, Momoh MO, Dongo AE, Ike C, Tobin E, Akpede N, Ogbaini-Emovon E, Adewale AE, Ochei O, Onyeke F, Okonofua MO, Atafo RO, Odia I, Adomeh DI, Odigie G, Ogbeifun C, Muebonam E, Ihekweazu C, Ramharter M, Colubri A, Sarbeti PC, Happi CT, Günther S, Agbonlahor DE.'
-publication: 'Front Public Health 7: 170 (2019).'
-order: 17
+title: 'The case for altruism in institutional diagnostic testing'
+authors: 'Specht I, Sani K, Botti-Lodovico Y, Hughes M, Heumann K, Bronson A, Marshall J, Baron E, Parrie E, Glennon O, Fry B, Colubri A, Sabeti PC'
+publication: 'Sci Rep. 2022 Feb 3;12(1):1857'
+links:
+  [
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35115545'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1038/s41598-021-02605-4'},
+  ]
+order: 18
 ---

@@ -1,6 +1,11 @@
 ---
-title: 'Retrospective Cohort Study of Lassa Fever in Pregnancy, Southern Nigeria.'
-authors: 'Okogbenin S, Okoeguale J, Akpede G, Colubri A, Barnes KG, Mehta S, Eifediyi R, Okogbo F, Eigbefoh J, Momoh M, Rafiu M, Adomeh D, Odia I, Aire C, Atafo R, Okonofua M, Pahlman M, Becker-Ziaja B, Asogun D, Okokhere P, Happi C, Günther S, Sabeti PC, Ogbaini-Emovon E.'
-publication: 'Emerging Infectious Diseases 25: 1494–1500 (2019).'
-order: 18
+title: 'Sciviewer enables interactive visual interrogation of single-cell RNA-Seq data from the python programming environment'
+authors: 'Kotliar D, Colubri A'
+publication: 'Bioinformatics. 2021 Oct 2:btab689'
+links:
+  [
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/34601589'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1093/bioinformatics/btab689'},
+  ]
+order: 19
 ---

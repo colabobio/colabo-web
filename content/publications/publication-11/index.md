@@ -1,11 +1,11 @@
 ---
-title: 'Risk Prediction Score for Pediatric Patients with Suspected Ebola Virus Disease.'
-authors: 'Genisca AE, Chu TC, Huang L, Gainey M, Adeniji M, Mbong EN, Kennedy SB, Laghari R, Nganga F, Muhayangabo RF, Vaishnav H, Perera SM, Colubri A, Levine AC, Michelow IC.'
-publication: Emerg Infect Dis. 2022 Jun;28(6):1189-1197.
+title: 'Comparison of Rapid Antigen Tests'' Performance Between Delta and Omicron Variants of SARS-CoV-2 : A Secondary Analysis From a Serial Home Self-testing Study'
+authors: 'Soni A, Herbert C, Filippaios A, Broach J, Colubri A, …, Hafer N, Luzuriaga K, Barton B, Heetderks W, Manabe YC, McManus D'
+publication: 'Ann Intern Med. 2022 Dec;175(12):1685-1692'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35608611' },
-    { 'text': 'DOI', url: 'https://doi.org/10.3201/eid2806.212265' },
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36215709'},
+    { 'text': 'DOI', url: 'https://doi.org/10.7326/M22-0760'},
   ]
-order: 10
+order: 11
 ---

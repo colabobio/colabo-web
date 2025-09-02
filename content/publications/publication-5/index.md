@@ -1,11 +1,11 @@
 ---
-title: 'Derivation and Internal Validation of a Mortality Prognostication Machine Learning Model in Ebola Virus Disease Using Iterative Point-of-Care Biomarkers.'
-authors: 'Bearnot CJ, Laghari R, Mbong EN, Muhayangabo RF, Butler K, Gainey M, Perera SM, Michelow IC, Tang OY, Levine AC, Colubri A, Aluisio AR.'
-publication: 'Open Forum Infectious Diseases, 2024; ofad689'
+title: 'Using a comprehensive atlas and predictive models to reveal the complexity and evolution of brain-active regulatory elements'
+authors: 'Pratt HE, Andrews G, Shedd N, Phalke N, Li T, Pampari A, Jensen M, Wen C, Consortium P, Gandal MJ, Geschwind DH, Gerstein M, Moore J, Kundaje A, Colubri A, Weng Z'
+publication: 'Sci Adv. 2024 May 24;10(21):eadj4452'
 links:
   [
-    { 'text': 'PUBMED', 'url': 'https://pubmed.ncbi.nlm.nih.gov/38379568/' },
-    { 'text': 'DOI', url: 'https://doi.org/10.1093/ofid/ofad689' },
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/38781344'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1126/sciadv.adj4452'},
   ]
-order: 4
+order: 5
 ---

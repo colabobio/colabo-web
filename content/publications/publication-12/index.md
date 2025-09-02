@@ -1,11 +1,11 @@
 ---
-title: ''
-authors: 'Morrill K, Hekman J, Li X, McClure J, Logan B, Goodman L, Gao M, Dong Y, Alonso M, Carmichael E, Snyder-Mackler N, Alonso J, Noh HJ, Johnson J, Koltookian M, Lieu C, Megquier K, Swofford R, Turner-Maier J, White ME, Weng Z, Colubri A, Genereux DP, Lord KA, Karlsson EK.'
-publication: Science. 2022 Apr 29;376(6592):eabk0639.
+title: 'Analyzing the impact of a real-life outbreak simulator on pandemic mitigation: An epidemiological modeling study'
+authors: 'Specht I, Sani K, Loftness BC, Hoffman C, Gionet G, Bronson A, Marshall J, Decker C, Bailey L, Siyanbade T, Kemball M, Pickett BE, Hanage WP, Brown T, Sabeti PC, Colubri A'
+publication: 'Patterns (N Y). 2022 Aug 12;3(8):100572'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35482869' },
-    { 'text': 'DOI', url: 'https://doi.org/10.1126/science.abk0639' },
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36033592'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.patter.2022'},
   ]
-order: 11
+order: 12
 ---
