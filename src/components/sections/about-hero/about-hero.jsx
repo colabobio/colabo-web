@@ -28,24 +28,20 @@ export function AboutHero({ description }) {
 				</svg>
 			</div>
 
-		<div className={lottieBackground}>
-			<Lottie
-				animationData={colaboAnimation}
-				loop
-				play
-				style={{
-				position: 'relative',
-					top: 130,
-					left: 0,
-					width: '100%',
-					height: '80%',
-					opacity: 0.1, // Very subtle background
-					zIndex: -1
-				}}
-			/>
-			</div>
-
 			<div className={text}>
+				<div className={lottieBackground}>
+					<Lottie
+						animationData={colaboAnimation}
+						loop
+						play
+						style={{
+							width: '100%',
+							height: '100%',
+							opacity: 0.1,
+							zIndex: -1
+						}}
+					/>
+				</div>
 				<Markdown>{description}</Markdown>
 			</div>
 		</Section>
