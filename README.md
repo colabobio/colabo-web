@@ -1,32 +1,39 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://co-labo.org/">
+    <img alt="CoLabo" src="https://github.com/colabobio/colabo-web/blob/main/static/images/colabo-logo-v1.svg" width="60" />
   </a>
 </p>
+
 <h1 align="center">
-  Colubri Laboratory website
+  Colubri Lab (CoLabo) website
 </h1>
 
 ## 🚀 Quick start
 
 This site is developed using [GatsbyJS](https://www.gatsbyjs.com/).
 
-1.  **Start developing.**
+1.  **Getting started.**
 
-    Clone this repository and then:
+    Clone this repository and install node dependencies:
 
     ```shell
     cd colabo-web/
+    npm run install
+    ```    
+
+2.  **Launch local instance of site for development.**
+
+    Once depndencies are installed, launch the site locally:
+
+    ```shell
     npm run develop
     ```
 
-2.  **Open the code and start customizing!**
+    The site should be running at http://localhost:8000 after that.
 
-    Your site is now running at http://localhost:8000!
+    Changes to any of the source or content files will update the site in real-time.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-3.  **Learn more**
+3.  **GatsbyJS development resources**
 
     - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
     - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
@@ -34,9 +41,3 @@ This site is developed using [GatsbyJS](https://www.gatsbyjs.com/).
     - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
     - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
     - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)

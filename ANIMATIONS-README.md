@@ -56,33 +56,53 @@ import { IntroAnimation } from '../components/ui/intro-animation';
 <IntroAnimation />
 ```
 
+## Research animations
+
+## ✅ Color change effect
+
+This is achieved by changing the `--animated-bg-color` variable for html.
+
+Here you can also change the easing, duration, colors and other settings for the animation.
+👉🏻 [GitHub - use-animated-bg.js](https://github.com/glivera-team/colabo-web/blob/a9c38452840f04dbbcdcf05d5097132fee59042f/src/hooks/use-animated-bg/use-animated-bg.js)
+
+## ✅ Lottie animations
+
+👉🏻 [GitHub - area-item.jsx](https://github.com/glivera-team/colabo-web/blob/a9c38452840f04dbbcdcf05d5097132fee59042f/src/components/ui/area-item/area-item.jsx)
+
+Configuration for lottie animations, methods to stop/start on hover.
+You can replace the animation by adding the required json to the `animations` object.
+
+```
+import epidemologyAnimation from './lotties/epidemology.json';
+import visualizationAnimation from './lotties/visualization.json';
+import learningAnimation from './lotties/learning.json';
+
+const animations = {
+	epidemology: epidemologyAnimation,
+	learning: learningAnimation,
+	visualization: visualizationAnimation,
+};
+
+const defaultOptions = {
+	loop: true,
+	autoplay: false,
+	animationData: animations[animation],
+};
+
+const playAnimation = () => {
+	if (lottieRef.current) {
+		lottieRef.current.play();
+	}
+};
+
+const pauseAnimation = () => {
+	if (lottieRef.current) {
+		lottieRef.current.stop();
+	}
+};
+```
+
 ---
-
-## Legacy Animation Documentation
-
-To replace the intro animation, implement a new one and place the JS file under ```src/components/ui/intro-animation/animations```. 
-
-Then import the file into ```src/pages/index.js``` like so:
-
-```
-import { MyAnimation } from '../components/ui/intro-animation/my-animation';
-
-function IndexPage({ data }) {
-	const { news } = data.news.childMarkdownRemark.frontmatter;
-
-	return (
-		<Layout>
-			<Seo title="Colabo" image="/images/home.png" />
-			<HomeHero>
-				<MyAnimation />
-				<ConditionalComponent data={news}>
-					<NewsFeed newsItems={news} />
-				</ConditionalComponent>
-			</HomeHero>
-		</Layout>
-	);
-}
-```
 
 ## Original logo & blobs animation from 360D
 
@@ -229,51 +249,4 @@ newUV.y = newUV.y + yMult * (sin(uTime) * xMult) * 20. * uDistProgress;
 
 In this file you can find GSAP timelines for the `uDistProgress` parameter, it is responsible for the animation progress.
 👉🏻 [GitHub - logo-distortion.js](https://github.com/glivera-team/colabo-web/blob/b4ecd56e5c53ecdc1d3d2f2a1b3e1a0d0d062b4d/src/components/ui/intro-animation/animations/logo-distortion.js)
-
-# Research animations
-
-## ✅ Color change effect
-
-This is achieved by changing the `--animated-bg-color` variable for html.
-
-Here you can also change the easing, duration, colors and other settings for the animation.
-👉🏻 [GitHub - use-animated-bg.js](https://github.com/glivera-team/colabo-web/blob/a9c38452840f04dbbcdcf05d5097132fee59042f/src/hooks/use-animated-bg/use-animated-bg.js)
-
-## ✅ Lottie animations
-
-👉🏻 [GitHub - area-item.jsx](https://github.com/glivera-team/colabo-web/blob/a9c38452840f04dbbcdcf05d5097132fee59042f/src/components/ui/area-item/area-item.jsx)
-
-Configuration for lottie animations, methods to stop/start on hover.
-You can replace the animation by adding the required json to the `animations` object.
-
-```
-import epidemologyAnimation from './lotties/epidemology.json';
-import visualizationAnimation from './lotties/visualization.json';
-import learningAnimation from './lotties/learning.json';
-
-const animations = {
-	epidemology: epidemologyAnimation,
-	learning: learningAnimation,
-	visualization: visualizationAnimation,
-};
-
-const defaultOptions = {
-	loop: true,
-	autoplay: false,
-	animationData: animations[animation],
-};
-
-const playAnimation = () => {
-	if (lottieRef.current) {
-		lottieRef.current.play();
-	}
-};
-
-const pauseAnimation = () => {
-	if (lottieRef.current) {
-		lottieRef.current.stop();
-	}
-};
-```
-
 
