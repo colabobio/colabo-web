@@ -41,6 +41,13 @@
 			transform: scale(1);
 		}
 	}
+
+	// Mobile-only scroll-triggered animation
+	&.visible::before {
+		@include bp($tablet_min - 1) {
+			transform: scale(1);
+		}
+	}
 }
 
 .imageW {
@@ -53,7 +60,7 @@
 }
 
 .image {
-	dispaly: block;
+	display: block;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -98,6 +105,15 @@
 
 	.note:hover & {
 		@include bp($tablet_max, min) {
+			background-color: var(--cerulean);
+			transform: translateX(-5.2rem);
+			box-shadow: 1px 0 0 0 var(--dark);
+		}
+	}
+
+	// Mobile-only scroll-triggered animation for content
+	.note.visible & {
+		@include bp($tablet_min - 1) {
 			background-color: var(--cerulean);
 			transform: translateX(-5.2rem);
 			box-shadow: 1px 0 0 0 var(--dark);
@@ -173,6 +189,13 @@
 
 	.note:hover & {
 		@include bp($tablet_max, min) {
+			background-color: var(--cerulean);
+		}
+	}
+
+	// Mobile-only scroll-triggered animation for hint
+	.note.visible & {
+		@include bp($tablet_min - 1) {
 			background-color: var(--cerulean);
 		}
 	}

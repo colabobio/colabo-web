@@ -1,8 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { SanitaizedText } from '@ui/sanitaized-text';
 import { formatDate } from '@utils/helpers';
+import { useIntersectionObserver } from '@hooks';
 import * as styles from './note-item.module.scss';
 
 export function NoteItem({ 
@@ -18,10 +20,22 @@ export function NoteItem({
 	// Use Medium thumbnail if available and no custom image is provided
 	const imageToDisplay = img || thumbnail;
 
+	// Use intersection observer for mobile scroll-triggered animations
+	const { targetRef, isIntersecting } = useIntersectionObserver({
+		threshold: 0.5, // Trigger when 50% of the element is visible
+		rootMargin: '0px 0px -10% 0px', // Trigger slightly before element comes into view
+	});
+
+	// Combine classes for note item - add visible class when intersecting
+	const noteClassNames = classNames(styles.note, {
+		[styles.visible]: isIntersecting,
+	});
+
 	return (
 		<a
+			ref={targetRef}
 			href={link}
-			className={styles.note}
+			className={noteClassNames}
 			target="_blank"
 			rel="noopener noreferrer"
 		>
