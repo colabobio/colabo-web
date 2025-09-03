@@ -3,17 +3,19 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie-player';
 import classNames from 'classnames';
+import { useIntersectionObserver } from '@hooks';
 import * as styles from './area-item.module.scss';
 import epidemologyAnimation from './lotties/epidemology.json';
 import visualizationAnimation from './lotties/visualization.json';
 import learningAnimation from './lotties/learning.json';
 
-const selectClassnames = ({ reverse, variant }) =>
+const selectClassnames = ({ reverse, variant, isVisible }) =>
 	classNames(styles.area, {
 		[styles.reverse]: reverse,
 		[styles.primary]: variant === 'primary',
 		[styles.secondary]: variant === 'secondary',
 		[styles.accent]: variant === 'accent',
+		[styles.visible]: isVisible,
 	});
 
 const animations = {
@@ -31,30 +33,28 @@ export function AreaItem({
 	href,
 	animation,
 }) {
-	const areaClassname = selectClassnames({ reverse, variant });
+	const { targetRef, isIntersecting } = useIntersectionObserver({
+		threshold: 0.4, // Trigger when 40% of the element is visible
+		rootMargin: '0px 0px -20% 0px', // Trigger slightly before element comes into view
+	});
+
+	const areaClassname = selectClassnames({ reverse, variant, isVisible: isIntersecting });
 
 	const lottieRef = useRef(null);
 
-	// Remove the cleanup function that was causing the error
-	// react-lottie-player handles cleanup differently
+	// Animation state is now controlled by intersection observer
 	const [isPlaying, setIsPlaying] = React.useState(false);
 
-	const playAnimation = () => {
-		setIsPlaying(true);
-	};
-
-	const pauseAnimation = () => {
-		setIsPlaying(false);
-	};
+	// Update animation state based on visibility
+	React.useEffect(() => {
+		setIsPlaying(isIntersecting);
+	}, [isIntersecting]);
 
 	return (
 		<Link
+			ref={targetRef}
 			to={href}
 			className={areaClassname}
-			onMouseEnter={playAnimation}
-			onFocus={playAnimation}
-			onMouseLeave={pauseAnimation}
-			onBlur={pauseAnimation}
 		>
 			<div className={styles.contentW}>
 				<div className={styles.content}>

@@ -55,7 +55,8 @@
 	}
 
 	.area:hover &::before,
-	.area:focus &::before {
+	.area:focus &::before,
+	.area.visible &::before {
 		opacity: 0;
 	}
 }
@@ -102,7 +103,8 @@
 	}
 
 	.area:hover &::before,
-	.area:focus &::before {
+	.area:focus &::before,
+	.area.visible &::before {
 		transform: scale(1400%);
 		opacity: 1;
 	}
