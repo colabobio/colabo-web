@@ -115,7 +115,7 @@
 	.note.visible & {
 		@include bp($tablet_min - 1) {
 			background-color: var(--cerulean);
-			transform: translateX(-5.2rem);
+			transform: translateX(0rem);
 			box-shadow: 1px 0 0 0 var(--dark);
 		}
 	}
