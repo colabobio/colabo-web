@@ -1,6 +1,11 @@
 ---
 news:
 
+  - decorVariant: "square"
+    colorVariant: "2"
+    title: "Congratulations to Trusting for successfully defending his PhD thesis, and starting a new position at SUNY Polytechnic Institute!"
+    url: "https://colabobio.medium.com/92d652f95f9a"
+
   - decorVariant: "elipses"
     colorVariant: "3"
     title: "Thanks to Ciro Catutto at ISI Foundation who invited Andres Colubri to talk about Epidemica, our upcoming platorm for experimental epidemiology"
@@ -15,10 +20,5 @@ news:
     colorVariant: "1"
     title: "Winnie's remarkable career and achievements were showcased by UMass Chan News"
     url: "https://direc.to/mB9T"
-
-  - decorVariant: "square"
-    colorVariant: "2"
-    title: "Read our pre-print on the epidemic simulation at Wenzhou-Kean University that used proximity sensing and gamification to study the effect of risk perception on infectious disease spread"
-    url: "https://www.medrxiv.org/content/10.1101/2024.12.14.24318955"
 
 ---
