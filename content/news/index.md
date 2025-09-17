@@ -1,6 +1,11 @@
 ---
 news:
 
+  - decorVariant: "elipses"
+    colorVariant: "4"
+    title: "Check out our latest preprint, a collaboration with the Kowalik and Garber labs where we apply our directional analysis to HCMV single-cell RNA sequencing data"
+    url: "https://doi.org/10.1101/2025.09.16.676604"
+
   - decorVariant: "circles"
     colorVariant: "1"
     title: "The Travel Healthy project has been selected for UMass Chan's IMPACT Program, a portfolio of high-potential research projects ready for industry collaboration"

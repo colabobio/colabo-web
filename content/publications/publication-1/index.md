@@ -1,10 +1,10 @@
 ---
-title: 'A Multi-target Bayesian Transformer Framework for Predicting Cardiovascular Disease Biomarkers during Pandemics'
-authors: 'Inekwe T, Agu E, Mkandawire W, Colubri A'
-publication: 'arXiv. 2025 2509.01794v1'
+title: 'Human Cytomegalovirus Infection of Primary Human Oral Keratinocytes Induces Intermediate Keratinocyte Differentiation and an Altered Innate Immune Response'
+authors: 'Cojohari O, Cao Y, Temirbek A, Colubri A, Garber M, Kowalik T'
+publication: 'bioRxiv. 2025 676604v1'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.48550/arXiv.2509.01794'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1101/2025.09.16.676604'},
   ]
 order: 1
 ---
