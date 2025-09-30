@@ -1,11 +1,10 @@
 ---
-title: 'Preventing Outbreaks through Interactive, Experiential Real-Life Simulations'
-authors: 'Colubri A, Kemball M, Sani K, Boehm C, Mutch-Jones K, Fry B, Brown T, Sabeti PC'
-publication: 'Cell. 2020 Sep 17;182(6):1366-1371'
+title: 'Individual-level Modeling of COVID-19 Epidemic Risk'
+authors: 'Colubri A, Yadav K, Jha A, Sabeti PC'
+publication: 'arXiv. 2020 1908.06822v1'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/32905783'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.cell.2020.08.042'},
+    { 'text': 'DOI', url: 'https://doi.org/10.48550/arXiv.2006.16761'},
   ]
 order: 25
 ---
