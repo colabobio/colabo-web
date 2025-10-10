@@ -1,6 +1,11 @@
 ---
 news:
 
+  - decorVariant: "square"
+    colorVariant: "3"
+    title: "Andres will present at the 2025 Perth Epidemiology Group (PEG) Seminar Series: App-based epidemic games for infectious disease research"
+    url: "https://www.eventbrite.com.au/e/app-based-epidemic-games-for-infectious-disease-research-tickets-1698503362279"
+
   - decorVariant: "elipses"
     colorVariant: "4"
     title: "Check out our latest preprint, a collaboration with the Kowalik and Garber labs where we apply our directional analysis to HCMV single-cell RNA sequencing data"
