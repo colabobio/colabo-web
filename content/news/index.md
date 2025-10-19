@@ -1,9 +1,15 @@
 ---
 news:
 
+  - decorVariant: "rounded"
+    colorVariant: "4"
+    title: "Our paper introducing the Travel Healthy app has been published on the Travel Medicine and Infectious Disease journal"
+    url: "https://doi.org/10.1016/j.tmaid.2025.102922"
+
+
   - decorVariant: "square"
     colorVariant: "3"
-    title: "Andres will present at the 2025 Perth Epidemiology Group (PEG) Seminar Series: App-based epidemic games for infectious disease research"
+    title: "Andres presented at the 2025 Perth Epidemiology Group Seminar Series: App-based epidemic games for infectious disease research"
     url: "https://www.eventbrite.com.au/e/app-based-epidemic-games-for-infectious-disease-research-tickets-1698503362279"
 
   - decorVariant: "elipses"
@@ -25,10 +31,5 @@ news:
     colorVariant: "3"
     title: "Thanks to Ciro Catutto at ISI Foundation who invited Andres Colubri to talk about Epidemica, our upcoming platorm for experimental epidemiology"
     url: "https://www.isi.it/seminars/2025-07-columbri/"
-
-  - decorVariant: "rounded"
-    colorVariant: "4"
-    title: "We launched the Pounce! project in collaboration with the Karlsson lab at the MIT Museum After Dark event series"
-    url: "https://colabobio.medium.com/314c6b32f0a0"
 
 ---

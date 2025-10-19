@@ -1,11 +1,11 @@
 ---
-title: 'The case for altruism in institutional diagnostic testing'
-authors: 'Specht I, Sani K, Botti-Lodovico Y, Hughes M, Heumann K, Bronson A, Marshall J, Baron E, Parrie E, Glennon O, Fry B, Colubri A, Sabeti PC'
-publication: 'Sci Rep. 2022 Feb 3;12(1):1857'
+title: 'Containing the spread of mumps on college campuses'
+authors: 'Shah M, Ferra G, Fitzgerald S, Barreira PJ, Sabeti PC, Colubri A'
+publication: 'R Soc Open Sci. 2022 Jan 26;9(1):210948'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35115545'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1038/s41598-021-02605-4'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35116142'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1098/rsos.210948'},
   ]
 order: 21
 ---
