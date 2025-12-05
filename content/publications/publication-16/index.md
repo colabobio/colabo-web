@@ -1,11 +1,11 @@
 ---
-title: 'Comparison of Rapid Antigen Tests'' Performance Between Delta and Omicron Variants of SARS-CoV-2 : A Secondary Analysis From a Serial Home Self-testing Study'
-authors: 'Soni A, Herbert C, Filippaios A, Broach J, Colubri A, …, Hafer N, Luzuriaga K, Barton B, Heetderks W, Manabe YC, McManus D'
-publication: 'Ann Intern Med. 2022 Dec;175(12):1685-1692'
+title: 'Knowledge, Attitudes and Practices Regarding the Use of Mobile Travel Health Apps'
+authors: 'Machoko MMP, Dong Y, Grozdani A, Hong H, Oliver E, Hyle EP, Ryan ET, Walker AT, Colubri A, LaRocque RC'
+publication: 'J Travel Med. 2023 Jul 6:taad089'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36215709'},
-    { 'text': 'DOI', url: 'https://doi.org/10.7326/M22-0760'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/37410376'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1093/jtm/taad089'},
   ]
 order: 16
 ---

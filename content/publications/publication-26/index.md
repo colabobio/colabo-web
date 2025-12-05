@@ -1,11 +1,11 @@
 ---
-title: 'Deployable CRISPR-Cas13a diagnostic tools to detect and report Ebola and Lassa virus cases in real-time'
-authors: 'Barnes KG, Lachenauer AE, Nitido A, Siddiqui S, Gross R, Beitzel B, Siddle KJ, Freije CA, Dighero-Kemp B, Mehta SB, Carter A, Uwanibe J, Ajogbasile F, Olumade T, Odia I, Sandi JD, Momoh M, Metsky HC, Boehm CK, Lin AE, Kemball M, Park DJ, Branco L, Boisen M, Sullivan B, Amare MF, Tiamiyu AB, Parker ZF, Iroezindu M, Grant DS, Modjarrad K, Myhrvold C, Garry RF, Palacios G, Hensley LE, Schaffner SF, Happi CT, Colubri A, Sabeti PC'
-publication: 'Nature Comm. 2020 Aug 17;11(1):4131'
+title: 'The Origins and Future of Sentinel: An Early-Warning System for Pandemic Preemption and Response'
+authors: 'Botti-Lodovico Y, Nair P, Nosamiefan D, Stremlau M, Schaffner S, Agignoae SV, Aiyepada JO, Ajogbasile FV, Akpede GO, Alhasan F, Andersen KG, Asogun DA, Ayodeji OO, Badiane AS, Barnes K, Bauer MR, Bell-Kareem A, Benard ME, Benevolence EO, Blessing O, Boehm CK, Boisen ML, Bond NG, Branco LM, Butts MJ, Carter A, Colubri A, …, Vinzé A, Vodzak ME, Welch N, Wurie HI, Zoumarou D, Grant DS, Ndiaye D, MacInnis B, Sabeti PC, Happi C'
+publication: 'Viruses. 2021 Aug 13;13(8):1605'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/32807807'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1038/s41467-020-17994-9'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/34452470'},
+    { 'text': 'DOI', url: 'https://doi.org/10.3390/v13081605'},
   ]
 order: 26
 ---

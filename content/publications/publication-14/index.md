@@ -1,11 +1,11 @@
 ---
-title: 'Performance of Screening for SARS-CoV-2 using Rapid Antigen Tests to Detect Incidence of Symptomatic and Asymptomatic SARS-CoV-2 Infection: findings from the Test Us at Home prospective cohort study'
-authors: 'Soni A, Herbert C, Lin H, Yan Y, Pretz C, Stamegna P, …, Colubri A, O''Connor L, Lemon SC, Fahey N, Luzuriaga KL, Hafer N, Roth K, Lowe T, Stenzel T, Heetderks W, Broach J, McManus DD'
-publication: 'Annals of Internal Medicine. 2023 Jul 4'
+title: 'Derivation and Internal Validation of a Mortality Prognostication Machine Learning Model in Ebola Virus Disease Using Iterative Point-of-Care Biomarkers'
+authors: 'Bearnot CJ, Laghari R, Mbong EN, Muhayangabo RF, Butler K, Gainey M, Perera SM, Michelow IC, Tang OY, Levine AC, Colubri A, Aluisio AR'
+publication: 'Open Forum Infectious Diseases, 2024; ofad689'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/37399548'},
-    { 'text': 'DOI', url: 'https://doi.org/10.7326/M23-0385'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/38379568'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1093/ofid/ofad689'},
   ]
 order: 14
 ---
