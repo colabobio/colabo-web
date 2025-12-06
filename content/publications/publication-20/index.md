@@ -1,11 +1,11 @@
 ---
-title: 'Multimodal surveillance of SARS-CoV-2 at a university enables development of a robust outbreak response framework'
-authors: 'Petros BA, Paull JS, Tomkins-Tinch CH, Loftness B, ..., Colubri A.; MacInnis BL, Ozsoy AZ, Parrie E, Sholtes K, Siddle KJ, Fry B, Luban J, Park DJ, Marshall J, Bronson A, Schaffner SF, Sabeti PC'
-publication: 'Cell Med. 2022 Dec 9;3(12):883-900.e13'
+title: 'Analyzing the impact of a real-life outbreak simulator on pandemic mitigation: An epidemiological modeling study'
+authors: 'Specht I, Sani K, Loftness BC, Hoffman C, Gionet G, Bronson A, Marshall J, Decker C, Bailey L, Siyanbade T, Kemball M, Pickett BE, Hanage WP, Brown T, Sabeti PC, Colubri A'
+publication: 'Patterns (N Y). 2022 Aug 12;3(8):100572'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36198312'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.medj.2022.09.003'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36033592'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.patter.2022.100572'},
   ]
 order: 20
 ---

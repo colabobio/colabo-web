@@ -1,11 +1,11 @@
 ---
-title: 'Knowledge, Attitudes and Practices Regarding the Use of Mobile Travel Health Apps'
-authors: 'Machoko MMP, Dong Y, Grozdani A, Hong H, Oliver E, Hyle EP, Ryan ET, Walker AT, Colubri A, LaRocque RC'
-publication: 'J Travel Med. 2023 Jul 6:taad089'
+title: 'Derivation and Internal Validation of a Mortality Prognostication Machine Learning Model in Ebola Virus Disease Using Iterative Point-of-Care Biomarkers'
+authors: 'Bearnot CJ, Laghari R, Mbong EN, Muhayangabo RF, Butler K, Gainey M, Perera SM, Michelow IC, Tang OY, Levine AC, Colubri A, Aluisio AR'
+publication: 'Open Forum Infectious Diseases, 2024; ofad689'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/37410376'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1093/jtm/taad089'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/38379568'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1093/ofid/ofad689'},
   ]
 order: 16
 ---

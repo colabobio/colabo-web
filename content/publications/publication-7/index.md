@@ -1,10 +1,11 @@
 ---
-title: 'A Genetic Neural Architecture Search Framework to Predict Biomarker Status in Cardiovascular Disease Patients during Pandemics'
-authors: 'Inekwe T, Agu E, Mkandawire W. Colubri A'
-publication: '2025 IEEE/ACM Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE), New York, NY, USA, 2025, pp. 45-56'
+title: 'Modeling Neisseria meningitidis transmission dynamics and the impact of pentavalent vaccination targeting serogroups A, C, W-135, Y, and X in the African meningitis belt'
+authors: 'Hussaini N, Habib AG, Garba I, Baba IA, Colubri A, Abdulrashid I, SS Musa'
+publication: 'Infectious Disease Modelling. 2025; 10(4): 1355-1383'
 links:
   [
-    { 'text': 'WEB', url: 'https://ieeexplore.ieee.org/document/11121123'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/40740617'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.idm.2025.06.008'},
   ]
 order: 7
 ---

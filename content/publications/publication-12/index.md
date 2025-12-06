@@ -1,11 +1,10 @@
 ---
-title: 'Evaluating the spike in the symptomatic proportion of SARS-CoV-2 in China in 2022 with variolation effects: a modeling analysis'
-authors: 'Musa SS, Zhao S, Abdulrashid I, Qureshi S, Colubri A, He D'
-publication: 'Infect Dis Model. 2024 Mar 11;9(2):601-617'
+title: 'The effect of Behavioral Factors and Intervention Strategies on Pathogen Transmission: Insights from a Two-Week Epidemic Game at Wenzhou-Kean University in China'
+authors: 'Musa SS, Mkandawire W, Inekwe T, Dong Y, Grozdani A, Hong H, Khandpekar M, Nowak SA, Young JG, Wong A, King D, Colubri A'
+publication: 'medRxiv. 2024.12.14.24318955'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/38558958'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.idm.2024.02.011'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1101/2024.12.14.24318955'},
   ]
 order: 12
 ---

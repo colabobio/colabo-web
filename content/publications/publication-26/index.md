@@ -1,11 +1,11 @@
 ---
-title: 'The Origins and Future of Sentinel: An Early-Warning System for Pandemic Preemption and Response'
-authors: 'Botti-Lodovico Y, Nair P, Nosamiefan D, Stremlau M, Schaffner S, Agignoae SV, Aiyepada JO, Ajogbasile FV, Akpede GO, Alhasan F, Andersen KG, Asogun DA, Ayodeji OO, Badiane AS, Barnes K, Bauer MR, Bell-Kareem A, Benard ME, Benevolence EO, Blessing O, Boehm CK, Boisen ML, Bond NG, Branco LM, Butts MJ, Carter A, Colubri A, …, Vinzé A, Vodzak ME, Welch N, Wurie HI, Zoumarou D, Grant DS, Ndiaye D, MacInnis B, Sabeti PC, Happi C'
-publication: 'Viruses. 2021 Aug 13;13(8):1605'
+title: 'The case for altruism in institutional diagnostic testing'
+authors: 'Specht I, Sani K, Botti-Lodovico Y, Hughes M, Heumann K, Bronson A, Marshall J, Baron E, Parrie E, Glennon O, Fry B, Colubri A, Sabeti PC'
+publication: 'Sci Rep. 2022 Feb 3;12(1):1857'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/34452470'},
-    { 'text': 'DOI', url: 'https://doi.org/10.3390/v13081605'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35115545'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1038/s41598-021-02605-4'},
   ]
 order: 26
 ---

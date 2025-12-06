@@ -1,11 +1,11 @@
 ---
-title: 'Sciviewer enables interactive visual interrogation of single-cell RNA-Seq data from the python programming environment'
-authors: 'Kotliar D, Colubri A'
-publication: 'Bioinformatics. 2021 Oct 2:btab689'
+title: 'Containing the spread of mumps on college campuses'
+authors: 'Shah M, Ferra G, Fitzgerald S, Barreira PJ, Sabeti PC, Colubri A'
+publication: 'R Soc Open Sci. 2022 Jan 26;9(1):210948'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/34601589'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1093/bioinformatics/btab689'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35116142'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1098/rsos.210948'},
   ]
 order: 25
 ---

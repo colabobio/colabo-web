@@ -1,11 +1,11 @@
 ---
-title: 'Using a comprehensive atlas and predictive models to reveal the complexity and evolution of brain-active regulatory elements'
-authors: 'Pratt HE, Andrews G, Shedd N, Phalke N, Li T, Pampari A, Jensen M, Wen C, Consortium P, Gandal MJ, Geschwind DH, Gerstein M, Moore J, Kundaje A, Colubri A, Weng Z'
-publication: 'Sci Adv. 2024 May 24;10(21):eadj4452'
+title: 'Biomarker Trajectory Prediction and Causal Analysis of the Impact of the Covid-19 Pandemic on CVD Patients using Machine Learning'
+authors: 'Inekwe T, Mkandawire WW, Wee B, Agu E, Colubri A'
+publication: '2024 IEEE/ACM Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE), Wilmington, DE, USA, 2024, pp. 1-12'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/38781344'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1126/sciadv.adj4452'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1109/CHASE60773.2024.00011'},
+    { 'text': 'WEB', url: 'https://ieeexplore.ieee.org/document/10614425'},
   ]
 order: 11
 ---

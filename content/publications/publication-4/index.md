@@ -1,10 +1,11 @@
 ---
-title: 'Human Cytomegalovirus Infection of Primary Human Oral Keratinocytes Induces Intermediate Keratinocyte Differentiation and an Altered Innate Immune Response'
-authors: 'Cojohari O, Cao Y, Temirbek A, Colubri A, Garber M, Kowalik T'
-publication: 'bioRxiv. 2025 676604v1'
+title: 'Travel Healthy, a mobile app for participatory surveillance among U.S. international travelers'
+authors: 'Colubri A, Willing N, Grozdani A, Dong Y, Hong H, Khandpekar M, Oliver E, Thwing J, Ryan ET, LaRocque RC'
+publication: 'Travel Med Infect Dis. 2025 Oct 11:68:102922'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.1101/2025.09.16.676604'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/41083032'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.tmaid.2025.102922'},
   ]
 order: 4
 ---

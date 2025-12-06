@@ -1,10 +1,10 @@
 ---
-title: 'The effect of Behavioral Factors and Intervention Strategies on Pathogen Transmission: Insights from a Two-Week Epidemic Game at Wenzhou-Kean University in China'
-authors: 'Musa SS, Mkandawire W, Inekwe T, Dong Y, Grozdani A, Hong H, Khandpekar M, Nowak SA, Young JG, Wong A, King D, Colubri A'
-publication: 'medRxiv. 2024.12.14.24318955'
+title: 'An epidemiological modeling investigation of the long-term changing dynamics of the plague epidemics in Hong Kong'
+authors: 'Musa SS, Zhao S, Mkandawire WW, Colubri A, He D'
+publication: 'Math Biosci Eng 2024, 21(10): 7435-7453'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.1101/2024.12.14.24318955'},
+    { 'text': 'DOI', url: 'https://doi.org/10.3934/mbe.2024327'},
   ]
 order: 10
 ---

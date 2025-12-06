@@ -1,11 +1,11 @@
 ---
-title: 'Containing the spread of mumps on college campuses'
-authors: 'Shah M, Ferra G, Fitzgerald S, Barreira PJ, Sabeti PC, Colubri A'
-publication: 'R Soc Open Sci. 2022 Jan 26;9(1):210948'
+title: 'Risk Prediction Score for Pediatric Patients with Suspected Ebola Virus Disease'
+authors: 'Genisca AE, Chu TC, Huang L, Gainey M, Adeniji M, Mbong EN, Kennedy SB, Laghari R, Nganga F, Muhayangabo RF, Vaishnav H, Perera SM, Colubri A, Levine AC, Michelow IC'
+publication: 'Emerg Infect Dis. 2022 Jun;28(6):1189-1197'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35116142'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1098/rsos.210948'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35608611'},
+    { 'text': 'DOI', url: 'https://doi.org/10.3201/eid2806.212265'},
   ]
 order: 23
 ---

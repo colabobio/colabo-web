@@ -1,11 +1,11 @@
 ---
-title: 'Performance of Screening for SARS-CoV-2 using Rapid Antigen Tests to Detect Incidence of Symptomatic and Asymptomatic SARS-CoV-2 Infection: findings from the Test Us at Home prospective cohort study'
-authors: 'Soni A, Herbert C, Lin H, Yan Y, Pretz C, Stamegna P, …, Colubri A, O''Connor L, Lemon SC, Fahey N, Luzuriaga KL, Hafer N, Roth K, Lowe T, Stenzel T, Heetderks W, Broach J, McManus DD'
-publication: 'Annals of Internal Medicine. 2023 Jul 4'
+title: 'Investigating the etiologies of non-malarial febrile illness in Senegal using metagenomic sequencing'
+authors: 'Levine ZC, Sene A, Mkandawire WW, Deme AB, Ndiaye T, Sy M, Gaye A, Diedhiou Y, Mbaye AM, Ndiaye IM, Gomis J, Ndiop M, Sene D, Faye Paye M, MacInnis BL, Schaffner SF, Park DJ, Badiane AS, Colubri A, Ndiaye M, Sy N, Sabeti PC, Ndiaye D, Siddle KJ'
+publication: 'Nat Commun. 2024 Jan 25;15(1):747'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/37399548'},
-    { 'text': 'DOI', url: 'https://doi.org/10.7326/M23-0385'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/38272885'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1038/s41467-024-44800-7'},
   ]
 order: 15
 ---
