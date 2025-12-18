@@ -1,11 +1,10 @@
 ---
-title: 'Addressing pandemics in Argentine Secondary Education using participatory methodologies and simulation games with a human rights approach'
-authors: 'Colubri A, Richmond I, Visotsky J, Boscardin Z'
-publication: 'Revista de Educación en Biología, 28(2)'
+title: 'An Experimental Epidemic Game (epigame) to Model the Attitude-behavior Relationship in Prophylactic Quarantine'
+authors: 'Colubri A'
+publication: 'OSF Preregistration. November 13, 2025'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.59524/2344-9225.v28.n2.49330'},
-    { 'text': 'WEB', url: 'https://revistas.unc.edu.ar/index.php/revistaadbia/article/view/49330'},
+    { 'text': 'DOI', url: 'https://doi.org/10.17605/OSF.IO/QEV6N '},
   ]
 order: 3
 ---

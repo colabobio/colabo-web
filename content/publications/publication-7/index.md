@@ -1,11 +1,10 @@
 ---
-title: 'Modeling Neisseria meningitidis transmission dynamics and the impact of pentavalent vaccination targeting serogroups A, C, W-135, Y, and X in the African meningitis belt'
-authors: 'Hussaini N, Habib AG, Garba I, Baba IA, Colubri A, Abdulrashid I, SS Musa'
-publication: 'Infectious Disease Modelling. 2025; 10(4): 1355-1383'
+title: 'Human Cytomegalovirus Infection of Primary Human Oral Keratinocytes Induces Intermediate Keratinocyte Differentiation and an Altered Innate Immune Response'
+authors: 'Cojohari O, Cao Y, Temirbek A, Colubri A, Garber M, Kowalik T'
+publication: 'bioRxiv. 2025 676604v1'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/40740617'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.idm.2025.06.008'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1101/2025.09.16.676604'},
   ]
 order: 7
 ---

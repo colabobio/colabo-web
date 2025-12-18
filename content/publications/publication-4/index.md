@@ -1,11 +1,11 @@
 ---
-title: 'Travel Healthy, a mobile app for participatory surveillance among U.S. international travelers'
-authors: 'Colubri A, Willing N, Grozdani A, Dong Y, Hong H, Khandpekar M, Oliver E, Thwing J, Ryan ET, LaRocque RC'
-publication: 'Travel Med Infect Dis. 2025 Oct 11:68:102922'
+title: 'Addressing pandemics in Argentine Secondary Education using participatory methodologies and simulation games with a human rights approach'
+authors: 'Colubri A, Richmond I, Visotsky J, Boscardin Z'
+publication: 'Revista de Educación en Biología, 28(2)'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/41083032'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.tmaid.2025.102922'},
+    { 'text': 'DOI', url: 'https://doi.org/10.59524/2344-9225.v28.n2.49330'},
+    { 'text': 'WEB', url: 'https://revistas.unc.edu.ar/index.php/revistaadbia/article/view/49330'},
   ]
 order: 4
 ---
