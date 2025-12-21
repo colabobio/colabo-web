@@ -4,7 +4,7 @@ authors: 'Colubri A, Hedrich N, Leva J, Muñoz J, LaRocque R, Schlagenhauf P, Fa
 publication: 'Zenodo, December 17, 2025'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.17969782'},
+    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.17969781'},
   ]
 order: 1
 ---
