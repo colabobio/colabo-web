@@ -1,11 +1,15 @@
 ---
 news:
 
+  - decorVariant: "elipses"
+    colorVariant: "3"
+    title: "We launched the Travel Health Data Commons (THDC) with travel medicine collaborators to catalyze the development of interoperable travel health tools"
+    url: "https://travelhealthdatacommons.org/"
+
   - decorVariant: "rounded"
     colorVariant: "4"
     title: "Our paper introducing the Travel Healthy app has been published on the Travel Medicine and Infectious Disease journal"
     url: "https://doi.org/10.1016/j.tmaid.2025.102922"
-
 
   - decorVariant: "square"
     colorVariant: "3"
@@ -26,10 +30,5 @@ news:
     colorVariant: "2"
     title: "Congratulations to Trusting for successfully defending his PhD thesis, and starting a new position at SUNY Polytechnic Institute!"
     url: "https://colabobio.medium.com/92d652f95f9a"
-
-  - decorVariant: "elipses"
-    colorVariant: "3"
-    title: "Thanks to Ciro Catutto at ISI Foundation who invited Andres Colubri to talk about Epidemica, our upcoming platorm for experimental epidemiology"
-    url: "https://www.isi.it/seminars/2025-07-columbri/"
 
 ---
