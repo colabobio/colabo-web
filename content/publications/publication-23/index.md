@@ -1,11 +1,11 @@
 ---
-title: 'Multimodal surveillance of SARS-CoV-2 at a university enables development of a robust outbreak response framework'
-authors: 'Petros BA, Paull JS, Tomkins-Tinch CH, Loftness B, ..., Colubri A.; MacInnis BL, Ozsoy AZ, Parrie E, Sholtes K, Siddle KJ, Fry B, Luban J, Park DJ, Marshall J, Bronson A, Schaffner SF, Sabeti PC'
-publication: 'Cell Med. 2022 Dec 9;3(12):883-900.e13'
+title: 'Using machine learning to predict survival in children with Ebola Virus Disease'
+authors: 'Genisca AE, Butler K, Gainey M, Chu TC, Huang L, Mbong EN, Kennedy SB, Laghari R, Nganga F, Muhayangabo RF, Vaishnav H, Perera SM, Adeniji M, Levine AC, Michelow IC, Colubri A'
+publication: 'PLOS Neglected Tropical Diseases. 2022 Oct 12;16(10):e0010789'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36198312'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.medj.2022.09.003'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36223331'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1371/journal.pntd.0010789'},
   ]
 order: 23
 ---
