@@ -1,7 +1,7 @@
 ---
 news:
 
-- decorVariant: "circles"
+  - decorVariant: "circles"
     colorVariant: "1"
     title: "This preprint with our Oxford collaborators shows the use of real-world epigame data to integrate large language models into agent-based simulations"
     url: "https://arxiv.org/abs/2606.02867"
