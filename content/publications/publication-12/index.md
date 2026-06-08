@@ -1,11 +1,10 @@
 ---
-title: 'Biomarker Trajectory Prediction and Causal Analysis of the Impact of the Covid-19 Pandemic on CVD Patients using Machine Learning'
-authors: 'Inekwe T, Mkandawire WW, Wee B, Agu E, Colubri A'
-publication: '2024 IEEE/ACM Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE), Wilmington, DE, USA, 2024, pp. 1-12'
+title: 'An epidemiological modeling investigation of the long-term changing dynamics of the plague epidemics in Hong Kong'
+authors: 'Musa SS, Zhao S, Mkandawire WW, Colubri A, He D'
+publication: 'Math Biosci Eng 2024, 21(10): 7435-7453'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.1109/CHASE60773.2024.00011'},
-    { 'text': 'WEB', url: 'https://ieeexplore.ieee.org/document/10614425'},
+    { 'text': 'DOI', url: 'https://doi.org/10.3934/mbe.2024327'},
   ]
 order: 12
 ---

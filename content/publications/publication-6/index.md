@@ -1,10 +1,10 @@
 ---
-title: 'Transmission network for foot-and-mouth disease epidemic in Mar Chiquita - Argentina: A spatial modeling analysis'
-authors: 'Musa SS, Lozano LC, Marcos A, König GA, Colubri A'
-publication: 'bioRxiv. 2025 678789v1'
+title: 'Validation and Improvement of Child Undernutrition Risk Prediction Model Using National Family Health Survey-5 Data from India'
+authors: 'Shah B, Guerra J, Fahey N, Nimbalkar S, Colubri, A, Soni A'
+publication: 'Research Square, December 4, 2025'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.1101/2025.09.26.678789'},
+    { 'text': 'DOI', url: 'https://doi.org/10.21203/rs.3.rs-7943491/v1'},
   ]
 order: 6
 ---
