@@ -1,11 +1,10 @@
 ---
-title: 'Using a comprehensive atlas and predictive models to reveal the complexity and evolution of brain-active regulatory elements'
-authors: 'Pratt HE, Andrews G, Shedd N, Phalke N, Li T, Pampari A, Jensen M, Wen C, Consortium P, Gandal MJ, Geschwind DH, Gerstein M, Moore J, Kundaje A, Colubri A, Weng Z'
-publication: 'Sci Adv. 2024 May 24;10(21):eadj4452'
+title: 'Validation and Improvement of Child Undernutrition Risk Prediction Model Using National Family Health Survey-5 Data from India'
+authors: 'Shah B, Guerra J, Fahey N, Nimbalkar S, Colubri, A, Soni A'
+publication: 'Research Square, December 4, 2025'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/38781344'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1126/sciadv.adj4452'},
+    { 'text': 'DOI', url: 'https://doi.org/10.21203/rs.3.rs-7943491/v1'},
   ]
 order: 15
 ---

@@ -1,11 +1,10 @@
 ---
-title: 'Investigating the etiologies of non-malarial febrile illness in Senegal using metagenomic sequencing'
-authors: 'Levine ZC, Sene A, Mkandawire WW, Deme AB, Ndiaye T, Sy M, Gaye A, Diedhiou Y, Mbaye AM, Ndiaye IM, Gomis J, Ndiop M, Sene D, Faye Paye M, MacInnis BL, Schaffner SF, Park DJ, Badiane AS, Colubri A, Ndiaye M, Sy N, Sabeti PC, Ndiaye D, Siddle KJ'
-publication: 'Nat Commun. 2024 Jan 25;15(1):747'
+title: 'Human Cytomegalovirus Infection of Primary Human Oral Keratinocytes Induces Intermediate Keratinocyte Differentiation and an Altered Innate Immune Response'
+authors: 'Cojohari O, Cao Y, Temirbek A, Colubri A, Garber M, Kowalik T'
+publication: 'bioRxiv. 2025 676604v1'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/38272885'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1038/s41467-024-44800-7'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1101/2025.09.16.676604'},
   ]
 order: 17
 ---

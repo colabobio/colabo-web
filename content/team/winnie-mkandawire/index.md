@@ -1,6 +1,6 @@
 ---
 name: Winnie Mkandawire
-category: member
+category: collaborator
 avatar: ./winnie.png
 avatarHover: ./winnie-hover.jpg
 order: 12

@@ -1,10 +1,10 @@
 ---
-title: 'Validation and Improvement of Child Undernutrition Risk Prediction Model Using National Family Health Survey-5 Data from India'
-authors: 'Shah B, Guerra J, Fahey N, Nimbalkar S, Colubri, A, Soni A'
-publication: 'Research Square, December 4, 2025'
+title: 'Structural and Epidemic Properties of Contact Networks from Epigames'
+authors: 'McCool E, Fowler A, Di Lauro F, Ferretti L, Fraser, C, Enright J, Colubri A, Panovska-Griffiths, J'
+publication: 'Zenodo, February 25, 2026'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.21203/rs.3.rs-7943491/v1'},
+    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.18774428'},
   ]
 order: 6
 ---

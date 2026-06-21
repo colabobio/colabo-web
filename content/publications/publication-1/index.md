@@ -1,10 +1,10 @@
 ---
-title: 'Advancing Travel Medicine Through Shared Digital Infrastructure and Common Data Standards'
-authors: 'Colubri A, Hedrich N, Leva J, Muñoz J, LaRocque R, Schlagenhauf P, Farnham A, ISTM Technology Interest Group'
-publication: 'Zenodo, December 17, 2025'
+title: 'The Epi-LLM Framework: probing LLM behavioral priors through epidemiological agent-based models'
+authors: 'Ferenz P, Keeling A, O''Keefe T, Stigliano L, Di Lauro L, Colubri A, Panovska-Griffiths J'
+publication: ''
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.17969781'},
+    { 'text': 'DOI', url: 'https://doi.org/10.48550/arXiv.2606.02867'},
   ]
 order: 1
 ---

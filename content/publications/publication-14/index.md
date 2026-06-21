@@ -1,10 +1,11 @@
 ---
-title: 'The effect of Behavioral Factors and Intervention Strategies on Pathogen Transmission: Insights from a Two-Week Epidemic Game at Wenzhou-Kean University in China'
-authors: 'Musa SS, Mkandawire W, Inekwe T, Dong Y, Grozdani A, Hong H, Khandpekar M, Nowak SA, Young JG, Wong A, King D, Colubri A'
-publication: 'medRxiv. 2024.12.14.24318955'
+title: 'Travel Healthy, a mobile app for participatory surveillance among U.S. international travelers'
+authors: 'Colubri A, Willing N, Grozdani A, Dong Y, Hong H, Khandpekar M, Oliver E, Thwing J, Ryan ET, LaRocque RC'
+publication: 'Travel Med Infect Dis. 2025 Oct 11:68:102922'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.1101/2024.12.14.24318955'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/41083032'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.tmaid.2025.102922'},
   ]
 order: 14
 ---

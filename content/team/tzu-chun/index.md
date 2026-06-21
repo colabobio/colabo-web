@@ -1,6 +1,6 @@
 ---
 name: Tzu-Chun
-category: collaborator
+category: former_student
 avatar: ./tzuchun.png
 avatarHover: ./tzuchun-hover.jpg
 order: 19

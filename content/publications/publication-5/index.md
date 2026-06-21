@@ -1,11 +1,10 @@
 ---
-title: 'Travel Healthy, a mobile app for participatory surveillance among U.S. international travelers'
-authors: 'Colubri A, Willing N, Grozdani A, Dong Y, Hong H, Khandpekar M, Oliver E, Thwing J, Ryan ET, LaRocque RC'
-publication: 'Travel Med Infect Dis. 2025 Oct 11:68:102922'
+title: 'Understanding human behaviour for pandemic preparedness with epigames'
+authors: 'Colubri A, Williams D, Valente T, Bauch CT, Drake JM, Mills MC, Drury J, Fraser C, Ferretti L, Panovska-Griffiths J'
+publication: ''
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/41083032'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.tmaid.2025.102922'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1038/s44360-026-00071-8'},
   ]
 order: 5
 ---

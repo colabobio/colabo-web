@@ -1,11 +1,10 @@
 ---
-title: 'Using machine learning to predict survival in children with Ebola Virus Disease'
-authors: 'Genisca AE, Butler K, Gainey M, Chu TC, Huang L, Mbong EN, Kennedy SB, Laghari R, Nganga F, Muhayangabo RF, Vaishnav H, Perera SM, Adeniji M, Levine AC, Michelow IC, Colubri A'
-publication: 'PLOS Neglected Tropical Diseases. 2022 Oct 12;16(10):e0010789'
+title: 'The effect of Behavioral Factors and Intervention Strategies on Pathogen Transmission: Insights from a Two-Week Epidemic Game at Wenzhou-Kean University in China'
+authors: 'Musa SS, Mkandawire W, Inekwe T, Dong Y, Grozdani A, Hong H, Khandpekar M, Nowak SA, Young JG, Wong A, King D, Colubri A'
+publication: 'medRxiv. 2024.12.14.24318955'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36223331'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1371/journal.pntd.0010789'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1101/2024.12.14.24318955'},
   ]
 order: 23
 ---

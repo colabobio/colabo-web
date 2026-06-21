@@ -1,11 +1,11 @@
 ---
-title: 'Sciviewer enables interactive visual interrogation of single-cell RNA-Seq data from the python programming environment'
-authors: 'Kotliar D, Colubri A'
-publication: 'Bioinformatics. 2021 Oct 2:btab689'
+title: 'Knowledge, Attitudes and Practices Regarding the Use of Mobile Travel Health Apps'
+authors: 'Machoko MMP, Dong Y, Grozdani A, Hong H, Oliver E, Hyle EP, Ryan ET, Walker AT, Colubri A, LaRocque RC'
+publication: 'J Travel Med. 2023 Jul 6:taad089'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/34601589'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1093/bioinformatics/btab689'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/37410376'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1093/jtm/taad089'},
   ]
 order: 29
 ---

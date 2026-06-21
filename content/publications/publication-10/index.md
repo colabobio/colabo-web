@@ -1,10 +1,10 @@
 ---
-title: 'A Multi-target Bayesian Transformer Framework for Predicting Cardiovascular Disease Biomarkers during Pandemics'
-authors: 'Inekwe T, Agu E, Mkandawire W, Colubri A'
-publication: 'arXiv. 2025 2509.01794v1'
+title: 'Advancing Travel Medicine Through Shared Digital Infrastructure and Common Data Standards'
+authors: 'Colubri A, Hedrich N, Leva J, Muñoz J, LaRocque R, Schlagenhauf P, Farnham A, ISTM Technology Interest Group'
+publication: 'Zenodo, December 17, 2025'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.48550/arXiv.2509.01794'},
+    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.17969781'},
   ]
 order: 10
 ---

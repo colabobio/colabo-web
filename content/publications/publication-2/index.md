@@ -1,10 +1,11 @@
 ---
-title: 'A Novel Protocol for an Experimental Epidemic Game to Study Quarantine Behavior Dynamics: The Epi-Q Study'
-authors: 'McCool E, Mkandawire W, Musa S, Chen S, Moley L, Robbins Schug G, Bowman N, Nowak S, Drake J, Drury J, Fowler A, Mills M, Fraser C, Ferretti L, Swallow B, Panovska-Griffiths J, Colubri A'
-publication: 'SocArXiv. 2025 85fsj_v1'
+title: 'scSketch: Interactive Sketch-based Trajectory Exploration and Pathway-Aware Analysis of Single-Cell Data'
+authors: 'Temirbek A, Lekschas F, Sankaran K, Colubri A'
+publication: 'bioRxiv. 2026 Apr 23:2026.04.16.718997'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.31235/osf.io/85fsj_v1'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/42079097'},
+    { 'text': 'DOI', url: 'https://doi.org/10.64898/2026.04.16.718997'},
   ]
 order: 2
 ---

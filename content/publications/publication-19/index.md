@@ -1,11 +1,10 @@
 ---
-title: 'Performance of Screening for SARS-CoV-2 using Rapid Antigen Tests to Detect Incidence of Symptomatic and Asymptomatic SARS-CoV-2 Infection: findings from the Test Us at Home prospective cohort study'
-authors: 'Soni A, Herbert C, Lin H, Yan Y, Pretz C, Stamegna P, …, Colubri A, O''Connor L, Lemon SC, Fahey N, Luzuriaga KL, Hafer N, Roth K, Lowe T, Stenzel T, Heetderks W, Broach J, McManus DD'
-publication: 'Annals of Internal Medicine. 2023 Jul 4'
+title: 'A Multi-target Bayesian Transformer Framework for Predicting Cardiovascular Disease Biomarkers during Pandemics'
+authors: 'Inekwe T, Agu E, Mkandawire W, Colubri A'
+publication: 'arXiv. 2025 2509.01794v1'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/37399548'},
-    { 'text': 'DOI', url: 'https://doi.org/10.7326/M23-0385'},
+    { 'text': 'DOI', url: 'https://doi.org/10.48550/arXiv.2509.01794'},
   ]
 order: 19
 ---

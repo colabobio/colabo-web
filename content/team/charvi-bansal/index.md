@@ -1,6 +1,6 @@
 ---
 name: Charvi Bansal
-category: collaborator
+category: member
 avatar: ./charvi.jpg
 avatarHover: ./charvi-hover.jpg
 order: 3

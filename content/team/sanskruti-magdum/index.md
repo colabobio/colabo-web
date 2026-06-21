@@ -1,6 +1,6 @@
 ---
 name: Sanskruti Magdum
-category: member
+category: former_student
 avatar: ./sanskruti.jpg
 avatarHover: ./sanskruti-hover.jpg
 order: 3

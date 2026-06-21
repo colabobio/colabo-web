@@ -1,10 +1,10 @@
 ---
-title: 'Transmission network for foot-and-mouth disease epidemic in Mar Chiquita - Argentina: A spatial modeling analysis'
-authors: 'Musa SS, Lozano LC, Marcos A, König GA, Colubri A'
-publication: 'bioRxiv. 2025 678789v1'
+title: 'App-based Epidemic Game to Model Belief-Behavior Mapping and Cost Incentives in Voluntary Quarantine: A Randomized Controlled Trial'
+authors: 'Colubri A, Grozdani A, Khandpekar M, Graytee Y, Al-Mohammedi O, Al-Shabandar AA, Shabeeb WY, Ghassan Y, Swayedi H, Bauch CT, Drury J, Panovska-Griffiths J, King D'
+publication: 'medRxiv. 2026 26343836v2'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.1101/2025.09.26.678789'},
+    { 'text': 'DOI', url: 'https://doi.org/10.64898/2026.01.10.26343836'},
   ]
 order: 7
 ---

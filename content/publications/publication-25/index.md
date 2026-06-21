@@ -1,11 +1,11 @@
 ---
-title: 'Risk Prediction Score for Pediatric Patients with Suspected Ebola Virus Disease'
-authors: 'Genisca AE, Chu TC, Huang L, Gainey M, Adeniji M, Mbong EN, Kennedy SB, Laghari R, Nganga F, Muhayangabo RF, Vaishnav H, Perera SM, Colubri A, Levine AC, Michelow IC'
-publication: 'Emerg Infect Dis. 2022 Jun;28(6):1189-1197'
+title: 'Evaluating the spike in the symptomatic proportion of SARS-CoV-2 in China in 2022 with variolation effects: a modeling analysis'
+authors: 'Musa SS, Zhao S, Abdulrashid I, Qureshi S, Colubri A, He D'
+publication: 'Infect Dis Model. 2024 Mar 11;9(2):601-617'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/35608611'},
-    { 'text': 'DOI', url: 'https://doi.org/10.3201/eid2806.212265'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/38558958'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.idm.2024.02.011'},
   ]
 order: 25
 ---

@@ -1,10 +1,10 @@
 ---
-title: 'An epidemiological modeling investigation of the long-term changing dynamics of the plague epidemics in Hong Kong'
-authors: 'Musa SS, Zhao S, Mkandawire WW, Colubri A, He D'
-publication: 'Math Biosci Eng 2024, 21(10): 7435-7453'
+title: 'An Experimental Epidemic Game (epigame) to Model the Attitude-behavior Relationship in Prophylactic Quarantine'
+authors: 'Colubri A'
+publication: 'OSF Preregistration. November 13, 2025'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.3934/mbe.2024327'},
+    { 'text': 'DOI', url: 'https://doi.org/10.17605/OSF.IO/QEV6N '},
   ]
 order: 12
 ---

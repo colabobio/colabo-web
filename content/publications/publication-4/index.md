@@ -1,11 +1,11 @@
 ---
-title: 'Addressing pandemics in Argentine Secondary Education using participatory methodologies and simulation games with a human rights approach'
-authors: 'Colubri A, Richmond I, Visotsky J, Boscardin Z'
-publication: 'Revista de Educación en Biología, 28(2)'
+title: 'A call for shared digital infrastructure in travel medicine: the travel health data commons'
+authors: 'Colubri A, Hedrich N, Leva J, Muñoz J, LaRocque RC, Schlagenhauf P, Farnham A'
+publication: 'J Travel Med. 2026 Apr 1;33(3):taag013'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.59524/2344-9225.v28.n2.49330'},
-    { 'text': 'WEB', url: 'https://revistas.unc.edu.ar/index.php/revistaadbia/article/view/49330'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/41665274'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1093/jtm/taag013'},
   ]
 order: 4
 ---

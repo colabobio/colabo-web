@@ -1,11 +1,11 @@
 ---
-title: 'Analyzing the impact of a real-life outbreak simulator on pandemic mitigation: An epidemiological modeling study'
-authors: 'Specht I, Sani K, Loftness BC, Hoffman C, Gionet G, Bronson A, Marshall J, Decker C, Bailey L, Siyanbade T, Kemball M, Pickett BE, Hanage WP, Brown T, Sabeti PC, Colubri A'
-publication: 'Patterns (N Y). 2022 Aug 12;3(8):100572'
+title: 'Biomarker Trajectory Prediction and Causal Analysis of the Impact of the Covid-19 Pandemic on CVD Patients using Machine Learning'
+authors: 'Inekwe T, Mkandawire WW, Wee B, Agu E, Colubri A'
+publication: '2024 IEEE/ACM Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE), Wilmington, DE, USA, 2024, pp. 1-12'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/36033592'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.patter.2022.100572'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1109/CHASE60773.2024.00011'},
+    { 'text': 'WEB', url: 'https://ieeexplore.ieee.org/document/10614425'},
   ]
 order: 22
 ---

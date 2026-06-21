@@ -1,11 +1,11 @@
 ---
-title: 'Knowledge, Attitudes and Practices Regarding the Use of Mobile Travel Health Apps'
-authors: 'Machoko MMP, Dong Y, Grozdani A, Hong H, Oliver E, Hyle EP, Ryan ET, Walker AT, Colubri A, LaRocque RC'
-publication: 'J Travel Med. 2023 Jul 6:taad089'
+title: 'A Genetic Neural Architecture Search Framework to Predict Biomarker Status in Cardiovascular Disease Patients during Pandemics'
+authors: 'Inekwe T, Agu E, Mkandawire W. Colubri A'
+publication: '2025 IEEE/ACM Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE), New York, NY, USA, 2025, pp. 45-56'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/37410376'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1093/jtm/taad089'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1145/3721201.3721381'},
+    { 'text': 'WEB', url: 'https://dl.acm.org/doi/10.1145/3721201.3721381'},
   ]
 order: 20
 ---
