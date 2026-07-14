@@ -1,11 +1,10 @@
 ---
-title: 'scSketch: Interactive Sketch-based Trajectory Exploration and Pathway-Aware Analysis of Single-Cell Data'
-authors: 'Temirbek A, Lekschas F, Sankaran K, Colubri A'
-publication: 'bioRxiv. 2026 Apr 23:2026.04.16.718997'
+title: 'The Epi-LLM Framework: probing LLM behavioral priors through epidemiological agent-based models'
+authors: 'Ferenz P, Keeling A, O''Keefe T, Stigliano L, Di Lauro L, Colubri A, Panovska-Griffiths J'
+publication: 'arXiv:2606.02867'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/42079097'},
-    { 'text': 'DOI', url: 'https://doi.org/10.64898/2026.04.16.718997'},
+    { 'text': 'DOI', url: 'https://doi.org/10.48550/arXiv.2606.02867'},
   ]
 order: 2
 ---

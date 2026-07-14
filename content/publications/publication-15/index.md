@@ -1,10 +1,11 @@
 ---
-title: 'Validation and Improvement of Child Undernutrition Risk Prediction Model Using National Family Health Survey-5 Data from India'
-authors: 'Shah B, Guerra J, Fahey N, Nimbalkar S, Colubri, A, Soni A'
-publication: 'Research Square, December 4, 2025'
+title: 'Travel Healthy, a mobile app for participatory surveillance among U.S. international travelers'
+authors: 'Colubri A, Willing N, Grozdani A, Dong Y, Hong H, Khandpekar M, Oliver E, Thwing J, Ryan ET, LaRocque RC'
+publication: 'Travel Med Infect Dis. 2025 Oct 11:68:102922'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.21203/rs.3.rs-7943491/v1'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/41083032'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1016/j.tmaid.2025.102922'},
   ]
 order: 15
 ---

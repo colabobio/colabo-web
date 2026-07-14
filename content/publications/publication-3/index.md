@@ -1,10 +1,11 @@
 ---
-title: 'App-based Experimental Epidemic Games: A Research Protocol for Socio-Behavioral Study of Infectious Disease Transmission in University Campuses'
-authors: 'Yu X, Chen S, He B, Hou S, Jiang J, Luo Y, Miao H, Wang R, Wang Y, Xiang X, Tao Z, Dong Y, Woike JK, Musa SS, King D, Colubri A'
-publication: 'Zenodo 2026 19158373'
+title: 'scSketch: Interactive Sketch-based Trajectory Exploration and Pathway-Aware Analysis of Single-Cell Data'
+authors: 'Temirbek A, Lekschas F, Sankaran K, Colubri A'
+publication: 'bioRxiv. 2026 Apr 23:2026.04.16.718997'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.19158373'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/42079097'},
+    { 'text': 'DOI', url: 'https://doi.org/10.64898/2026.04.16.718997'},
   ]
 order: 3
 ---

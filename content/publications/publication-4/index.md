@@ -1,11 +1,10 @@
 ---
-title: 'A call for shared digital infrastructure in travel medicine: the travel health data commons'
-authors: 'Colubri A, Hedrich N, Leva J, Muñoz J, LaRocque RC, Schlagenhauf P, Farnham A'
-publication: 'J Travel Med. 2026 Apr 1;33(3):taag013'
+title: 'App-based Experimental Epidemic Games: A Research Protocol for Socio-Behavioral Study of Infectious Disease Transmission in University Campuses'
+authors: 'Yu X, Chen S, He B, Hou S, Jiang J, Luo Y, Miao H, Wang R, Wang Y, Xiang X, Tao Z, Dong Y, Woike JK, Musa SS, King D, Colubri A'
+publication: 'Zenodo 2026 19158373'
 links:
   [
-    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/41665274'},
-    { 'text': 'DOI', url: 'https://doi.org/10.1093/jtm/taag013'},
+    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.19158373'},
   ]
 order: 4
 ---
