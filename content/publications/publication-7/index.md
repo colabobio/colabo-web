@@ -1,10 +1,11 @@
 ---
-title: 'Structural and Epidemic Properties of Contact Networks from Epigames'
-authors: 'McCool E, Fowler A, Di Lauro F, Ferretti L, Fraser, C, Enright J, Colubri A, Panovska-Griffiths, J'
-publication: 'Zenodo, February 25, 2026'
+title: 'A call for shared digital infrastructure in travel medicine: the travel health data commons'
+authors: 'Colubri A, Hedrich N, Leva J, Muñoz J, LaRocque RC, Schlagenhauf P, Farnham A'
+publication: 'J Travel Med. 2026 Apr 1;33(3):taag013'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.18774428'},
+    { 'text': 'PUBMED', url: 'https://pubmed.ncbi.nlm.nih.gov/41665274'},
+    { 'text': 'DOI', url: 'https://doi.org/10.1093/jtm/taag013'},
   ]
 order: 7
 ---

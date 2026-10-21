@@ -1,10 +1,10 @@
 ---
-title: 'Human Cytomegalovirus Infection of Primary Human Oral Keratinocytes Induces Intermediate Keratinocyte Differentiation and an Altered Innate Immune Response'
-authors: 'Cojohari O, Cao Y, Temirbek A, Colubri A, Garber M, Kowalik T'
-publication: 'bioRxiv. 2025 676604v1'
+title: 'Validation and Improvement of Child Undernutrition Risk Prediction Model Using National Family Health Survey-5 Data from India'
+authors: 'Shah B, Guerra J, Fahey N, Nimbalkar S, Colubri, A, Soni A'
+publication: 'Research Square, December 4, 2025'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.1101/2025.09.16.676604'},
+    { 'text': 'DOI', url: 'https://doi.org/10.21203/rs.3.rs-7943491/v1'},
   ]
 order: 18
 ---

@@ -1,10 +1,11 @@
 ---
-title: 'Validation and Improvement of Child Undernutrition Risk Prediction Model Using National Family Health Survey-5 Data from India'
-authors: 'Shah B, Guerra J, Fahey N, Nimbalkar S, Colubri, A, Soni A'
-publication: 'Research Square, December 4, 2025'
+title: 'Addressing pandemics in Argentine Secondary Education using participatory methodologies and simulation games with a human rights approach'
+authors: 'Colubri A, Richmond I, Visotsky J, Boscardin Z'
+publication: 'Revista de Educación en Biología, 28(2)'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.21203/rs.3.rs-7943491/v1'},
+    { 'text': 'DOI', url: 'https://doi.org/10.59524/2344-9225.v28.n2.49330'},
+    { 'text': 'WEB', url: 'https://revistas.unc.edu.ar/index.php/revistaadbia/article/view/49330'},
   ]
 order: 16
 ---

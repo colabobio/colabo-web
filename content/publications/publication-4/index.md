@@ -1,10 +1,10 @@
 ---
-title: 'App-based Experimental Epidemic Games: A Research Protocol for Socio-Behavioral Study of Infectious Disease Transmission in University Campuses'
-authors: 'Yu X, Chen S, He B, Hou S, Jiang J, Luo Y, Miao H, Wang R, Wang Y, Xiang X, Tao Z, Dong Y, Woike JK, Musa SS, King D, Colubri A'
-publication: 'Zenodo 2026 19158373'
+title: 'The Epi-LLM Framework: probing LLM behavioral priors through epidemiological agent-based models'
+authors: 'Ferenz P, Keeling A, O''Keefe T, Stigliano L, Di Lauro L, Colubri A, Panovska-Griffiths J'
+publication: 'arXiv:2606.02867'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.19158373'},
+    { 'text': 'DOI', url: 'https://doi.org/10.48550/arXiv.2606.02867'},
   ]
 order: 4
 ---

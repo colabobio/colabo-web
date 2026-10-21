@@ -1,11 +1,10 @@
 ---
-title: 'Understanding human behaviour for pandemic preparedness with epigames'
-authors: 'Colubri A, Williams D, Valente T, Bauch CT, Drake JM, Mills MC, Drury J, Fraser C, Ferretti L, Panovska-Griffiths J'
-publication: 'Nat. Health. 2026 Feb 24 pp. 1-3'
+title: 'App-based Experimental Epidemic Games: A Research Protocol for Socio-Behavioral Study of Infectious Disease Transmission in University Campuses'
+authors: 'Yu X, Chen S, He B, Hou S, Jiang J, Luo Y, Miao H, Wang R, Wang Y, Xiang X, Tao Z, Dong Y, Woike JK, Musa SS, King D, Colubri A'
+publication: 'Zenodo 2026 19158373'
 links:
   [
-    { 'text': 'DOI', url: 'https://doi.org/10.1038/s44360-026-00071-8'},
-    { 'text': 'WEB', url: 'https://ora.ox.ac.uk/objects/uuid:5718c4aa-ea78-4030-ae3d-d8433b660ae5/files/s9019s515w'},
+    { 'text': 'DOI', url: 'https://doi.org/10.5281/zenodo.19158373'},
   ]
 order: 6
 ---
